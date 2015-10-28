@@ -1,0 +1,9 @@
+sequence_number		number			sequence_number
+family_name		string	50		family_name
+date_of_birth		date			date_of_birth
+relation_name		string	50		relation_name
+education_name		string	50		education_name
+STATUS			string	50		STATUS
+religion_name		string	30		religion_name
+sex_name		string	30		sex_name
+marital_status_name	string	30		marital_status_name

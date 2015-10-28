@@ -1,0 +1,12 @@
+company_code	string	20
+company_name	string	50
+employee_code	string	20
+employee_name	string	50
+att_date	date
+ot_hour		number
+satu_jam	number
+dua_jam		number
+tiga_jam	number
+empat_jam	number
+tot_overtime	number
+username	string	20

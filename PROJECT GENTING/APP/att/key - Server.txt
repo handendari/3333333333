@@ -1,0 +1,13 @@
+user name = root
+user pass = SSDadmin2012
+host name = 192.168.35.30
+port = 3306
+db name = db_genting
+dsn =
+dsn created = 1
+description = -
+driver path = {MySQL ODBC 5.1 Driver}
+driver name = MySQL ODBC 5.1 Driver
+license number = ≈Ì“y≈Ù
+license count = Ä
+license id = 

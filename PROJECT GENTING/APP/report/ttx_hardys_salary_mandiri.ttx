@@ -1,0 +1,19 @@
+bank_account		string	50		bank_account
+employee_name		string	50		employee_name
+country			string	50		country
+k1			string	50		k1
+k2			string	50		k2
+currency_code		string	50		currency_code
+total_thp		number			total_thp
+k3			string	50		k3
+k4			string	50		k4
+k5			string	50		k5
+k6			string	50		k6
+k7			string	50		k7
+department_name		string	50		department_name
+k8			string	50		k8
+k9			string	50		k9
+k10			string	50		k10
+k11			string	50		k11
+k12			string	50		k12
+division_name	string	50

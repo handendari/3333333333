@@ -1,0 +1,9 @@
+company_code		string	30
+company_name		string	50
+department_code		string	10
+department_name		string	50
+employee_code		string	20
+employee_name		string	50
+title_code		string	10
+title_name		string	50
+flag_ot			number

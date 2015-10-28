@@ -1,0 +1,20 @@
+employee_code	string	30
+employee_name	string	50
+company_name	string	50
+working_days	number
+days_present	number
+days_duty	number
+days_permission	number
+days_sick	number
+days_other	number
+days_leave	number
+days_holiday	number
+days_general_leave	number
+absen	number
+days_late	number
+days_early	number
+days_ot	number
+time_default	string	10
+sum_late	number
+sum_early	number
+sum_ot		number

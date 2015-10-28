@@ -1,0 +1,11 @@
+company_code	string	30
+company_name	string	50
+title_code	string	20
+title_name	string	50
+bulan_lalu	date
+croll_bln_lalu	number
+cont_bln_lalu	number
+bulan_ini	date
+croll_bulan_ini	number
+cont_bln_ini	number
+remark		string	100	

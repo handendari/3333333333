@@ -1,0 +1,59 @@
+month		date
+company_code	string	20
+company_name	string	50
+level_code	string	20
+level_name	string	30
+area_code	string	20
+area_name	string	50
+location_code	string	20
+location_name	string	50
+basic_salary	number
+tunj_transport	number
+tunj_functional	number
+tunj_staff	number
+tunj_phone	number
+tunj_acting	number
+tunj_lain	number
+lembur		number
+rapel		number
+jkk_persen	number
+jkk_value	number
+jkm_persen	number
+jkm_value	number
+prs_persen	number
+prs_value	number
+tk_persen	number
+tk_value	number
+thr		number
+bonus		number
+misc_adjust_in	number
+tax_pph21	number
+tax_shortage	number
+loan		number
+misc_deduction	number
+returnable	number
+head_count	number
+tunj_skill	number
+tunj_driver	number
+sisa_gaji	number
+hr_exc		string	100
+hr_exc_title	string	100
+hr_man		string	100
+hr_man_title	string	100
+svp_finance	string	100
+svp_finance_title	string	100
+presdir		string	100
+presdir_title	string	100
+meal_allow	number
+prepared_by	string	100
+checked_by	string	100
+auth1_by	string	100
+auth2_by	string	100
+jp_emp		number
+jp_emp_value	number
+jp_co		number
+jp_co_value	number
+bpjs_emp	number
+bpjs_emp_value	number
+bpjs_co		number
+bpjs_co_value	number

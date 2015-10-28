@@ -1,0 +1,132 @@
+MONTH			string	50		MONTH
+company_name		string	50		company_name
+department_code		string	50		department_code
+department_name		string	50		department_name
+division_code		string	50		division_code
+employee_code		string	50		employee_code
+employee_name		string	50		employee_name
+department_name		string	50		department_name
+division_name		string	50		division_name
+title_name		string	50		title_name
+start_working		date			start_working
+
+days_count		number			days_count
+days_present		number			days_present
+
+level1			number			level1
+level2			number			level2
+working_age		number			working_age
+STATUS			string	50		STATUS
+bank_name		string	50		bank_name
+bank_account		string	50		bank_account
+basic_salary		number			basic_salary
+basic_salary_est	number			basic_salary_est
+
+total_thp		number			total_thp
+tunj_kost		number			tunj_kost
+tunj_makan		number			tunj_makan
+sisa_gaji		number			sisa_gaji
+biaya_jstk		number			biaya_jstk
+tax_per_month		number			tax_per_month
+all_pph21_deduction	number			all_pph21_deduction
+pph21_30		number			pph21_30
+pph21_25		number			pph21_25
+pph21_15		number			pph21_15
+pph21_05		number			pph21_05
+pkp			number			pkp
+ptkp			number			ptkp
+pph_disetahunkan	number			pph_disetahunkan
+pot_jamsostek		number			pot_jamsostek
+nett_paid_tax		number			nett_paid_tax
+sub_total_pot1		number			sub_total_pot1
+pot_pribadi		number			pot_pribadi
+pot_lain2		number			pot_lain2
+pot_kinerja		number			pot_kinerja
+pot_so			number			pot_so
+sub_total1		number			sub_total1
+tunj_lain2		number			tunj_lain2
+tunj_transport		number			tunj_transport
+tunj_hp			number			tunj_hp
+tunj_position		number			tunj_position
+tunj_staff		number			tunj_staff
+lembur			number			lembur
+tunj_driver		number			tunj_driver
+thr			number			thr
+bonus			number			bonus
+total_thp_est		number
+special_allowance	number
+jstk_accident		number
+jstk_life		number
+jstk_pers		number
+annual_gross		number
+rapel			number
+returnable		number
+adj_in			number
+
+days_present		number
+days_duty		number
+days_permission		number
+days_sick		number
+days_alpha		number
+days_leave		number
+days_holiday		number
+days_general_leave	number
+leave_up_to_month	number
+max_leave		number
+
+grade			string	20
+date_from		string	20
+date_to			date
+fiscal			number
+level			string	30
+
+jkk_persen		number
+jkm_persen		number
+tk_persen		number
+prs_persen		number
+
+tax_short		number
+exps_misc		number
+pot_tanpa_npwp		number
+
+tunj_acting		number
+tunj_skill		number
+ded_in			number
+biaya_jabatan		number
+loan			number
+
+nol			number
+
+hr_exc			string	100
+hr_exc_title		string	100
+hr_man			string	100
+hr_man_title		string	100
+svp_finance		string	100
+svp_finance_title	string	100
+presdir			string	100
+presdir_title		string	100
+
+ket_return		string	100
+ket_rapel		string	100
+ket_misc_adjust		string	100
+ket_insentif		string	100
+ket_shortage		string	100
+ket_misc		string	100
+ket_misc_deduct		string	100
+pot_mangkir		number
+pot_misc		number
+npwp			string	30
+
+prepared_by		string	100
+checked_by		string	100
+auth1_by		string	100
+auth2_by		string	100
+
+jp_emp			number
+jp_emp_value		number
+jp_co			number
+jp_co_value		number
+bpjs_emp		number
+bpjs_emp_value		number
+bpjs_co			number
+bpjs_co_value		number

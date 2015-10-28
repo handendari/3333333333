@@ -1,0 +1,4 @@
+username	string	20
+login_time	date
+click_time	date
+description	string	100

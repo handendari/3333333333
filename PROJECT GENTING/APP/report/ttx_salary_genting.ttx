@@ -1,0 +1,32 @@
+year					string	5		year
+month					string	20		month
+company_name			string	50		company_name
+area_name				string	50		area_name
+employee_code			string	50		employee_code
+employee_name			string	50		employee_name
+date_employed			date			date_employed
+designation				string	50		designation
+basic_salary			number			basic_salary
+special_allowance		number			special_allowance
+staff_allowance			number			staff_allowance
+functional_allowance	number			functional_allowance
+transport_allowance		number			transport_allowance
+meal_allowance			number			meal_allowance
+acting_allowance		number			acting_allowance
+other_allowance			number			other_allowance
+gross_basic_salary		number			gross_basic_salary
+jht_deduction_2_persen	number			jht_deduction_2_persen
+monthly_tax_deduction	number			monthly_tax_deduction
+nett_salary				number			nett_salary
+deduction				number			deduction
+tot_salary_paid			number			tot_salary_paid
+jkk_jkm_084_persen		number			jkk_jkm_084_persen
+jht_37_persen			number			jht_37_persen
+prepared_name			string	50		prepared_by
+prepared_title			string	50		prepared_by
+checked_name			string	50		checked_name
+checked_title			string	50		checked_title
+approved_name			string	50		approved_name
+approved_title			string	50		approved_title
+authorized_name			string	50		authorized_name
+authorized_title		string	50		authorized_title

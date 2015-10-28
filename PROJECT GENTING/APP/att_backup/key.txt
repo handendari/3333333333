@@ -1,0 +1,13 @@
+user name = root
+user pass = 
+host name = 127.0.0.1
+port = 3306
+db name = db_attendance
+dsn = dsn_attendance
+dsn created = 0
+description = -
+driver path = {MySQL ODBC 5.1 Driver}
+driver name = MySQL ODBC 5.1 Driver
+license number = ≈Ì“y≈Ù
+license count = Ä
+license id = 0

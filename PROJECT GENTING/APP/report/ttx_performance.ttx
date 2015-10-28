@@ -1,0 +1,25 @@
+company_code		string	30		company_code
+company_name		string	50		company_name
+department_code		string	50		department_code
+department_name		string	50		department_name
+division_code		string	50		division_code
+division_name		string	50		division_name
+title_code		string	50		title_code
+title_name 		string	50		title_name 
+employee_code		string	50		employee_code
+employee_name 		string	50		employee_name
+start_working		date			start_working
+
+dt_from			date			dt_from
+flag_to			number			flag_to
+dt_to			date			dt_to
+performance_description		string	50		performance_description
+flag_performance		number			flag_performance
+flag_title			number			flag_title
+department_code1		string	50		department_code1
+department_name1		string	50		department_name1
+division_code1		string	50		division_code1
+division_name1		string	50		division_name1
+title_code1		string	50		title_code1
+title_name1		string	50		title_name1
+entry_date		date			entry_date
