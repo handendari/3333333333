@@ -1,0 +1,14 @@
+NoKaryawan	String	10	
+NamaKaryawan	String	50	
+jabatan	String	50
+departement	String	50
+Divisi	String	30	
+lokasi	String	30
+marital_status	String	10
+JmlAnak	Number		
+jeniskelamin	String	5
+start_working	Date	
+BasciSalary	Number		
+PeriodeAwal	Date		
+PeriodeAkhir	Date
+compani_code	string	10

@@ -1,0 +1,14 @@
+user name = root
+user pass = ssdadmin
+host name = localhost
+port = 3306
+db name = hrd_ktc_new
+dsn = 
+dsn created = 1
+description = -
+driver path = {MySQL ODBC 5.1 Driver}
+driver name = MySQL ODBC 5.1 Driver
+license number = ùëË{ÇègB4QFÙĞèI­“åè¦‚g|lWWÆî	3
+license count = ƒ
+license id = 0
+first run = 0

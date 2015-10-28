@@ -1,0 +1,9 @@
+company_code		String	30		company_code
+company_name		String	50		company_name
+date			Date			date
+employee_code		String	30		employee_code
+employee_name		String	50		employee_name
+p24_value		Number			p24_value
+p24_reduce		Number			p24_reduce
+p24_reduce_timestr	String	30		p24_reduce_timestr
+p24_remain_timestr	String	30		p24_remain_timestr

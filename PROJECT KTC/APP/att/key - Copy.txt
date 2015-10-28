@@ -1,0 +1,14 @@
+user name = root
+user pass = tomcat123
+host name = localhost
+port = 3309
+db name = db_payroll_multi_deploy
+dsn = dsn_payroll
+dsn created = 0
+description = -
+driver path = {MySQL ODBC 5.1 Driver}
+driver name = MySQL ODBC 5.1 Driver
+license number = ùëË{ÇègB4QFÙĞèI­“åè¦‚g|lWWÆî	3
+license count = ƒ
+license id = 0
+first run = 1

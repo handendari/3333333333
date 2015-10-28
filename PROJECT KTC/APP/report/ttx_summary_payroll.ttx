@@ -1,0 +1,32 @@
+PeriodeAwal	Date
+PeriodeAkhir	Date
+NoKaryawan	String	15	
+Nama	String	50	
+Departement	String	20	
+Posisi	String	25	
+Location	String	15	
+MaritalStatus	String	3	
+Sex	String	1	
+EmpDate	Date		
+Basic	Currency		
+Overtime	Currency		
+SIteAllowance	Currency		
+AttendancesIncentive	Currency		
+Others	Currency		
+BonusTHR	Currency		
+TotalGross	Currency		
+DedJHT	Currency		
+DedPPH21	Currency		
+DedAbsent	Currency		
+DedOther	Currency		
+TotDeduction	Currency		
+NetSalary	Currency		
+DedLoanAdv	Currency		
+Rounding	Currency		
+TotPayment	Currency		
+Keterangan	String	50	
+NoRek	String	20	
+Cabang	String	50	
+ViaCash	Currency		
+ViaBank	Currency
+UserPrint	String	10		

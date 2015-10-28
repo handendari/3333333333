@@ -1,0 +1,23 @@
+NoBadge	String	20
+nmkaryawan	string	50
+jmlAnak	Number
+GajiBasis	Number
+rate_hour	Number
+allowance_rate	Number
+jmlharimasuk	Number
+jmlhariabsent	Number
+jmljamlembur	Number
+JHT_2_persen	Number
+JKK_JKM_204_persen	Number
+Lembur	Number
+TunjanganLap	Number
+Incentive_Hadir	Number
+Kurang_bln_lalu	Number
+THR	Number
+Potongan_Absen	Number
+Potongan_lain	Number
+Potongan_Pinjam	Number
+PPH21	Number
+Jamsostek_Persh	Number
+PTKP	Number
+uangmakan	Number

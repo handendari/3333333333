@@ -1,0 +1,12 @@
+PeriodeAwal	Date		
+PeriodeAkhir	Date
+kdKaryawan	String	20
+Name	String	50	
+Position	String	30	
+BasicSalary	Number
+jmlJamLembur	Number
+Allowance_rate	Number
+hour_rate	Number
+JHariKerja	Number	
+company_code	string	30	
+Remarks	String	50	

@@ -1,0 +1,12 @@
+NoBadge	String	12
+Name	String	50	
+Jabatan	string	50
+TanggalPenerimaan	Date		
+Periode	Date
+GajiBasis	Number
+StatusMarriage	String	4
+TotKerja	Number
+Tunjangan	Number
+company_code	string	30
+prepared	string	50
+checked		string	50

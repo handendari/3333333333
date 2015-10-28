@@ -1,0 +1,43 @@
+MONTH			date			MONTH
+company_name		string	50		company_name
+employee_code		string	50		employee_code
+employee_name		string	50		employee_name
+department_name		string	50		department_name
+division_name		string	50		division_name
+title_name		string	50		title_name
+start_working		date			start_working
+STATUS			string	50		STATUS
+number_wd		number			number_wd
+					
+basic_salary		number			basic_salary
+transport_d		number			transport_d
+transport_m		number			transport_m
+fix_charge		number			fix_charge
+var_charge		number			var_charge
+other			number			other
+bonus_thr		number			bonus_thr
+company_astek_p		number			company_astek_p
+gross_paid		number			gross_paid
+					
+employee_astek		number			employee_astek
+company_astek_m		number			company_astek_m
+deduction_koperasi	number			deduction_koperasi
+deduction_union		number			deduction_union
+deduction_all		number			deduction_all
+					
+t_jabatan		number			t_jabatan
+nett_paid		number			nett_paid
+nett_paid_tax		number			nett_paid_tax
+pph_in_year		number			pph_in_year
+ptkp			number			ptkp
+					
+pkp			number			pkp
+pkp_5			number			pkp_5
+pkp_15			number			pkp_15
+pkp_25			number			pkp_25
+pkp_30			number			pkp_30
+					
+tax_month		number			tax_month
+thp			number			thp
+balance_tax		number			balance_tax
+total_thp		number			total_thp

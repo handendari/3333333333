@@ -1,0 +1,5 @@
+company_code	string	20
+employee_code	string	30
+employee_name	string	50
+bank_account	string	30
+tot_payment	number

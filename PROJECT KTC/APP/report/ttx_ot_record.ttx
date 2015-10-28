@@ -1,0 +1,15 @@
+PeriodeAwal	Date		
+PeriodeAkhir	Date		
+NoKaryawan	Number		
+NamaKaryawan	String	60	
+Jabatan	String	30	
+Basic	Number		
+JLembur15	Number		
+JLembur2	Number		
+JLembur3	Number		
+JLembur4	Number		
+TotJamLembur	Number		
+RateLembur	Number		
+TotLemburRp	Number
+company_code	string	30		
+Keterangan	String	50

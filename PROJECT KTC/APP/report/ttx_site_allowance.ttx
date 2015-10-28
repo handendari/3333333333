@@ -1,0 +1,9 @@
+PeriodeAwal	Date		
+PeriodeAkhir	Date
+NoKaryawan	String	10	
+NamaKaryawan	String	50	
+Jabatan	String	30	
+JHariKerja	Number		
+RateSiteAllowance	Number
+company_code	string	30		
+Keterangan	String	50	

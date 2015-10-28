@@ -1,0 +1,8 @@
+NoKaryawan	String	10	
+NamaKaryawan	String	50	
+Jabatan	String	30	
+Saldo_Awal	Number		
+Hutang_Bln_Ini	Number		
+Byr_Bln_Ini	Number
+PeriodeAwal	Date		
+PeriodeAkhir	Date

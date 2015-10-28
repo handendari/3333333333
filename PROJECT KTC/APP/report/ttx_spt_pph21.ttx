@@ -1,0 +1,44 @@
+sequence_number			String	30		sequence_number
+company_npwp			String	50		company_npwp
+company_name			String	50		company_name
+company_address			String	50		company_address
+employee_name			String	50		employee_name
+employee_npwp			String	50		employee_npwp
+employee_address		String	50		employee_address
+marital_status			String	30		marital_status
+number_of_children		Number			number_of_children
+title_name			String	50		title_name
+month1				Date			month1
+month2				Date			month2
+					
+total_salary			number			total_salary
+pph_subsidy			number			pph_subsidy
+other_subsidy			number			other_subsidy
+honor_subsidy			number			honor_subsidy
+total_insurance_from_company	number			total_insurance_from_company
+other_salary_to_pph21		number			other_salary_to_pph21
+sum7				number			sum7
+bonus				number			bonus
+sum9				number			sum9
+					
+salary_cost			number			salary_cost
+salary_cost8			number			salary_cost8
+pension_expend			number			pension_expend
+sum13				number			sum13
+					
+sum14				number			sum14
+net_salary_before		number			net_salary_before
+sum16				number			sum16
+ptkp_value			number			ptkp_value
+salary_to_pph21			number			salary_to_pph21
+total_pph21			number			total_pph21
+total_pph21_before		number			total_pph21_before
+sum21				number			sum21
+sum22				number			sum22
+sum23				number			sum23
+sum24				number			sum24
+sum25				number			sum25
+sum26				number			sum26
+city_name			String	50		city_name
+dt 				date			dt 
+rate_hour			number			rate_hour

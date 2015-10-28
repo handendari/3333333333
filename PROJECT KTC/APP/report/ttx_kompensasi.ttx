@@ -1,0 +1,23 @@
+employee_code	string	30
+employee_name	string	50
+title_code	string	30
+title_name	string	30
+start_working	date
+basic_salary	number
+b.kali_gaji	number
+tgltrans	date
+uang_pensiun	number
+persen_trans	number
+lain1		number
+lain2		number
+pph21		number
+loan		number
+jamsostek	number
+absen		number
+tot_income	number
+tot_deduction	number
+total		number
+judul		string	50
+company_code	string	10
+masa_kerja	number
+sisa_cuti	number
