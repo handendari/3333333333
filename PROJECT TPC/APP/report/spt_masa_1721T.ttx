@@ -1,0 +1,9 @@
+month			string	2
+year			string	4
+company_code		string	50
+employee_code		string	20
+nik			string	20
+employee_name		string	100
+npwp			string	20
+status			string	20
+jml_tanggungan		number

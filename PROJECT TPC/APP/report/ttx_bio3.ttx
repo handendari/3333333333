@@ -1,0 +1,6 @@
+sequence_number		number			sequence_number
+education_name		string	50		education_name
+address			string	100		address
+START			date			START
+finish			date			finish
+STATUS			string	50		STATUS

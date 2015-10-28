@@ -1,0 +1,27 @@
+company_code		string	20
+company_name		string	50
+division_code		string	20
+division_name		string	50
+employee_code		string	20
+nik			string	20
+employee_name		string	50
+avg_basic		number
+avg_potongan		number
+avg_attendance		number
+avg_incentive		number
+avg_position		number
+avg_other		number
+avg_meal		number
+avg_transport		number
+avg_shift2		number
+avg_shift3		number
+avg_jkkjkm		number
+avg_jstk		number
+avg_marital		string	10
+jmlbln			number
+bruto_salary		number
+THR			number
+Bonus			number
+xBonus			number
+ptkp			number
+prosen_pajak		number

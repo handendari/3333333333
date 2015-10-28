@@ -1,0 +1,21 @@
+company_code		string	20
+company_name		string	50
+department_code		string	20
+department_name		string	50
+employee_code		string	20
+employee_name		string	50
+x_15_wd			number
+x_2_wd			number
+x_2_hol			number
+x_3_hol			number
+x_4_hol			number
+x_4_hr			number
+x_6_hr			number
+tot_ot			number
+meal			number
+trans			number
+shift2			number
+shift3			number
+remarks			number
+days			datetime
+

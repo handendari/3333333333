@@ -1,0 +1,63 @@
+periode				string	50
+year				string	5
+month				string	20
+no_area				number
+area				string	50
+department_name			string	50
+job_scope			string	50
+employee_code			string	50
+employee_name			string	50
+date_employed			date
+designationAAA	string	50
+designationBBB	string	50
+fiscal_period_1		date
+fiscal_period_until		date
+fiscal_periode_month		number
+gender				string	1
+status				string	5
+jamsostek_registered		string	1
+jamsostek_registered_code	string	1
+basic_salary			number
+staff_allowance			number
+functional_allowance		number
+transport_allowance		number
+meal_allowance			number
+acting_allowance		number
+other_allowance			number
+overtime			number
+tax_inc_art21_allowance		string	1
+tax_inc_art21			number
+gross_basic_salary1		number
+jamsostek_acc_allowance		number
+jamsostek_life_allowance	number
+gross_basic_salary2		number
+duty_allowance			number
+jamsostek_deduction		number
+monthly_salary_netto		number
+annual_salary_netto1		number
+thr_bonus			number
+thr_bonus_pph21			number
+thr_brutto			number
+thr_bonus_biaya_jabatan		number
+netto_thr_bonus			number
+annual_salary_netto2		number
+annual_untaxed_income		number
+annual_taxable_income		number
+annual_tax_deduction		number
+monthly_tax_deduction		number
+salary_after_tax_deduction	number
+jamsostek_jht_deduction		number
+jkk_jkm				number
+nett_salary			number
+loan_employee_deduction		number
+nett_salary_loan_deduction	number
+rekening_1			string	50
+rekening_2			string	50
+insentif_tax_art21		number
+tot_salary_paid			number
+jamsostek_jht			number
+remarks				number
+misc_payment			number
+deduction			number
+ket_misc_payment		string	50
+ket_deduction			string	50

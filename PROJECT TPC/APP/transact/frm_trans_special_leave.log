@@ -1,0 +1,14 @@
+Line 19: Property Icon in frm_mst_country had an invalid file reference.
+Line 129: Property MICON in cmdNew had an invalid file reference.
+Line 130: Property PICN in cmdNew had an invalid file reference.
+Line 168: Property MICON in cmdSave had an invalid file reference.
+Line 169: Property PICN in cmdSave had an invalid file reference.
+Line 207: Property MICON in cmdEdit had an invalid file reference.
+Line 208: Property PICN in cmdEdit had an invalid file reference.
+Line 246: Property MICON in cmdDelete had an invalid file reference.
+Line 247: Property PICN in cmdDelete had an invalid file reference.
+Line 285: Property MICON in cmdCancel had an invalid file reference.
+Line 286: Property PICN in cmdCancel had an invalid file reference.
+Line 324: Property MICON in cmdExit had an invalid file reference.
+Line 325: Property PICN in cmdExit had an invalid file reference.
+Line 502: Property Picture in Image1 had an invalid file reference.

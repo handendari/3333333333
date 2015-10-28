@@ -1,0 +1,69 @@
+month		date
+company_name	string	50
+department_code	string	20
+division_code	string	20
+nik		string	20
+employee_name	string	50
+department_name	string	50
+division_name	string	50
+title_name	string	50
+start_working	string	20
+job_title	string	50
+days_present	number
+working_age	number
+status		string	20
+bank_acc_name	string	50
+bank_account	string	30
+basic_salary	number
+ot_15		number
+ot_20		number
+ot_20_hol	number
+ot_30_hol	number
+ot_40_hol	number
+ot_40_hr	number
+ot_60_hr	number
+value_ot15	number
+value_ot20	number
+value_ot30	number
+value_ot40	number
+value_ot60	number
+overtime	number
+presence_allow	number
+position_allow	number
+meal_allow	number
+transport_allow	number
+shift2		number
+shift3		number
+other_income	number
+other_expense	number
+loan_prs	number
+loan_koperasi	number
+pl_expense	number
+pl_not_expense	number
+alpha_expense	number
+late_expense	number
+tot_gaji_tunj	number
+tot_gaji_bersih	number
+jstk		number
+jstk_accident	number
+jstk_life	number
+jstk_pers	number
+sisa_gaji	number
+pph21		number
+iuran_coop	number
+gp_tj		number
+private_leave	number
+
+days_present	number
+days_duty	number
+days_permission	number
+days_sick	number
+days_alpha	number
+days_leave	number
+days_holiday	number
+days_general_leave	number
+
+bank_account	string	50
+
+sum_late	number
+count_late	number

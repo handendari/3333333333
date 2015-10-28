@@ -1,0 +1,12 @@
+company_name	string	50
+department_name	string	30
+title_name	string	30
+employee_code	string	20
+employee_name	string	50
+periode		date
+installment	number
+inst_value	number
+flag_paid	number
+paid		number
+count_loan	number
+total_loan	number

@@ -1,0 +1,69 @@
+company_code	string	20
+company_name	string	50
+employee_code	string	10
+nik		string	10
+employee_name	string	50
+period		string	15
+ot_15_21	number
+ot_15_22	number
+ot_15_23	number
+ot_15_24	number
+ot_15_25	number
+ot_15_26	number
+ot_15_27	number
+ot_15_28	number
+ot_15_29	number
+ot_15_30	number
+ot_15_31	number
+ot_15_01	number
+ot_15_02	number
+ot_15_03	number
+ot_15_04	number
+ot_15_05	number
+ot_15_06	number
+ot_15_07	number
+ot_15_08	number
+ot_15_09	number
+ot_15_10	number
+ot_15_11	number
+ot_15_12	number
+ot_15_13	number
+ot_15_14	number
+ot_15_15	number
+ot_15_16	number
+ot_15_17	number
+ot_15_18	number
+ot_15_19	number
+ot_15_20	number
+
+ot_20_21	number
+ot_20_22	number
+ot_20_23	number
+ot_20_24	number
+ot_20_25	number
+ot_20_26	number
+ot_20_27	number
+ot_20_28	number
+ot_20_29	number
+ot_20_30	number
+ot_20_31	number
+ot_20_01	number
+ot_20_02	number
+ot_20_03	number
+ot_20_04	number
+ot_20_05	number
+ot_20_06	number
+ot_20_07	number
+ot_20_08	number
+ot_20_09	number
+ot_20_10	number
+ot_20_11	number
+ot_20_12	number
+ot_20_13	number
+ot_20_14	number
+ot_20_15	number
+ot_20_16	number
+ot_20_17	number
+ot_20_18	number
+ot_20_19	number
+ot_20_20	number

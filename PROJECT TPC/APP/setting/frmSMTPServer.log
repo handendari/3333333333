@@ -1,0 +1,50 @@
+Line 18: Class Project1.vbButton of control vbButton1 was not a loaded control class.
+Line 180: Class Project1.vbButton of control vbButton2 was not a loaded control class.
+Line 10: Property Icon in settingserver had an invalid file reference.
+Line 24: The property name _ExtentX in vbButton1 is invalid.
+Line 25: The property name _ExtentY in vbButton1 is invalid.
+Line 26: The property name BTYPE in vbButton1 is invalid.
+Line 27: The property name TX in vbButton1 is invalid.
+Line 28: The property name ENAB in vbButton1 is invalid.
+Line 38: The property name COLTYPE in vbButton1 is invalid.
+Line 39: The property name FOCUSR in vbButton1 is invalid.
+Line 40: The property name BCOL in vbButton1 is invalid.
+Line 41: The property name BCOLO in vbButton1 is invalid.
+Line 42: The property name FCOL in vbButton1 is invalid.
+Line 43: The property name FCOLO in vbButton1 is invalid.
+Line 44: The property name MCOL in vbButton1 is invalid.
+Line 45: The property name MPTR in vbButton1 is invalid.
+Line 46: The property name MICON in vbButton1 is invalid.
+Line 47: The property name PICN in vbButton1 is invalid.
+Line 48: The property name UMCOL in vbButton1 is invalid.
+Line 49: The property name SOFT in vbButton1 is invalid.
+Line 50: The property name PICPOS in vbButton1 is invalid.
+Line 51: The property name NGREY in vbButton1 is invalid.
+Line 52: The property name FX in vbButton1 is invalid.
+Line 53: The property name HAND in vbButton1 is invalid.
+Line 54: The property name CHECK in vbButton1 is invalid.
+Line 55: The property name VALUE in vbButton1 is invalid.
+Line 186: The property name _ExtentX in vbButton2 is invalid.
+Line 187: The property name _ExtentY in vbButton2 is invalid.
+Line 188: The property name BTYPE in vbButton2 is invalid.
+Line 189: The property name TX in vbButton2 is invalid.
+Line 190: The property name ENAB in vbButton2 is invalid.
+Line 200: The property name COLTYPE in vbButton2 is invalid.
+Line 201: The property name FOCUSR in vbButton2 is invalid.
+Line 202: The property name BCOL in vbButton2 is invalid.
+Line 203: The property name BCOLO in vbButton2 is invalid.
+Line 204: The property name FCOL in vbButton2 is invalid.
+Line 205: The property name FCOLO in vbButton2 is invalid.
+Line 206: The property name MCOL in vbButton2 is invalid.
+Line 207: The property name MPTR in vbButton2 is invalid.
+Line 208: The property name MICON in vbButton2 is invalid.
+Line 209: The property name PICN in vbButton2 is invalid.
+Line 210: The property name UMCOL in vbButton2 is invalid.
+Line 211: The property name SOFT in vbButton2 is invalid.
+Line 212: The property name PICPOS in vbButton2 is invalid.
+Line 213: The property name NGREY in vbButton2 is invalid.
+Line 214: The property name FX in vbButton2 is invalid.
+Line 215: The property name HAND in vbButton2 is invalid.
+Line 216: The property name CHECK in vbButton2 is invalid.
+Line 217: The property name VALUE in vbButton2 is invalid.
+Line 229: Property Picture in Image1 had an invalid file reference.

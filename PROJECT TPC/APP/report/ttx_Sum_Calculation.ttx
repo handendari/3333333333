@@ -1,0 +1,356 @@
+CompanyCode	string 	20	
+CompanyName	String	75
+DepartmentCode	string	20
+DepartmentName	string	50
+DivisionCode	string	20
+DivisionName	string	50
+EmployeeCode	string	20	
+NIK		string	20		
+EmployeeName	String	50	
+Day21		String	10
+Day22		String	10
+Day23		String	10
+Day24		String	10
+Day25		String	10
+Day26		String	10
+Day27		String	10
+Day28		String	10
+Day29		String	10
+Day30		String	10
+Day31		String	10
+Day1		String	10
+Day2		String	10
+Day3		String	10
+Day4		String	10
+Day5		String	10
+Day6		String	10
+Day7		String	10
+Day8		String	10
+Day9		String	10
+Day10		String	10
+Day11		String	10
+Day12		String	10
+Day13		String	10
+Day14		String	10
+Day15		String	10
+Day16		String	10
+Day17		String	10
+Day18		String	10
+Day19		String	10
+Day20		String	10
+Leave		Number
+Meal		Number
+Transp		Number
+Aft		Number
+Ngt		Number
+Remark		String	250
+X1_Day21	Number
+X1_Day22	Number	
+X1_Day23	Number
+X1_Day24	Number
+X1_Day25	Number
+X1_Day26	Number
+X1_Day27	Number	
+X1_Day28	Number
+X1_Day29	Number
+X1_Day30	Number
+X1_Day31	Number
+X1_Day1		Number	
+X1_Day2		Number
+X1_Day3		Number
+X1_Day4		Number
+X1_Day5		Number	
+X1_Day6		Number
+X1_Day7		Number
+X1_Day8		Number
+X1_Day9		Number	
+X1_Day10	Number
+X1_Day11	Number
+X1_Day12	Number
+X1_Day13	Number
+X1_Day14	Number
+X1_Day15	Number
+X1_Day16	Number
+X1_Day17	Number
+X1_Day18	Number
+X1_Day19	Number
+X1_Day20	Number
+X2_Day21	Number
+X2_Day22	Number	
+X2_Day23	Number
+X2_Day24	Number
+X2_Day25	Number
+X2_Day26	Number
+X2_Day27	Number	
+X2_Day28	Number
+X2_Day29	Number
+X2_Day30	Number
+X2_Day31	Number
+X2_Day1		Number	
+X2_Day2		Number
+X2_Day3		Number
+X2_Day4		Number
+X2_Day5		Number	
+X2_Day6		Number
+X2_Day7		Number
+X2_Day8		Number
+X2_Day9		Number	
+X2_Day10	Number
+X2_Day11	Number
+X2_Day12	Number
+X2_Day13	Number
+X2_Day14	Number
+X2_Day15	Number
+X2_Day16	Number
+X2_Day17	Number
+X2_Day18	Number
+X2_Day19	Number
+X2_Day20	Number
+X21_Day21	Number
+X21_Day22	Number	
+X21_Day23	Number
+X21_Day24	Number
+X21_Day25	Number
+X21_Day26	Number
+X21_Day27	Number	
+X21_Day28	Number
+X21_Day29	Number
+X21_Day30	Number
+X21_Day31	Number
+X21_Day1	Number	
+X21_Day2	Number
+X21_Day3	Number
+X21_Day4	Number
+X21_Day5	Number	
+X21_Day6	Number
+X21_Day7	Number
+X21_Day8	Number
+X21_Day9	Number	
+X21_Day10	Number
+X21_Day11	Number
+X21_Day12	Number
+X21_Day13	Number
+X21_Day14	Number
+X21_Day15	Number
+X21_Day16	Number
+X21_Day17	Number
+X21_Day18	Number
+X21_Day19	Number
+X21_Day20	Number
+X3_Day21	Number
+X3_Day22	Number	
+X3_Day23	Number
+X3_Day24	Number
+X3_Day25	Number
+X3_Day26	Number
+X3_Day27	Number	
+X3_Day28	Number
+X3_Day29	Number
+X3_Day30	Number
+X3_Day31	Number
+X3_Day1		Number	
+X3_Day2		Number
+X3_Day3		Number
+X3_Day4		Number
+X3_Day5		Number	
+X3_Day6		Number
+X3_Day7		Number
+X3_Day8		Number
+X3_Day9		Number	
+X3_Day10	Number
+X3_Day11	Number
+X3_Day12	Number
+X3_Day13	Number
+X3_Day14	Number
+X3_Day15	Number
+X3_Day16	Number
+X3_Day17	Number
+X3_Day18	Number
+X3_Day19	Number
+X3_Day20	Number
+X4_Day21	Number
+X4_Day22	Number	
+X4_Day23	Number
+X4_Day24	Number
+X4_Day25	Number
+X4_Day26	Number
+X4_Day27	Number	
+X4_Day28	Number
+X4_Day29	Number
+X4_Day30	Number
+X4_Day31	Number
+X4_Day1		Number	
+X4_Day2		Number
+X4_Day3		Number
+X4_Day4		Number
+X4_Day5		Number	
+X4_Day6		Number
+X4_Day7		Number
+X4_Day8		Number
+X4_Day9		Number	
+X4_Day10	Number
+X4_Day11	Number
+X4_Day12	Number
+X4_Day13	Number
+X4_Day14	Number
+X4_Day15	Number
+X4_Day16	Number
+X4_Day17	Number
+X4_Day18	Number
+X4_Day19	Number
+X4_Day20	Number
+X41_Day21	Number
+X41_Day22	Number	
+X41_Day23	Number
+X41_Day24	Number
+X41_Day25	Number
+X41_Day26	Number
+X41_Day27	Number	
+X41_Day28	Number
+X41_Day29	Number
+X41_Day30	Number
+X41_Day31	Number
+X41_Day1	Number	
+X41_Day2	Number
+X41_Day3	Number
+X41_Day4	Number
+X41_Day5	Number	
+X41_Day6	Number
+X41_Day7	Number
+X41_Day8	Number
+X41_Day9	Number	
+X41_Day10	Number
+X41_Day11	Number
+X41_Day12	Number
+X41_Day13	Number
+X41_Day14	Number
+X41_Day15	Number
+X41_Day16	Number
+X41_Day17	Number
+X41_Day18	Number
+X41_Day19	Number
+X41_Day20	Number
+X6_Day21	Number
+X6_Day22	Number	
+X6_Day23	Number
+X6_Day24	Number
+X6_Day25	Number
+X6_Day26	Number
+X6_Day27	Number	
+X6_Day28	Number
+X6_Day29	Number
+X6_Day30	Number
+X6_Day31	Number
+X6_Day1		Number	
+X6_Day2		Number
+X6_Day3		Number
+X6_Day4		Number
+X6_Day5		Number	
+X6_Day6		Number
+X6_Day7		Number
+X6_Day8		Number
+X6_Day9		Number	
+X6_Day10	Number
+X6_Day11	Number
+X6_Day12	Number
+X6_Day13	Number
+X6_Day14	Number
+X6_Day15	Number
+X6_Day16	Number
+X6_Day17	Number
+X6_Day18	Number
+X6_Day19	Number
+X6_Day20	Number
+Sick_Day21	Number
+Sick_Day22	Number	
+Sick_Day23	Number
+Sick_Day24	Number
+Sick_Day25	Number
+Sick_Day26	Number
+Sick_Day27	Number	
+Sick_Day28	Number
+Sick_Day29	Number
+Sick_Day30	Number
+Sick_Day31	Number
+Sick_Day1	Number	
+Sick_Day2	Number
+Sick_Day3	Number
+Sick_Day4	Number
+Sick_Day5	Number	
+Sick_Day6	Number
+Sick_Day7	Number
+Sick_Day8	Number
+Sick_Day9	Number	
+Sick_Day10	Number
+Sick_Day11	Number
+Sick_Day12	Number
+Sick_Day13	Number
+Sick_Day14	Number
+Sick_Day15	Number
+Sick_Day16	Number
+Sick_Day17	Number
+Sick_Day18	Number
+Sick_Day19	Number
+Sick_Day20	Number
+PL_Day21	Number
+PL_Day22	Number	
+PL_Day23	Number
+PL_Day24	Number
+PL_Day25	Number
+PL_Day26	Number
+PL_Day27	Number	
+PL_Day28	Number
+PL_Day29	Number
+PL_Day30	Number
+PL_Day31	Number
+PL_Day1		Number	
+PL_Day2		Number
+PL_Day3		Number
+PL_Day4		Number
+PL_Day5		Number	
+PL_Day6		Number
+PL_Day7		Number
+PL_Day8		Number
+PL_Day9		Number	
+PL_Day10	Number
+PL_Day11	Number
+PL_Day12	Number
+PL_Day13	Number
+PL_Day14	Number
+PL_Day15	Number
+PL_Day16	Number
+PL_Day17	Number
+PL_Day18	Number
+PL_Day19	Number
+PL_Day20	Number
+Late_Day21	Number
+Late_Day22	Number	
+Late_Day23	Number
+Late_Day24	Number
+Late_Day25	Number
+Late_Day26	Number
+Late_Day27	Number	
+Late_Day28	Number
+Late_Day29	Number
+Late_Day30	Number
+Late_Day31	Number
+Late_Day1	Number	
+Late_Day2	Number
+Late_Day3	Number
+Late_Day4	Number
+Late_Day5	Number	
+Late_Day6	Number
+Late_Day7	Number
+Late_Day8	Number
+Late_Day9	Number	
+Late_Day10	Number
+Late_Day11	Number
+Late_Day12	Number
+Late_Day13	Number
+Late_Day14	Number
+Late_Day15	Number
+Late_Day16	Number
+Late_Day17	Number
+Late_Day18	Number
+Late_Day19	Number
+Late_Day20	Number

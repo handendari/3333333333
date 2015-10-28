@@ -1,0 +1,42 @@
+company_code		String	20	company_code
+company_name		String	50	company_name
+department_code		string	20
+department_name		string	50
+division_code		String	50	division_code
+division_name		String	50	division_name
+employee_name		String	50	employee_name
+title_code		String	50	title_code
+title_name		String	50	title_name
+employee_code		String	50	employee_code
+att_date		date		att_date
+enrollnumber		number		enrollnumber
+shift_number		number		shift_number
+shift_code		String	20	shift_code
+start_time		date		start_time
+end_time		date		end_time
+time_in			date		time_in
+time_out		date		time_out
+time_in_diff		date		time_in_diff
+Jml_Jam_Lembur		Number		time_out_diff
+flag_io			number		flag_io
+flag_present		number		flag_present
+flag_duty		number		flag_duty
+flag_late		number		flag_late
+flag_early		number		flag_early
+absent_status		number		absent_status
+description		String	100	description
+entry_date		date		entry_date
+late			number		late
+lembur_act		number
+lembur			number		lembur
+early			number		early
+login_name		string	50
+ket_holiday		string	50
+sch_shift		string	50
+pl_desc			string	100
+team			string	10
+leave			number
+pl			number
+sick			number
+tot_hour		number
+absent_name		string	50

@@ -1,0 +1,14 @@
+bank_account	string	30
+employee_code	string	30
+employee_name	string	50
+country		string	30
+curency		string	30
+tot_gaji	number
+company_code	string	30
+company_name	string	50
+bank_name	string	20
+email		string	30
+account_name	string	50
+bulan		string	50
+prepapred	string	50
+authorized	string	50

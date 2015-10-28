@@ -1,0 +1,32 @@
+in_year				date			in_year
+employee_code			string	30		employee_code
+employee_name			string	50		employee_name
+employee_title			string	50		employee_title
+employee_npwp			string	30		employee_npwp
+employee_address		string	50		employee_address
+employee_marital_status		string	20		employee_marital_status
+employee_sex			string	10		employee_sex
+employee_no_of_children		number			employee_no_of_children
+company_npwp			string	30		company_npwp
+company_name			string	50		company_name
+company_address			string	50		company_address
+start_date			date			start_date
+end_date			date			end_date
+basic_salary			number			basic_salary
+other_support			number			other_support
+insurance_premium		number			insurance_premium
+sum1				number			sum1
+bonus				number			bonus
+sum2				number			sum2
+title_support			number			title_support
+pension_premium			number			pension_premium
+sum3				number			sum3
+sum4				number			sum4
+sum5				number			sum5
+ptkp				number			ptkp
+pkp				number			pkp
+tax				number			tax
+sum6				number			sum6
+sum7				number			sum7
+sum8				number			sum8
+sum9				number			sum9

@@ -1,0 +1,47 @@
+year			string	4
+company_npwp		string	20
+company_city		string	20
+company_name		string	50
+employee_code		string 	12
+employee_name		string	50
+title_name		string	20
+employee_npwp		string	20
+address			string	100
+sex			string	10
+marital_status		string	20
+number_child		string	10
+start_date		string	5
+end_date		string	5
+
+basic_salary1		number
+tunj_pph2		number
+lembur3			number
+honor4			number
+uangmakan6		number
+thr7			number
+bonus7			number
+jht12			number
+jml_ptkp17		number
+pph21			number
+neto15			number
+jml_bln_kerja		number
+jstk_accident		number
+jstk_life		number
+nol			number
+
+pimpinan_name		string	50
+pimpinan_npwp		string	20
+
+tunj_presence		number
+tunj_meal		number
+tunj_transport		number
+tunj_position		number
+tunj_shift2		number
+tunj_shift3		number
+Tunj_lain		number
+
+pl_value		number
+pl_not_value		number
+alpha_value		number
+late_value		number
+other_expense		number

@@ -1,0 +1,19 @@
+year		string	10
+paid_at		string	15
+employee_code	string	20
+nik		string	20
+employee_name	string	50
+department_code	string	20
+department_name	string	50
+title_code	string	20
+job_title	string	50
+start_working	string	20
+status		string	10
+basic_salary	number
+jml_bln		number
+jml_bonus	number
+pph21_value	number
+bank_code	string	20
+bank_account	string	20
+bank_name	string	50
+multiplier	number

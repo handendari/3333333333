@@ -1,0 +1,7 @@
+employee_code		string	20
+nik			string	20
+employee_name		string	50
+department_code		string	20
+department_name		string	50
+division_code		string	20
+division_name		string	50

@@ -1,0 +1,23 @@
+salary_date	string	20
+employee_code	string	50
+nik		string	50
+employee_name	string	50
+pph_type	string	50
+ptkp_type	string	50
+jstk_type	string	30
+flag_ot		number
+basic_salary	number
+tunj_funct	number
+tunj_staff	number
+tunj_acting	number
+tunj_skill	number
+tunj_transport	number
+tunj_presence	number
+tunj_meal	number
+tunj_phone	number
+tunj_driver	number
+tunj_special	number
+company_code	string	30
+company_name	string	50
+department_code	string	30
+department_name	string	50

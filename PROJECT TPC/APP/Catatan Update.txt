@@ -1,0 +1,22 @@
+2012-02-11
+====================================================================
+- Pembatasan panjang NIK Name menjadi maksimal 11
+- Update master employee untuk menambahkan status jamsostek karyawan
+- Membuatkan laporan OverTime
+
+2012-02-10
+====================================================================
+Di Ketapang (Ketapang Office dan Kebun)
+- Perubahan proses input manual attendance dan manual lembur yang tadinya dibuat terpisah sekarang dijadikan satu dengan metode penghitungan lembur tetap sama (mengikuti peraturan pemerintah) dan ditambah dengan penghitungan pembulatan jam lembur sesuai dengan peraturan perusahaan, yaitu : 0-30 = 0 jam dan 31-60 = 1 jam.
+Note: * Tidak ada punnishment dari keterlambatan yang berhubungan dengan salary
+      * Penghitungan jam lembur dimulai dari jam pulang pada shift bersangkutan
+
+- Merubah proses export dan import untuk item Attendance dan Lembur yang tadinya terpisah dijadikan satu, ini sebagai akibat dari proses penyatuan manual attendance dan manual lembur pada item diatas.
+
+- Menambahkan fitur auto-signout apabila tidak ada aktifitas pada mouse atau keyboard dalam 20 detik
+
+- Membuat Master Area dan Master Location untuk digunakan di Ketapang (di Ketapang tidak menggunakan Master Department dan Master Divisi)
+
+- Membuat Master Employee untuk Ketapang (merubah Department dan Division menjadi Area dan Prev Location serta Current Location)
+
+- Menambahkan status Jamsostek di master employee (untuk membedakan employee yang dapat jamsostek atau yang tidak dapat jamsostek)

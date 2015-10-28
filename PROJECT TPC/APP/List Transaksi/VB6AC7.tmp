@@ -1,0 +1,2426 @@
+VERSION 5.00
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
+Object = "{0D62356B-DBA2-11D1-B5DF-0060976089D0}#6.0#0"; "TODL6.OCX"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
+Object = "{DEF7CADD-83C0-11D0-A0F1-00A024703500}#7.0#0"; "todg7.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Begin VB.Form frm_list_manual_att 
+   BorderStyle     =   3  'Fixed Dialog
+   Caption         =   "MANUAL ATTENDANCE"
+   ClientHeight    =   11385
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   15360
+   Icon            =   "frmListManualAtt.frx":0000
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   MinButton       =   0   'False
+   ScaleHeight     =   11385
+   ScaleWidth      =   15360
+   ShowInTaskbar   =   0   'False
+   Begin prj_tpc.LynxGrid LynxGrid3 
+      Height          =   2925
+      Left            =   7020
+      TabIndex        =   32
+      Top             =   1770
+      Visible         =   0   'False
+      Width           =   5415
+      _ExtentX        =   9551
+      _ExtentY        =   5159
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty FontHeader {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BackColorSel    =   12937777
+      ForeColorSel    =   16777215
+      CustomColorFrom =   16572875
+      CustomColorTo   =   14722429
+      GridColor       =   16367254
+      FocusRectColor  =   9895934
+      GridLines       =   2
+      Appearance      =   0
+      ColumnHeaderSmall=   0   'False
+      TotalsLineShow  =   0   'False
+      FocusRowHighlightKeepTextForecolor=   0   'False
+      ShowRowNumbers  =   0   'False
+      ShowRowNumbersVary=   0   'False
+      AllowColumnResizing=   -1  'True
+      ColumnSort      =   -1  'True
+   End
+   Begin TabDlg.SSTab SSTab1 
+      Height          =   9645
+      Left            =   180
+      TabIndex        =   0
+      Top             =   810
+      Width           =   15045
+      _ExtentX        =   26538
+      _ExtentY        =   17013
+      _Version        =   393216
+      Style           =   1
+      TabHeight       =   520
+      TabCaption(0)   =   "INPUT MANUAL"
+      TabPicture(0)   =   "frmListManualAtt.frx":058A
+      Tab(0).ControlEnabled=   -1  'True
+      Tab(0).Control(0)=   "Label1"
+      Tab(0).Control(0).Enabled=   0   'False
+      Tab(0).Control(1)=   "Label4"
+      Tab(0).Control(1).Enabled=   0   'False
+      Tab(0).Control(2)=   "Label2"
+      Tab(0).Control(2).Enabled=   0   'False
+      Tab(0).Control(3)=   "cmdNext"
+      Tab(0).Control(3).Enabled=   0   'False
+      Tab(0).Control(4)=   "cmdRefresh"
+      Tab(0).Control(4).Enabled=   0   'False
+      Tab(0).Control(5)=   "TDBCombo_company"
+      Tab(0).Control(5).Enabled=   0   'False
+      Tab(0).Control(6)=   "TDBCombo_Group_Shift"
+      Tab(0).Control(6).Enabled=   0   'False
+      Tab(0).Control(7)=   "DTPicker1"
+      Tab(0).Control(7).Enabled=   0   'False
+      Tab(0).Control(8)=   "txt_company_name"
+      Tab(0).Control(8).Enabled=   0   'False
+      Tab(0).Control(9)=   "txt_group_shift"
+      Tab(0).Control(9).Enabled=   0   'False
+      Tab(0).Control(10)=   "Frame1"
+      Tab(0).Control(10).Enabled=   0   'False
+      Tab(0).Control(11)=   "cmdPrev"
+      Tab(0).Control(11).Enabled=   0   'False
+      Tab(0).Control(12)=   "timer1"
+      Tab(0).Control(12).Enabled=   0   'False
+      Tab(0).Control(13)=   "Frame4"
+      Tab(0).Control(13).Enabled=   0   'False
+      Tab(0).Control(14)=   "cmdNew"
+      Tab(0).Control(14).Enabled=   0   'False
+      Tab(0).Control(15)=   "cmdEdit"
+      Tab(0).Control(15).Enabled=   0   'False
+      Tab(0).Control(16)=   "cmdDelete"
+      Tab(0).Control(16).Enabled=   0   'False
+      Tab(0).ControlCount=   17
+      TabCaption(1)   =   "IMPORT DATA ATTENDANCE"
+      TabPicture(1)   =   "frmListManualAtt.frx":05A6
+      Tab(1).ControlEnabled=   0   'False
+      Tab(1).Control(0)=   "Frame2"
+      Tab(1).Control(1)=   "ProgressBar1"
+      Tab(1).Control(2)=   "cmdImport"
+      Tab(1).Control(3)=   "cmdBrowse"
+      Tab(1).Control(4)=   "Label5"
+      Tab(1).ControlCount=   5
+      TabCaption(2)   =   "IMPORT ATTENDANCE FROM DATA  MACHINE"
+      TabPicture(2)   =   "frmListManualAtt.frx":05C2
+      Tab(2).ControlEnabled=   0   'False
+      Tab(2).Control(0)=   "Frame3"
+      Tab(2).Control(1)=   "ProgressBar2"
+      Tab(2).Control(2)=   "cmdImportM"
+      Tab(2).Control(3)=   "cmdBrowseM"
+      Tab(2).Control(4)=   "Label6"
+      Tab(2).ControlCount=   5
+      Begin prj_tpc.vbButton cmdDelete 
+         Height          =   465
+         Left            =   13590
+         TabIndex        =   12
+         Top             =   1380
+         Width           =   1305
+         _ExtentX        =   2302
+         _ExtentY        =   820
+         BTYPE           =   14
+         TX              =   "&Delete"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":05DE
+         PICN            =   "frmListManualAtt.frx":05FA
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin prj_tpc.vbButton cmdEdit 
+         Height          =   465
+         Left            =   12240
+         TabIndex        =   13
+         Top             =   1380
+         Width           =   1305
+         _ExtentX        =   2302
+         _ExtentY        =   820
+         BTYPE           =   14
+         TX              =   "&Edit"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":168C
+         PICN            =   "frmListManualAtt.frx":16A8
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin prj_tpc.vbButton cmdNew 
+         Height          =   465
+         Left            =   10890
+         TabIndex        =   14
+         Top             =   1380
+         Width           =   1305
+         _ExtentX        =   2302
+         _ExtentY        =   820
+         BTYPE           =   14
+         TX              =   "&New"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":273A
+         PICN            =   "frmListManualAtt.frx":2756
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin VB.Frame Frame4 
+         Caption         =   "Advanced Filter"
+         Height          =   1485
+         Left            =   5730
+         TabIndex        =   33
+         Top             =   390
+         Width           =   5025
+         Begin VB.TextBox txt_nik 
+            Appearance      =   0  'Flat
+            Height          =   285
+            Left            =   1110
+            TabIndex        =   36
+            Top             =   270
+            Width           =   855
+         End
+         Begin VB.TextBox txt_employee_name 
+            Appearance      =   0  'Flat
+            BackColor       =   &H8000000B&
+            DragMode        =   1  'Automatic
+            Height          =   285
+            Left            =   2370
+            TabIndex        =   35
+            Top             =   270
+            Width           =   2535
+         End
+         Begin prj_tpc.vbButton cmdBrowse_Emp 
+            Height          =   285
+            Left            =   2010
+            TabIndex        =   34
+            Top             =   270
+            Width           =   315
+            _ExtentX        =   556
+            _ExtentY        =   503
+            BTYPE           =   14
+            TX              =   "..."
+            ENAB            =   -1  'True
+            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            COLTYPE         =   1
+            FOCUSR          =   -1  'True
+            BCOL            =   15790320
+            BCOLO           =   15790320
+            FCOL            =   0
+            FCOLO           =   0
+            MCOL            =   12632256
+            MPTR            =   1
+            MICON           =   "frmListManualAtt.frx":37E8
+            UMCOL           =   -1  'True
+            SOFT            =   0   'False
+            PICPOS          =   0
+            NGREY           =   0   'False
+            FX              =   0
+            HAND            =   0   'False
+            CHECK           =   0   'False
+            VALUE           =   0   'False
+         End
+         Begin MSComCtl2.DTPicker DTPicker_from 
+            Height          =   315
+            Left            =   1110
+            TabIndex        =   39
+            Top             =   600
+            Width           =   1275
+            _ExtentX        =   2249
+            _ExtentY        =   556
+            _Version        =   393216
+            CustomFormat    =   "yyyy-MM-dd"
+            Format          =   90832899
+            CurrentDate     =   40794
+         End
+         Begin MSComCtl2.DTPicker DTPicker_to 
+            Height          =   315
+            Left            =   2790
+            TabIndex        =   40
+            Top             =   600
+            Width           =   1335
+            _ExtentX        =   2355
+            _ExtentY        =   556
+            _Version        =   393216
+            CustomFormat    =   "yyyy-MM-dd"
+            Format          =   90832899
+            CurrentDate     =   40794
+         End
+         Begin prj_tpc.vbButton cmdSearch 
+            Height          =   435
+            Left            =   3930
+            TabIndex        =   43
+            Top             =   960
+            Width           =   975
+            _ExtentX        =   1720
+            _ExtentY        =   767
+            BTYPE           =   14
+            TX              =   "&View"
+            ENAB            =   -1  'True
+            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            COLTYPE         =   1
+            FOCUSR          =   -1  'True
+            BCOL            =   15790320
+            BCOLO           =   15790320
+            FCOL            =   0
+            FCOLO           =   0
+            MCOL            =   12632256
+            MPTR            =   1
+            MICON           =   "frmListManualAtt.frx":3804
+            PICN            =   "frmListManualAtt.frx":3820
+            UMCOL           =   -1  'True
+            SOFT            =   0   'False
+            PICPOS          =   0
+            NGREY           =   0   'False
+            FX              =   0
+            HAND            =   0   'False
+            CHECK           =   0   'False
+            VALUE           =   0   'False
+         End
+         Begin VB.TextBox txt_employee_code 
+            Appearance      =   0  'Flat
+            Height          =   285
+            Left            =   4710
+            TabIndex        =   37
+            Top             =   270
+            Visible         =   0   'False
+            Width           =   255
+         End
+         Begin VB.Label Label8 
+            AutoSize        =   -1  'True
+            Caption         =   "PERIODE"
+            Height          =   195
+            Left            =   90
+            TabIndex        =   42
+            Top             =   630
+            Width           =   720
+         End
+         Begin VB.Label Label16 
+            Alignment       =   2  'Center
+            Caption         =   "TO"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   2430
+            TabIndex        =   41
+            Top             =   630
+            Width           =   285
+         End
+         Begin VB.Label Label7 
+            AutoSize        =   -1  'True
+            Caption         =   "EMPLOYEE"
+            Height          =   195
+            Left            =   90
+            TabIndex        =   38
+            Top             =   300
+            Width           =   870
+         End
+      End
+      Begin VB.Frame Frame3 
+         Height          =   7980
+         Left            =   -74850
+         TabIndex        =   26
+         Top             =   450
+         Width           =   14715
+         Begin prj_tpc.LynxGrid LynxGrid2 
+            Height          =   7635
+            Left            =   120
+            TabIndex        =   27
+            Top             =   210
+            Width           =   14475
+            _ExtentX        =   25532
+            _ExtentY        =   13467
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            BeginProperty FontHeader {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            BackColorSel    =   12937777
+            ForeColorSel    =   16777215
+            CustomColorFrom =   16572875
+            CustomColorTo   =   14722429
+            GridColor       =   16367254
+            FocusRectColor  =   9895934
+            Appearance      =   0
+            ColumnHeaderSmall=   0   'False
+            TotalsLineShow  =   0   'False
+            FocusRowHighlightKeepTextForecolor=   0   'False
+            ShowRowNumbers  =   0   'False
+            ShowRowNumbersVary=   0   'False
+            AllowColumnResizing=   -1  'True
+         End
+         Begin MSAdodcLib.Adodc Adodc2 
+            Height          =   330
+            Left            =   30
+            Top             =   120
+            Visible         =   0   'False
+            Width           =   1200
+            _ExtentX        =   2117
+            _ExtentY        =   582
+            ConnectMode     =   0
+            CursorLocation  =   3
+            IsolationLevel  =   -1
+            ConnectionTimeout=   15
+            CommandTimeout  =   30
+            CursorType      =   3
+            LockType        =   3
+            CommandType     =   8
+            CursorOptions   =   0
+            CacheSize       =   50
+            MaxRecords      =   0
+            BOFAction       =   0
+            EOFAction       =   0
+            ConnectStringType=   1
+            Appearance      =   1
+            BackColor       =   -2147483643
+            ForeColor       =   -2147483640
+            Orientation     =   0
+            Enabled         =   -1
+            Connect         =   ""
+            OLEDBString     =   ""
+            OLEDBFile       =   ""
+            DataSourceName  =   ""
+            OtherAttributes =   ""
+            UserName        =   ""
+            Password        =   ""
+            RecordSource    =   ""
+            Caption         =   "Adodc1"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            _Version        =   393216
+         End
+      End
+      Begin VB.Frame Frame2 
+         Height          =   7980
+         Left            =   -74850
+         TabIndex        =   19
+         Top             =   390
+         Width           =   14715
+         Begin prj_tpc.LynxGrid LynxGrid1 
+            Height          =   7635
+            Left            =   120
+            TabIndex        =   20
+            Top             =   210
+            Width           =   14475
+            _ExtentX        =   25532
+            _ExtentY        =   13467
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            BeginProperty FontHeader {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            BackColorSel    =   12937777
+            ForeColorSel    =   16777215
+            CustomColorFrom =   16572875
+            CustomColorTo   =   14722429
+            GridColor       =   16367254
+            FocusRectColor  =   9895934
+            Appearance      =   0
+            ColumnHeaderSmall=   0   'False
+            TotalsLineShow  =   0   'False
+            FocusRowHighlightKeepTextForecolor=   0   'False
+            ShowRowNumbers  =   0   'False
+            ShowRowNumbersVary=   0   'False
+            AllowColumnResizing=   -1  'True
+         End
+         Begin MSAdodcLib.Adodc Adodc1 
+            Height          =   330
+            Left            =   30
+            Top             =   120
+            Visible         =   0   'False
+            Width           =   1200
+            _ExtentX        =   2117
+            _ExtentY        =   582
+            ConnectMode     =   0
+            CursorLocation  =   3
+            IsolationLevel  =   -1
+            ConnectionTimeout=   15
+            CommandTimeout  =   30
+            CursorType      =   3
+            LockType        =   3
+            CommandType     =   8
+            CursorOptions   =   0
+            CacheSize       =   50
+            MaxRecords      =   0
+            BOFAction       =   0
+            EOFAction       =   0
+            ConnectStringType=   1
+            Appearance      =   1
+            BackColor       =   -2147483643
+            ForeColor       =   -2147483640
+            Orientation     =   0
+            Enabled         =   -1
+            Connect         =   ""
+            OLEDBString     =   ""
+            OLEDBFile       =   ""
+            DataSourceName  =   ""
+            OtherAttributes =   ""
+            UserName        =   ""
+            Password        =   ""
+            RecordSource    =   ""
+            Caption         =   "Adodc1"
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            _Version        =   393216
+         End
+      End
+      Begin VB.Timer timer1 
+         Enabled         =   0   'False
+         Interval        =   600
+         Left            =   0
+         Top             =   7530
+      End
+      Begin prj_tpc.vbButton cmdPrev 
+         Height          =   285
+         Left            =   2700
+         TabIndex        =   16
+         Top             =   480
+         Width           =   345
+         _ExtentX        =   609
+         _ExtentY        =   503
+         BTYPE           =   14
+         TX              =   "<"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":48B2
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin VB.Frame Frame1 
+         Height          =   7665
+         Left            =   90
+         TabIndex        =   5
+         Top             =   1860
+         Width           =   14835
+         Begin TrueOleDBGrid70.TDBGrid TDBGrid_Shift 
+            Height          =   7365
+            Left            =   60
+            TabIndex        =   15
+            Top             =   180
+            Width           =   3615
+            _ExtentX        =   6376
+            _ExtentY        =   12991
+            _LayoutType     =   4
+            _RowHeight      =   -2147483647
+            _WasPersistedAsPixels=   0
+            Columns(0)._VlistStyle=   0
+            Columns(0)._MaxComboItems=   5
+            Columns(0).Caption=   "SHIFT CODE"
+            Columns(0).DataField=   "shift_code"
+            Columns(0)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(1)._VlistStyle=   0
+            Columns(1)._MaxComboItems=   5
+            Columns(1).Caption=   "SHIFT NAME"
+            Columns(1).DataField=   "shift_name"
+            Columns(1)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(2)._VlistStyle=   0
+            Columns(2)._MaxComboItems=   5
+            Columns(2).Caption=   "FLAG DAY OVER"
+            Columns(2).DataField=   "flag_day_over"
+            Columns(2)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns.Count   =   3
+            Splits(0)._UserFlags=   0
+            Splits(0).Size  =   2
+            Splits(0).Size.vt=   2
+            Splits(0).RecordSelectorWidth=   503
+            Splits(0)._SavedRecordSelectors=   0   'False
+            Splits(0).ScrollBars=   3
+            Splits(0).DividerColor=   13160660
+            Splits(0).FilterBar=   -1  'True
+            Splits(0).SpringMode=   0   'False
+            Splits(0)._PropDict=   "_ColumnProps,515,0;_UserFlags,518,3"
+            Splits(0)._ColumnProps(0)=   "Columns.Count=3"
+            Splits(0)._ColumnProps(1)=   "Column(0).Width=1799"
+            Splits(0)._ColumnProps(2)=   "Column(0).DividerColor=0"
+            Splits(0)._ColumnProps(3)=   "Column(0)._WidthInPix=1720"
+            Splits(0)._ColumnProps(4)=   "Column(0)._ColStyle=516"
+            Splits(0)._ColumnProps(5)=   "Column(0).Order=1"
+            Splits(0)._ColumnProps(6)=   "Column(1).Width=3545"
+            Splits(0)._ColumnProps(7)=   "Column(1).DividerColor=0"
+            Splits(0)._ColumnProps(8)=   "Column(1)._WidthInPix=3466"
+            Splits(0)._ColumnProps(9)=   "Column(1)._ColStyle=516"
+            Splits(0)._ColumnProps(10)=   "Column(1).Order=2"
+            Splits(0)._ColumnProps(11)=   "Column(2).Width=2725"
+            Splits(0)._ColumnProps(12)=   "Column(2).DividerColor=0"
+            Splits(0)._ColumnProps(13)=   "Column(2)._WidthInPix=2646"
+            Splits(0)._ColumnProps(14)=   "Column(2)._ColStyle=516"
+            Splits(0)._ColumnProps(15)=   "Column(2).Visible=0"
+            Splits(0)._ColumnProps(16)=   "Column(2).Order=3"
+            Splits.Count    =   1
+            PrintInfos(0)._StateFlags=   0
+            PrintInfos(0).Name=   "piInternal 0"
+            PrintInfos(0).PageHeaderFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=Tahoma"
+            PrintInfos(0).PageFooterFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=Tahoma"
+            PrintInfos(0).PageHeaderHeight=   0
+            PrintInfos(0).PageFooterHeight=   0
+            PrintInfos.Count=   1
+            AllowUpdate     =   0   'False
+            Appearance      =   2
+            DefColWidth     =   0
+            HeadLines       =   1
+            FootLines       =   1
+            Caption         =   "LIST OF SHIFT"
+            MultipleLines   =   0
+            CellTipsWidth   =   0
+            DeadAreaBackColor=   13160660
+            RowDividerColor =   13160660
+            RowSubDividerColor=   13160660
+            DirectionAfterEnter=   1
+            MaxRows         =   250000
+            ViewColumnCaptionWidth=   0
+            ViewColumnWidth =   0
+            _PropDict       =   "_ExtentX,2003,3;_ExtentY,2004,3;_LayoutType,512,2;_RowHeight,16,3;_StyleDefs,513,0;_WasPersistedAsPixels,516,2"
+            _StyleDefs(0)   =   "_StyleRoot:id=0,.parent=-1,.alignment=3,.valignment=0,.bgcolor=&H80000005&"
+            _StyleDefs(1)   =   ":id=0,.fgcolor=&H80000008&,.wraptext=0,.locked=0,.transparentBmp=0"
+            _StyleDefs(2)   =   ":id=0,.fgpicPosition=0,.bgpicMode=0,.appearance=0,.borderSize=0,.ellipsis=0"
+            _StyleDefs(3)   =   ":id=0,.borderColor=&H80000005&,.borderType=0,.bold=0,.fontsize=825,.italic=0"
+            _StyleDefs(4)   =   ":id=0,.underline=0,.strikethrough=0,.charset=0"
+            _StyleDefs(5)   =   ":id=0,.fontname=Tahoma"
+            _StyleDefs(6)   =   "Style:id=1,.parent=0,.namedParent=33"
+            _StyleDefs(7)   =   "CaptionStyle:id=4,.parent=2,.namedParent=37,.alignment=0,.bgcolor=&H80000002&"
+            _StyleDefs(8)   =   ":id=4,.fgcolor=&H80000009&,.bold=-1,.fontsize=825,.italic=0,.underline=0"
+            _StyleDefs(9)   =   ":id=4,.strikethrough=0,.charset=0"
+            _StyleDefs(10)  =   ":id=4,.fontname=Tahoma"
+            _StyleDefs(11)  =   "HeadingStyle:id=2,.parent=1,.namedParent=34"
+            _StyleDefs(12)  =   "FooterStyle:id=3,.parent=1,.namedParent=35"
+            _StyleDefs(13)  =   "InactiveStyle:id=5,.parent=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(14)  =   "SelectedStyle:id=6,.parent=1,.namedParent=36"
+            _StyleDefs(15)  =   "EditorStyle:id=7,.parent=1"
+            _StyleDefs(16)  =   "HighlightRowStyle:id=8,.parent=1,.namedParent=38"
+            _StyleDefs(17)  =   "EvenRowStyle:id=9,.parent=1,.namedParent=39"
+            _StyleDefs(18)  =   "OddRowStyle:id=10,.parent=1,.namedParent=40"
+            _StyleDefs(19)  =   "RecordSelectorStyle:id=11,.parent=2,.namedParent=41"
+            _StyleDefs(20)  =   "FilterBarStyle:id=12,.parent=1,.namedParent=42"
+            _StyleDefs(21)  =   "Splits(0).Style:id=13,.parent=1"
+            _StyleDefs(22)  =   "Splits(0).CaptionStyle:id=22,.parent=4,.bgcolor=&H80000002&,.fgcolor=&H80000009&"
+            _StyleDefs(23)  =   "Splits(0).HeadingStyle:id=14,.parent=2,.alignment=2,.bgcolor=&H8000000F&"
+            _StyleDefs(24)  =   ":id=14,.fgcolor=&H80000002&"
+            _StyleDefs(25)  =   "Splits(0).FooterStyle:id=15,.parent=3"
+            _StyleDefs(26)  =   "Splits(0).InactiveStyle:id=16,.parent=5"
+            _StyleDefs(27)  =   "Splits(0).SelectedStyle:id=18,.parent=6"
+            _StyleDefs(28)  =   "Splits(0).EditorStyle:id=17,.parent=7"
+            _StyleDefs(29)  =   "Splits(0).HighlightRowStyle:id=19,.parent=8"
+            _StyleDefs(30)  =   "Splits(0).EvenRowStyle:id=20,.parent=9"
+            _StyleDefs(31)  =   "Splits(0).OddRowStyle:id=21,.parent=10"
+            _StyleDefs(32)  =   "Splits(0).RecordSelectorStyle:id=23,.parent=11"
+            _StyleDefs(33)  =   "Splits(0).FilterBarStyle:id=24,.parent=12"
+            _StyleDefs(34)  =   "Splits(0).Columns(0).Style:id=32,.parent=13"
+            _StyleDefs(35)  =   "Splits(0).Columns(0).HeadingStyle:id=29,.parent=14"
+            _StyleDefs(36)  =   "Splits(0).Columns(0).FooterStyle:id=30,.parent=15"
+            _StyleDefs(37)  =   "Splits(0).Columns(0).EditorStyle:id=31,.parent=17"
+            _StyleDefs(38)  =   "Splits(0).Columns(1).Style:id=50,.parent=13"
+            _StyleDefs(39)  =   "Splits(0).Columns(1).HeadingStyle:id=47,.parent=14"
+            _StyleDefs(40)  =   "Splits(0).Columns(1).FooterStyle:id=48,.parent=15"
+            _StyleDefs(41)  =   "Splits(0).Columns(1).EditorStyle:id=49,.parent=17"
+            _StyleDefs(42)  =   "Splits(0).Columns(2).Style:id=28,.parent=13"
+            _StyleDefs(43)  =   "Splits(0).Columns(2).HeadingStyle:id=25,.parent=14"
+            _StyleDefs(44)  =   "Splits(0).Columns(2).FooterStyle:id=26,.parent=15"
+            _StyleDefs(45)  =   "Splits(0).Columns(2).EditorStyle:id=27,.parent=17"
+            _StyleDefs(46)  =   "Named:id=33:Normal"
+            _StyleDefs(47)  =   ":id=33,.parent=0"
+            _StyleDefs(48)  =   "Named:id=34:Heading"
+            _StyleDefs(49)  =   ":id=34,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(50)  =   ":id=34,.wraptext=-1"
+            _StyleDefs(51)  =   "Named:id=35:Footing"
+            _StyleDefs(52)  =   ":id=35,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(53)  =   "Named:id=36:Selected"
+            _StyleDefs(54)  =   ":id=36,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+            _StyleDefs(55)  =   "Named:id=37:Caption"
+            _StyleDefs(56)  =   ":id=37,.parent=34,.alignment=2"
+            _StyleDefs(57)  =   "Named:id=38:HighlightRow"
+            _StyleDefs(58)  =   ":id=38,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+            _StyleDefs(59)  =   "Named:id=39:EvenRow"
+            _StyleDefs(60)  =   ":id=39,.parent=33,.bgcolor=&HFFFF00&"
+            _StyleDefs(61)  =   "Named:id=40:OddRow"
+            _StyleDefs(62)  =   ":id=40,.parent=33"
+            _StyleDefs(63)  =   "Named:id=41:RecordSelector"
+            _StyleDefs(64)  =   ":id=41,.parent=34"
+            _StyleDefs(65)  =   "Named:id=42:FilterBar"
+            _StyleDefs(66)  =   ":id=42,.parent=33"
+         End
+         Begin TrueOleDBGrid70.TDBGrid TDBGrid_Att 
+            Height          =   7365
+            Left            =   3780
+            TabIndex        =   18
+            Top             =   180
+            Width           =   10995
+            _ExtentX        =   19394
+            _ExtentY        =   12991
+            _LayoutType     =   4
+            _RowHeight      =   -2147483647
+            _WasPersistedAsPixels=   0
+            Columns(0)._VlistStyle=   0
+            Columns(0)._MaxComboItems=   5
+            Columns(0).Caption=   "EMPLOYEE CODE"
+            Columns(0).DataField=   "employee_code"
+            Columns(0)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(1)._VlistStyle=   0
+            Columns(1)._MaxComboItems=   5
+            Columns(1).Caption=   "DATE"
+            Columns(1).DataField=   "att_date"
+            Columns(1).NumberFormat=   "yyyy-MM-dd"
+            Columns(1)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(2)._VlistStyle=   0
+            Columns(2)._MaxComboItems=   5
+            Columns(2).Caption=   "EMP. CODE"
+            Columns(2).DataField=   "nik"
+            Columns(2)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(3)._VlistStyle=   0
+            Columns(3)._MaxComboItems=   5
+            Columns(3).Caption=   "EMP. NAME"
+            Columns(3).DataField=   "employee_name"
+            Columns(3)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(4)._VlistStyle=   0
+            Columns(4)._MaxComboItems=   5
+            Columns(4).Caption=   "SHIFT CODE"
+            Columns(4).DataField=   "shift_code"
+            Columns(4)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(5)._VlistStyle=   0
+            Columns(5)._MaxComboItems=   5
+            Columns(5).Caption=   "SHIFT NAME"
+            Columns(5).DataField=   "shift_name"
+            Columns(5)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(6)._VlistStyle=   0
+            Columns(6)._MaxComboItems=   5
+            Columns(6).Caption=   "STATUS"
+            Columns(6).DataField=   "status"
+            Columns(6)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(7)._VlistStyle=   0
+            Columns(7)._MaxComboItems=   5
+            Columns(7).Caption=   "TITLE CODE"
+            Columns(7).DataField=   "title_code"
+            Columns(7)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(8)._VlistStyle=   0
+            Columns(8)._MaxComboItems=   5
+            Columns(8).Caption=   "JOB TITLE"
+            Columns(8).DataField=   "title_name"
+            Columns(8)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(9)._VlistStyle=   0
+            Columns(9)._MaxComboItems=   5
+            Columns(9).Caption=   "TIME IN"
+            Columns(9).DataField=   "time_in"
+            Columns(9).NumberFormat=   "hh:mm"
+            Columns(9)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(10)._VlistStyle=   0
+            Columns(10)._MaxComboItems=   5
+            Columns(10).Caption=   "TIME OUT"
+            Columns(10).DataField=   "time_out"
+            Columns(10).NumberFormat=   "hh:mm"
+            Columns(10)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(11)._VlistStyle=   0
+            Columns(11)._MaxComboItems=   5
+            Columns(11).Caption=   "ENTRY DATE"
+            Columns(11).DataField=   "entry_date"
+            Columns(11).NumberFormat=   "yyyy-MM-dd"
+            Columns(11)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(12)._VlistStyle=   0
+            Columns(12)._MaxComboItems=   5
+            Columns(12).Caption=   "DEPT. CODE"
+            Columns(12).DataField=   "department_code"
+            Columns(12)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(13)._VlistStyle=   0
+            Columns(13)._MaxComboItems=   5
+            Columns(13).Caption=   "DEPT. NAME"
+            Columns(13).DataField=   "department_name"
+            Columns(13)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(14)._VlistStyle=   0
+            Columns(14)._MaxComboItems=   5
+            Columns(14).Caption=   "DIV. CODE"
+            Columns(14).DataField=   "division_code"
+            Columns(14)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(15)._VlistStyle=   0
+            Columns(15)._MaxComboItems=   5
+            Columns(15).Caption=   "DIV. NAME"
+            Columns(15).DataField=   "division_name"
+            Columns(15)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(16)._VlistStyle=   0
+            Columns(16)._MaxComboItems=   5
+            Columns(16).Caption=   "DESCRIPTION"
+            Columns(16).DataField=   "descriptioon"
+            Columns(16)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(17)._VlistStyle=   0
+            Columns(17)._MaxComboItems=   5
+            Columns(17).Caption=   "STATUS NAME"
+            Columns(17).DataField=   "absent_name"
+            Columns(17)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns.Count   =   18
+            Splits(0)._UserFlags=   0
+            Splits(0).Size  =   2
+            Splits(0).Size.vt=   2
+            Splits(0).RecordSelectorWidth=   503
+            Splits(0)._SavedRecordSelectors=   0   'False
+            Splits(0).ScrollBars=   3
+            Splits(0).DividerColor=   13160660
+            Splits(0).FilterBar=   -1  'True
+            Splits(0).SpringMode=   0   'False
+            Splits(0)._PropDict=   "_ColumnProps,515,0;_UserFlags,518,3"
+            Splits(0)._ColumnProps(0)=   "Columns.Count=18"
+            Splits(0)._ColumnProps(1)=   "Column(0).Width=2143"
+            Splits(0)._ColumnProps(2)=   "Column(0).DividerColor=0"
+            Splits(0)._ColumnProps(3)=   "Column(0)._WidthInPix=2064"
+            Splits(0)._ColumnProps(4)=   "Column(0)._ColStyle=516"
+            Splits(0)._ColumnProps(5)=   "Column(0).Visible=0"
+            Splits(0)._ColumnProps(6)=   "Column(0).Order=1"
+            Splits(0)._ColumnProps(7)=   "Column(1).Width=2725"
+            Splits(0)._ColumnProps(8)=   "Column(1).DividerColor=0"
+            Splits(0)._ColumnProps(9)=   "Column(1)._WidthInPix=2646"
+            Splits(0)._ColumnProps(10)=   "Column(1)._ColStyle=513"
+            Splits(0)._ColumnProps(11)=   "Column(1).Order=2"
+            Splits(0)._ColumnProps(12)=   "Column(2).Width=1931"
+            Splits(0)._ColumnProps(13)=   "Column(2).DividerColor=0"
+            Splits(0)._ColumnProps(14)=   "Column(2)._WidthInPix=1852"
+            Splits(0)._ColumnProps(15)=   "Column(2)._ColStyle=513"
+            Splits(0)._ColumnProps(16)=   "Column(2).Order=3"
+            Splits(0)._ColumnProps(17)=   "Column(3).Width=3281"
+            Splits(0)._ColumnProps(18)=   "Column(3).DividerColor=0"
+            Splits(0)._ColumnProps(19)=   "Column(3)._WidthInPix=3201"
+            Splits(0)._ColumnProps(20)=   "Column(3)._ColStyle=516"
+            Splits(0)._ColumnProps(21)=   "Column(3).Order=4"
+            Splits(0)._ColumnProps(22)=   "Column(4).Width=1958"
+            Splits(0)._ColumnProps(23)=   "Column(4).DividerColor=0"
+            Splits(0)._ColumnProps(24)=   "Column(4)._WidthInPix=1879"
+            Splits(0)._ColumnProps(25)=   "Column(4)._ColStyle=513"
+            Splits(0)._ColumnProps(26)=   "Column(4).Order=5"
+            Splits(0)._ColumnProps(27)=   "Column(5).Width=2725"
+            Splits(0)._ColumnProps(28)=   "Column(5).DividerColor=0"
+            Splits(0)._ColumnProps(29)=   "Column(5)._WidthInPix=2646"
+            Splits(0)._ColumnProps(30)=   "Column(5)._ColStyle=516"
+            Splits(0)._ColumnProps(31)=   "Column(5).Visible=0"
+            Splits(0)._ColumnProps(32)=   "Column(5).Order=6"
+            Splits(0)._ColumnProps(33)=   "Column(6).Width=1614"
+            Splits(0)._ColumnProps(34)=   "Column(6).DividerColor=0"
+            Splits(0)._ColumnProps(35)=   "Column(6)._WidthInPix=1535"
+            Splits(0)._ColumnProps(36)=   "Column(6)._ColStyle=513"
+            Splits(0)._ColumnProps(37)=   "Column(6).Order=7"
+            Splits(0)._ColumnProps(38)=   "Column(7).Width=185"
+            Splits(0)._ColumnProps(39)=   "Column(7).DividerColor=0"
+            Splits(0)._ColumnProps(40)=   "Column(7)._WidthInPix=106"
+            Splits(0)._ColumnProps(41)=   "Column(7)._ColStyle=516"
+            Splits(0)._ColumnProps(42)=   "Column(7).Visible=0"
+            Splits(0)._ColumnProps(43)=   "Column(7).Order=8"
+            Splits(0)._ColumnProps(44)=   "Column(8).Width=2884"
+            Splits(0)._ColumnProps(45)=   "Column(8).DividerColor=0"
+            Splits(0)._ColumnProps(46)=   "Column(8)._WidthInPix=2805"
+            Splits(0)._ColumnProps(47)=   "Column(8)._ColStyle=516"
+            Splits(0)._ColumnProps(48)=   "Column(8).Order=9"
+            Splits(0)._ColumnProps(49)=   "Column(8)._MinWidth=10"
+            Splits(0)._ColumnProps(50)=   "Column(9).Width=1879"
+            Splits(0)._ColumnProps(51)=   "Column(9).DividerColor=0"
+            Splits(0)._ColumnProps(52)=   "Column(9)._WidthInPix=1799"
+            Splits(0)._ColumnProps(53)=   "Column(9)._ColStyle=513"
+            Splits(0)._ColumnProps(54)=   "Column(9).Order=10"
+            Splits(0)._ColumnProps(55)=   "Column(9)._MinWidth=54215968"
+            Splits(0)._ColumnProps(56)=   "Column(10).Width=2090"
+            Splits(0)._ColumnProps(57)=   "Column(10).DividerColor=0"
+            Splits(0)._ColumnProps(58)=   "Column(10)._WidthInPix=2011"
+            Splits(0)._ColumnProps(59)=   "Column(10)._ColStyle=513"
+            Splits(0)._ColumnProps(60)=   "Column(10).Order=11"
+            Splits(0)._ColumnProps(61)=   "Column(10)._MinWidth=54215968"
+            Splits(0)._ColumnProps(62)=   "Column(11).Width=2725"
+            Splits(0)._ColumnProps(63)=   "Column(11).DividerColor=0"
+            Splits(0)._ColumnProps(64)=   "Column(11)._WidthInPix=2646"
+            Splits(0)._ColumnProps(65)=   "Column(11)._ColStyle=516"
+            Splits(0)._ColumnProps(66)=   "Column(11).Order=12"
+            Splits(0)._ColumnProps(67)=   "Column(12).Width=2725"
+            Splits(0)._ColumnProps(68)=   "Column(12).DividerColor=0"
+            Splits(0)._ColumnProps(69)=   "Column(12)._WidthInPix=2646"
+            Splits(0)._ColumnProps(70)=   "Column(12)._ColStyle=516"
+            Splits(0)._ColumnProps(71)=   "Column(12).Visible=0"
+            Splits(0)._ColumnProps(72)=   "Column(12).Order=13"
+            Splits(0)._ColumnProps(73)=   "Column(13).Width=2725"
+            Splits(0)._ColumnProps(74)=   "Column(13).DividerColor=0"
+            Splits(0)._ColumnProps(75)=   "Column(13)._WidthInPix=2646"
+            Splits(0)._ColumnProps(76)=   "Column(13)._ColStyle=516"
+            Splits(0)._ColumnProps(77)=   "Column(13).Visible=0"
+            Splits(0)._ColumnProps(78)=   "Column(13).Order=14"
+            Splits(0)._ColumnProps(79)=   "Column(14).Width=2725"
+            Splits(0)._ColumnProps(80)=   "Column(14).DividerColor=0"
+            Splits(0)._ColumnProps(81)=   "Column(14)._WidthInPix=2646"
+            Splits(0)._ColumnProps(82)=   "Column(14)._ColStyle=516"
+            Splits(0)._ColumnProps(83)=   "Column(14).Visible=0"
+            Splits(0)._ColumnProps(84)=   "Column(14).Order=15"
+            Splits(0)._ColumnProps(85)=   "Column(15).Width=2725"
+            Splits(0)._ColumnProps(86)=   "Column(15).DividerColor=0"
+            Splits(0)._ColumnProps(87)=   "Column(15)._WidthInPix=2646"
+            Splits(0)._ColumnProps(88)=   "Column(15)._ColStyle=516"
+            Splits(0)._ColumnProps(89)=   "Column(15).Visible=0"
+            Splits(0)._ColumnProps(90)=   "Column(15).Order=16"
+            Splits(0)._ColumnProps(91)=   "Column(16).Width=2725"
+            Splits(0)._ColumnProps(92)=   "Column(16).DividerColor=0"
+            Splits(0)._ColumnProps(93)=   "Column(16)._WidthInPix=2646"
+            Splits(0)._ColumnProps(94)=   "Column(16)._ColStyle=516"
+            Splits(0)._ColumnProps(95)=   "Column(16).Visible=0"
+            Splits(0)._ColumnProps(96)=   "Column(16).Order=17"
+            Splits(0)._ColumnProps(97)=   "Column(17).Width=2725"
+            Splits(0)._ColumnProps(98)=   "Column(17).DividerColor=0"
+            Splits(0)._ColumnProps(99)=   "Column(17)._WidthInPix=2646"
+            Splits(0)._ColumnProps(100)=   "Column(17)._ColStyle=516"
+            Splits(0)._ColumnProps(101)=   "Column(17).Visible=0"
+            Splits(0)._ColumnProps(102)=   "Column(17).Order=18"
+            Splits.Count    =   1
+            PrintInfos(0)._StateFlags=   0
+            PrintInfos(0).Name=   "piInternal 0"
+            PrintInfos(0).PageHeaderFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=Tahoma"
+            PrintInfos(0).PageFooterFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=Tahoma"
+            PrintInfos(0).PageHeaderHeight=   0
+            PrintInfos(0).PageFooterHeight=   0
+            PrintInfos.Count=   1
+            AllowUpdate     =   0   'False
+            Appearance      =   2
+            DefColWidth     =   0
+            HeadLines       =   1
+            FootLines       =   1
+            Caption         =   "LIST OF ATTENDANCE"
+            AllowArrows     =   0   'False
+            MultipleLines   =   0
+            CellTipsWidth   =   0
+            DeadAreaBackColor=   13160660
+            RowDividerColor =   13160660
+            RowSubDividerColor=   13160660
+            DirectionAfterEnter=   1
+            MaxRows         =   250000
+            ViewColumnCaptionWidth=   0
+            ViewColumnWidth =   0
+            _PropDict       =   "_ExtentX,2003,3;_ExtentY,2004,3;_LayoutType,512,2;_RowHeight,16,3;_StyleDefs,513,0;_WasPersistedAsPixels,516,2"
+            _StyleDefs(0)   =   "_StyleRoot:id=0,.parent=-1,.alignment=3,.valignment=0,.bgcolor=&H80000005&"
+            _StyleDefs(1)   =   ":id=0,.fgcolor=&H80000008&,.wraptext=0,.locked=0,.transparentBmp=0"
+            _StyleDefs(2)   =   ":id=0,.fgpicPosition=0,.bgpicMode=0,.appearance=0,.borderSize=0,.ellipsis=0"
+            _StyleDefs(3)   =   ":id=0,.borderColor=&H80000005&,.borderType=0,.bold=0,.fontsize=825,.italic=0"
+            _StyleDefs(4)   =   ":id=0,.underline=0,.strikethrough=0,.charset=0"
+            _StyleDefs(5)   =   ":id=0,.fontname=Tahoma"
+            _StyleDefs(6)   =   "Style:id=1,.parent=0,.namedParent=33"
+            _StyleDefs(7)   =   "CaptionStyle:id=4,.parent=2,.namedParent=37,.alignment=0,.bgcolor=&H80000002&"
+            _StyleDefs(8)   =   ":id=4,.fgcolor=&H80000009&,.bold=-1,.fontsize=825,.italic=0,.underline=0"
+            _StyleDefs(9)   =   ":id=4,.strikethrough=0,.charset=0"
+            _StyleDefs(10)  =   ":id=4,.fontname=Tahoma"
+            _StyleDefs(11)  =   "HeadingStyle:id=2,.parent=1,.namedParent=34"
+            _StyleDefs(12)  =   "FooterStyle:id=3,.parent=1,.namedParent=35"
+            _StyleDefs(13)  =   "InactiveStyle:id=5,.parent=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(14)  =   "SelectedStyle:id=6,.parent=1,.namedParent=36"
+            _StyleDefs(15)  =   "EditorStyle:id=7,.parent=1"
+            _StyleDefs(16)  =   "HighlightRowStyle:id=8,.parent=1,.namedParent=38"
+            _StyleDefs(17)  =   "EvenRowStyle:id=9,.parent=1,.namedParent=39"
+            _StyleDefs(18)  =   "OddRowStyle:id=10,.parent=1,.namedParent=40"
+            _StyleDefs(19)  =   "RecordSelectorStyle:id=11,.parent=2,.namedParent=41"
+            _StyleDefs(20)  =   "FilterBarStyle:id=12,.parent=1,.namedParent=42"
+            _StyleDefs(21)  =   "Splits(0).Style:id=13,.parent=1"
+            _StyleDefs(22)  =   "Splits(0).CaptionStyle:id=22,.parent=4,.bgcolor=&H80000002&,.fgcolor=&H80000009&"
+            _StyleDefs(23)  =   "Splits(0).HeadingStyle:id=14,.parent=2,.alignment=2,.bgcolor=&H8000000F&"
+            _StyleDefs(24)  =   ":id=14,.fgcolor=&H80000002&"
+            _StyleDefs(25)  =   "Splits(0).FooterStyle:id=15,.parent=3"
+            _StyleDefs(26)  =   "Splits(0).InactiveStyle:id=16,.parent=5"
+            _StyleDefs(27)  =   "Splits(0).SelectedStyle:id=18,.parent=6"
+            _StyleDefs(28)  =   "Splits(0).EditorStyle:id=17,.parent=7"
+            _StyleDefs(29)  =   "Splits(0).HighlightRowStyle:id=19,.parent=8"
+            _StyleDefs(30)  =   "Splits(0).EvenRowStyle:id=20,.parent=9"
+            _StyleDefs(31)  =   "Splits(0).OddRowStyle:id=21,.parent=10"
+            _StyleDefs(32)  =   "Splits(0).RecordSelectorStyle:id=23,.parent=11"
+            _StyleDefs(33)  =   "Splits(0).FilterBarStyle:id=24,.parent=12"
+            _StyleDefs(34)  =   "Splits(0).Columns(0).Style:id=32,.parent=13"
+            _StyleDefs(35)  =   "Splits(0).Columns(0).HeadingStyle:id=29,.parent=14"
+            _StyleDefs(36)  =   "Splits(0).Columns(0).FooterStyle:id=30,.parent=15"
+            _StyleDefs(37)  =   "Splits(0).Columns(0).EditorStyle:id=31,.parent=17"
+            _StyleDefs(38)  =   "Splits(0).Columns(1).Style:id=90,.parent=13,.alignment=2"
+            _StyleDefs(39)  =   "Splits(0).Columns(1).HeadingStyle:id=87,.parent=14"
+            _StyleDefs(40)  =   "Splits(0).Columns(1).FooterStyle:id=88,.parent=15"
+            _StyleDefs(41)  =   "Splits(0).Columns(1).EditorStyle:id=89,.parent=17"
+            _StyleDefs(42)  =   "Splits(0).Columns(2).Style:id=50,.parent=13,.alignment=2"
+            _StyleDefs(43)  =   "Splits(0).Columns(2).HeadingStyle:id=47,.parent=14"
+            _StyleDefs(44)  =   "Splits(0).Columns(2).FooterStyle:id=48,.parent=15"
+            _StyleDefs(45)  =   "Splits(0).Columns(2).EditorStyle:id=49,.parent=17"
+            _StyleDefs(46)  =   "Splits(0).Columns(3).Style:id=54,.parent=13"
+            _StyleDefs(47)  =   "Splits(0).Columns(3).HeadingStyle:id=51,.parent=14"
+            _StyleDefs(48)  =   "Splits(0).Columns(3).FooterStyle:id=52,.parent=15"
+            _StyleDefs(49)  =   "Splits(0).Columns(3).EditorStyle:id=53,.parent=17"
+            _StyleDefs(50)  =   "Splits(0).Columns(4).Style:id=94,.parent=13,.alignment=2"
+            _StyleDefs(51)  =   "Splits(0).Columns(4).HeadingStyle:id=91,.parent=14"
+            _StyleDefs(52)  =   "Splits(0).Columns(4).FooterStyle:id=92,.parent=15"
+            _StyleDefs(53)  =   "Splits(0).Columns(4).EditorStyle:id=93,.parent=17"
+            _StyleDefs(54)  =   "Splits(0).Columns(5).Style:id=98,.parent=13"
+            _StyleDefs(55)  =   "Splits(0).Columns(5).HeadingStyle:id=95,.parent=14"
+            _StyleDefs(56)  =   "Splits(0).Columns(5).FooterStyle:id=96,.parent=15"
+            _StyleDefs(57)  =   "Splits(0).Columns(5).EditorStyle:id=97,.parent=17"
+            _StyleDefs(58)  =   "Splits(0).Columns(6).Style:id=62,.parent=13,.alignment=2"
+            _StyleDefs(59)  =   "Splits(0).Columns(6).HeadingStyle:id=59,.parent=14"
+            _StyleDefs(60)  =   "Splits(0).Columns(6).FooterStyle:id=60,.parent=15"
+            _StyleDefs(61)  =   "Splits(0).Columns(6).EditorStyle:id=61,.parent=17"
+            _StyleDefs(62)  =   "Splits(0).Columns(7).Style:id=66,.parent=13"
+            _StyleDefs(63)  =   "Splits(0).Columns(7).HeadingStyle:id=63,.parent=14"
+            _StyleDefs(64)  =   "Splits(0).Columns(7).FooterStyle:id=64,.parent=15"
+            _StyleDefs(65)  =   "Splits(0).Columns(7).EditorStyle:id=65,.parent=17"
+            _StyleDefs(66)  =   "Splits(0).Columns(8).Style:id=102,.parent=13"
+            _StyleDefs(67)  =   "Splits(0).Columns(8).HeadingStyle:id=99,.parent=14"
+            _StyleDefs(68)  =   "Splits(0).Columns(8).FooterStyle:id=100,.parent=15"
+            _StyleDefs(69)  =   "Splits(0).Columns(8).EditorStyle:id=101,.parent=17"
+            _StyleDefs(70)  =   "Splits(0).Columns(9).Style:id=110,.parent=13,.alignment=2"
+            _StyleDefs(71)  =   "Splits(0).Columns(9).HeadingStyle:id=107,.parent=14"
+            _StyleDefs(72)  =   "Splits(0).Columns(9).FooterStyle:id=108,.parent=15"
+            _StyleDefs(73)  =   "Splits(0).Columns(9).EditorStyle:id=109,.parent=17"
+            _StyleDefs(74)  =   "Splits(0).Columns(10).Style:id=74,.parent=13,.alignment=2"
+            _StyleDefs(75)  =   "Splits(0).Columns(10).HeadingStyle:id=71,.parent=14"
+            _StyleDefs(76)  =   "Splits(0).Columns(10).FooterStyle:id=72,.parent=15"
+            _StyleDefs(77)  =   "Splits(0).Columns(10).EditorStyle:id=73,.parent=17"
+            _StyleDefs(78)  =   "Splits(0).Columns(11).Style:id=28,.parent=13"
+            _StyleDefs(79)  =   "Splits(0).Columns(11).HeadingStyle:id=25,.parent=14"
+            _StyleDefs(80)  =   "Splits(0).Columns(11).FooterStyle:id=26,.parent=15"
+            _StyleDefs(81)  =   "Splits(0).Columns(11).EditorStyle:id=27,.parent=17"
+            _StyleDefs(82)  =   "Splits(0).Columns(12).Style:id=46,.parent=13"
+            _StyleDefs(83)  =   "Splits(0).Columns(12).HeadingStyle:id=43,.parent=14"
+            _StyleDefs(84)  =   "Splits(0).Columns(12).FooterStyle:id=44,.parent=15"
+            _StyleDefs(85)  =   "Splits(0).Columns(12).EditorStyle:id=45,.parent=17"
+            _StyleDefs(86)  =   "Splits(0).Columns(13).Style:id=58,.parent=13"
+            _StyleDefs(87)  =   "Splits(0).Columns(13).HeadingStyle:id=55,.parent=14"
+            _StyleDefs(88)  =   "Splits(0).Columns(13).FooterStyle:id=56,.parent=15"
+            _StyleDefs(89)  =   "Splits(0).Columns(13).EditorStyle:id=57,.parent=17"
+            _StyleDefs(90)  =   "Splits(0).Columns(14).Style:id=70,.parent=13"
+            _StyleDefs(91)  =   "Splits(0).Columns(14).HeadingStyle:id=67,.parent=14"
+            _StyleDefs(92)  =   "Splits(0).Columns(14).FooterStyle:id=68,.parent=15"
+            _StyleDefs(93)  =   "Splits(0).Columns(14).EditorStyle:id=69,.parent=17"
+            _StyleDefs(94)  =   "Splits(0).Columns(15).Style:id=78,.parent=13"
+            _StyleDefs(95)  =   "Splits(0).Columns(15).HeadingStyle:id=75,.parent=14"
+            _StyleDefs(96)  =   "Splits(0).Columns(15).FooterStyle:id=76,.parent=15"
+            _StyleDefs(97)  =   "Splits(0).Columns(15).EditorStyle:id=77,.parent=17"
+            _StyleDefs(98)  =   "Splits(0).Columns(16).Style:id=82,.parent=13"
+            _StyleDefs(99)  =   "Splits(0).Columns(16).HeadingStyle:id=79,.parent=14"
+            _StyleDefs(100) =   "Splits(0).Columns(16).FooterStyle:id=80,.parent=15"
+            _StyleDefs(101) =   "Splits(0).Columns(16).EditorStyle:id=81,.parent=17"
+            _StyleDefs(102) =   "Splits(0).Columns(17).Style:id=86,.parent=13"
+            _StyleDefs(103) =   "Splits(0).Columns(17).HeadingStyle:id=83,.parent=14"
+            _StyleDefs(104) =   "Splits(0).Columns(17).FooterStyle:id=84,.parent=15"
+            _StyleDefs(105) =   "Splits(0).Columns(17).EditorStyle:id=85,.parent=17"
+            _StyleDefs(106) =   "Named:id=33:Normal"
+            _StyleDefs(107) =   ":id=33,.parent=0"
+            _StyleDefs(108) =   "Named:id=34:Heading"
+            _StyleDefs(109) =   ":id=34,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(110) =   ":id=34,.wraptext=-1"
+            _StyleDefs(111) =   "Named:id=35:Footing"
+            _StyleDefs(112) =   ":id=35,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(113) =   "Named:id=36:Selected"
+            _StyleDefs(114) =   ":id=36,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+            _StyleDefs(115) =   "Named:id=37:Caption"
+            _StyleDefs(116) =   ":id=37,.parent=34,.alignment=2"
+            _StyleDefs(117) =   "Named:id=38:HighlightRow"
+            _StyleDefs(118) =   ":id=38,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+            _StyleDefs(119) =   "Named:id=39:EvenRow"
+            _StyleDefs(120) =   ":id=39,.parent=33,.bgcolor=&HFFFF00&"
+            _StyleDefs(121) =   "Named:id=40:OddRow"
+            _StyleDefs(122) =   ":id=40,.parent=33"
+            _StyleDefs(123) =   "Named:id=41:RecordSelector"
+            _StyleDefs(124) =   ":id=41,.parent=34"
+            _StyleDefs(125) =   "Named:id=42:FilterBar"
+            _StyleDefs(126) =   ":id=42,.parent=33"
+         End
+      End
+      Begin VB.TextBox txt_group_shift 
+         Appearance      =   0  'Flat
+         BackColor       =   &H8000000B&
+         Height          =   315
+         Left            =   2670
+         Locked          =   -1  'True
+         MaxLength       =   50
+         TabIndex        =   3
+         Top             =   1530
+         Width           =   2895
+      End
+      Begin VB.TextBox txt_company_name 
+         Appearance      =   0  'Flat
+         BackColor       =   &H8000000B&
+         Height          =   315
+         Left            =   2670
+         Locked          =   -1  'True
+         MaxLength       =   50
+         TabIndex        =   2
+         Top             =   1170
+         Width           =   2895
+      End
+      Begin MSComCtl2.DTPicker DTPicker1 
+         Height          =   315
+         Left            =   1350
+         TabIndex        =   4
+         Top             =   480
+         Width           =   1335
+         _ExtentX        =   2355
+         _ExtentY        =   556
+         _Version        =   393216
+         CustomFormat    =   "yyyy-MM-dd"
+         Format          =   90832899
+         CurrentDate     =   40794
+      End
+      Begin TrueOleDBList60.TDBCombo TDBCombo_Group_Shift 
+         Height          =   375
+         Left            =   1350
+         OleObjectBlob   =   "frmListManualAtt.frx":48CE
+         TabIndex        =   6
+         Top             =   1530
+         Width           =   1335
+      End
+      Begin TrueOleDBList60.TDBCombo TDBCombo_company 
+         Height          =   375
+         Left            =   1350
+         OleObjectBlob   =   "frmListManualAtt.frx":682C
+         TabIndex        =   7
+         Top             =   1170
+         Width           =   1335
+      End
+      Begin prj_tpc.vbButton cmdRefresh 
+         Height          =   495
+         Left            =   3510
+         TabIndex        =   8
+         Top             =   390
+         Width           =   1275
+         _ExtentX        =   2249
+         _ExtentY        =   873
+         BTYPE           =   14
+         TX              =   "Refresh"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":8792
+         PICN            =   "frmListManualAtt.frx":87AE
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin prj_tpc.vbButton cmdNext 
+         Height          =   285
+         Left            =   3030
+         TabIndex        =   17
+         Top             =   480
+         Width           =   345
+         _ExtentX        =   609
+         _ExtentY        =   503
+         BTYPE           =   14
+         TX              =   ">"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":9840
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin MSComctlLib.ProgressBar ProgressBar1 
+         Height          =   225
+         Left            =   -69030
+         TabIndex        =   21
+         Top             =   8640
+         Visible         =   0   'False
+         Width           =   8865
+         _ExtentX        =   15637
+         _ExtentY        =   397
+         _Version        =   393216
+         BorderStyle     =   1
+         Appearance      =   0
+         Scrolling       =   1
+      End
+      Begin prj_tpc.vbButton cmdImport 
+         Height          =   555
+         Left            =   -73020
+         TabIndex        =   22
+         Top             =   8610
+         Width           =   1575
+         _ExtentX        =   2778
+         _ExtentY        =   979
+         BTYPE           =   14
+         TX              =   "&Import"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":985C
+         PICN            =   "frmListManualAtt.frx":9878
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin prj_tpc.vbButton cmdBrowse 
+         Height          =   555
+         Left            =   -74700
+         TabIndex        =   23
+         Top             =   8610
+         Width           =   1635
+         _ExtentX        =   2884
+         _ExtentY        =   979
+         BTYPE           =   14
+         TX              =   "&Browse"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":A90A
+         PICN            =   "frmListManualAtt.frx":A926
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin MSComctlLib.ProgressBar ProgressBar2 
+         Height          =   225
+         Left            =   -69030
+         TabIndex        =   28
+         Top             =   8700
+         Visible         =   0   'False
+         Width           =   8865
+         _ExtentX        =   15637
+         _ExtentY        =   397
+         _Version        =   393216
+         BorderStyle     =   1
+         Appearance      =   0
+         Scrolling       =   1
+      End
+      Begin prj_tpc.vbButton cmdImportM 
+         Height          =   555
+         Left            =   -73020
+         TabIndex        =   29
+         Top             =   8670
+         Width           =   1575
+         _ExtentX        =   2778
+         _ExtentY        =   979
+         BTYPE           =   14
+         TX              =   "&Import"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":B9B8
+         PICN            =   "frmListManualAtt.frx":B9D4
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin prj_tpc.vbButton cmdBrowseM 
+         Height          =   555
+         Left            =   -74700
+         TabIndex        =   30
+         Top             =   8670
+         Width           =   1635
+         _ExtentX        =   2884
+         _ExtentY        =   979
+         BTYPE           =   14
+         TX              =   "&Browse"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frmListManualAtt.frx":CA66
+         PICN            =   "frmListManualAtt.frx":CA82
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin VB.Label Label6 
+         Caption         =   "Label1"
+         ForeColor       =   &H00000080&
+         Height          =   225
+         Left            =   -69030
+         TabIndex        =   31
+         Top             =   9000
+         Visible         =   0   'False
+         Width           =   6015
+      End
+      Begin VB.Label Label5 
+         Caption         =   "Label1"
+         ForeColor       =   &H00000080&
+         Height          =   225
+         Left            =   -69030
+         TabIndex        =   24
+         Top             =   8940
+         Visible         =   0   'False
+         Width           =   6015
+      End
+      Begin VB.Label Label2 
+         Caption         =   "DATE"
+         Height          =   195
+         Left            =   180
+         TabIndex        =   11
+         Top             =   540
+         Width           =   645
+      End
+      Begin VB.Label Label4 
+         AutoSize        =   -1  'True
+         Caption         =   "GROUP SHIFT"
+         Height          =   195
+         Left            =   180
+         TabIndex        =   10
+         Top             =   1560
+         Width           =   1095
+      End
+      Begin VB.Label Label1 
+         AutoSize        =   -1  'True
+         Caption         =   "COMPANY"
+         Height          =   195
+         Left            =   180
+         TabIndex        =   9
+         Top             =   1200
+         Width           =   795
+      End
+   End
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   0
+      Top             =   0
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+   End
+   Begin prj_tpc.vbButton cmdExit 
+      Height          =   705
+      Left            =   14100
+      TabIndex        =   25
+      Top             =   10530
+      Width           =   945
+      _ExtentX        =   1667
+      _ExtentY        =   1244
+      BTYPE           =   14
+      TX              =   "&Exit"
+      ENAB            =   -1  'True
+      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      COLTYPE         =   1
+      FOCUSR          =   -1  'True
+      BCOL            =   15790320
+      BCOLO           =   15790320
+      FCOL            =   0
+      FCOLO           =   0
+      MCOL            =   12632256
+      MPTR            =   1
+      MICON           =   "frmListManualAtt.frx":DB14
+      PICN            =   "frmListManualAtt.frx":DB30
+      UMCOL           =   -1  'True
+      SOFT            =   0   'False
+      PICPOS          =   2
+      NGREY           =   0   'False
+      FX              =   0
+      HAND            =   0   'False
+      CHECK           =   0   'False
+      VALUE           =   0   'False
+   End
+   Begin VB.Label Label3 
+      BackStyle       =   0  'Transparent
+      Caption         =   "MANUAL ATTENDANCE"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   285
+      Left            =   390
+      TabIndex        =   1
+      Top             =   150
+      Width           =   4845
+   End
+   Begin VB.Image Image2 
+      Height          =   585
+      Left            =   0
+      Picture         =   "frmListManualAtt.frx":EBC2
+      Stretch         =   -1  'True
+      Top             =   0
+      Width           =   16860
+   End
+End
+Attribute VB_Name = "frm_list_manual_att"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Dim fso As New FileSystemObject
+
+Dim rs As New ADODB.Recordset
+Dim rsCompany As New ADODB.Recordset
+Dim rsGroupShift As New ADODB.Recordset
+Dim rsShift As New ADODB.Recordset
+Dim rsAtt As New ADODB.Recordset
+Dim rsImportAtt As New ADODB.Recordset
+
+Dim Col As TrueOleDBGrid70.Column
+Dim Cols As TrueOleDBGrid70.Columns
+Dim SelBks As TrueOleDBGrid70.SelBookmarks
+
+Dim abstatus As Integer
+Dim v_flag_present As Integer
+Dim v_flag_duty As Integer
+
+Dim vMode As Integer
+
+Private Sub cmdExit_Click()
+    Unload Me
+End Sub
+
+Private Sub cmdNext_Click()
+    vMode = 0
+    DTPicker1.Value = DTPicker1 + 1
+
+    Call load_data_att
+End Sub
+
+Private Sub cmdPrev_Click()
+    vMode = 0
+    DTPicker1.Value = DTPicker1 - 1
+
+    Call load_data_att
+End Sub
+
+Private Sub cmdSearch_Click()
+    vMode = 1
+    
+    Call load_data_att
+End Sub
+
+Private Sub DTPicker1_Validate(Cancel As Boolean)
+    vMode = 0
+    
+    Call load_data_att
+End Sub
+
+Private Sub Form_Load()
+    DTPicker1.Value = Now
+    SSTab1.Tab = 0
+    
+    Call createGridKar
+    Call load_data_company
+    oClause = ""
+    vMode = 0
+    
+    DTPicker_from.Value = Now
+    DTPicker_to.Value = Now
+    
+    SSTab1.TabVisible(1) = False
+
+    Timer1.Enabled = True
+
+    cmdNew.Enabled = False
+    cmdEdit.Enabled = False
+    cmdDelete.Enabled = False
+    cmdRefresh.Enabled = False
+End Sub
+
+Private Sub load_data_company()
+    If rsCompany.State Then rsCompany.Close
+    SQL = "select * from m_company order by company_code"
+    rsCompany.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+
+    TDBCombo_company.RowSource = rsCompany
+End Sub
+
+Private Sub load_data_group_shift()
+    If rsGroupShift.State Then rsGroupShift.Close
+    SQL = "select * from m_shift_group order by group_code"
+    rsGroupShift.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+
+    Set TDBCombo_Group_Shift.RowSource = rsGroupShift
+End Sub
+
+Private Sub load_data_shift()
+    If rsShift.State Then rsShift.Close
+    SQL = "select shift_code,shift_name,flag_day_over " & _
+            "from m_shift where group_code = '" & TDBCombo_Group_Shift.Text & "' " & _
+          "order by shift_code"
+    rsShift.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+
+    Set TDBGrid_Shift.DataSource = rsShift
+End Sub
+
+Public Sub load_data_att()
+Dim vParameter As String
+
+    If rsAtt.State Then rsAtt.Close
+    
+    vParameter = IIf(txt_nik.Text <> "", _
+        "a.employee_code = '" & txt_employee_code.Text & "' AND (DATE(att_date) BETWEEN '" & Format(DTPicker_from.Value, "yyyy-MM-dd") & "' AND '" & Format(DTPicker_to.Value, "yyyy-MM-dd") & "')", _
+        "(DATE(att_date) BETWEEN '" & Format(DTPicker_from.Value, "yyyy-MM-dd") & "' AND '" & Format(DTPicker_to.Value, "yyyy-MM-dd") & "')")
+     
+    SQL = "select a.att_date,a.employee_code,b.nik,b.employee_name,a.status,e.absent_name,b.title_code,c.title_name, " & _
+                "a.time_in,a.time_out,a.entry_date,b.division_code,d.division_name,a.description, " & _
+                "b.department_code, f.department_name, a.shift_code, g.shift_name " & _
+              "from h_attendance a join m_employee b on a.employee_code = b.employee_code " & _
+                "left join m_title c on b.title_code = c.title_code " & _
+                "left join m_division d on b.division_code = d.division_code and b.department_code = d.department_code and b.company_code = d.company_code " & _
+                "join m_absent_status e on a.status = e.absent_code " & _
+                "left join m_department f on b.department_code = f.department_code and b.company_code = f.company_code " & _
+                "left join m_shift g on a.shift_code = g.shift_code "
+                
+    If vMode = 0 Then
+        SQL = SQL & _
+                "where date(a.att_date) = '" & Format(DTPicker1.Value, "yyyy-MM-dd") & "' " & _
+                    "AND a.group_code = '" & TDBCombo_Group_Shift.Text & "' " & _
+                    "AND a.shift_code = '" & TDBGrid_Shift.Columns("shift_code").Value & "' " & oClause
+    Else
+        SQL = SQL & _
+                "where " & vParameter & "" & oClause
+    End If
+    rsAtt.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+
+    TDBGrid_Att.DataSource = rsAtt
+
+    cmdNew.Enabled = IIf(TDBCombo_company.Columns("company_code").Text = "", False, True)
+    cmdEdit.Enabled = IIf(rsAtt.RecordCount = 0, False, True)
+    cmdDelete.Enabled = IIf(rsAtt.RecordCount = 0, False, True)
+    cmdRefresh.Enabled = IIf(rsAtt.RecordCount = 0, False, True)
+    
+    Call load_data_user_access(Me)
+    cmdNew.Enabled = blnUser_Add
+    cmdEdit.Enabled = blnUser_Edit
+    cmdDelete.Enabled = blnUser_Delete
+End Sub
+
+Private Sub showData()
+
+    If TDBGrid_Att.ApproxCount > 0 Then
+        With frm_trans_att_man
+            .DTPicker1.Value = DTPicker1.Value
+            .txt_employee_code.Text = TDBGrid_Att.Columns("employee_code").Value
+            .txt_nik.Text = TDBGrid_Att.Columns("nik").Value
+            .txt_employee_name.Text = TDBGrid_Att.Columns("employee_name").Value
+            
+            .TDBCombo_shift.Text = TDBGrid_Att.Columns("shift_code").Value
+            .txt_shift_name.Text = TDBGrid_Att.Columns("shift_name").Value
+            
+            .TDBCombo_department.Text = TDBGrid_Att.Columns("department_code").Value
+            .txt_department_name.Text = TDBGrid_Att.Columns("department_name").Value
+            .txt_division_code.Text = TDBGrid_Att.Columns("division_code").Value
+            .txt_division_name.Text = TDBGrid_Att.Columns("division_name").Value
+            .txt_title_code.Text = TDBGrid_Att.Columns("title_code").Value
+            .txt_title_name.Text = TDBGrid_Att.Columns("title_name").Value
+            
+            .TDBCombo_Status.Text = TDBGrid_Att.Columns("status").Value
+            .txt_status_name.Text = TDBGrid_Att.Columns("absent_name").Value
+            
+            .DTPicker_from.Value = DTPicker1.Value
+            .DTPicker_to.Value = DTPicker1.Value
+            .DTPicker_from.Enabled = False
+            .DTPicker_to.Enabled = False
+
+            If .TDBCombo_Status.Text = "P" Or .TDBCombo_Status.Text = "DT" Then
+                .ttin.Value = Format(TDBGrid_Att.Columns("time_in").Value, "hh:mm")
+                .ttout.Value = Format(TDBGrid_Att.Columns("time_out").Value, "hh:mm")
+            Else
+                .ttin.Enabled = False
+                .ttout.Enabled = False
+                .ttin.Value = "00:00"
+                .ttout.Value = "00:00"
+            End If
+
+            .txt_description = TDBGrid_Att.Columns("description").Value
+            
+            .chk_all_employee.Enabled = False
+            .editTrans = True
+            .Show vbModal
+        End With
+    End If
+End Sub
+
+Private Sub newData()
+    With frm_trans_att_man
+        .DTPicker1.Value = DTPicker1.Value
+        .DTPicker_from.Value = DTPicker1.Value
+        .DTPicker_to.Value = DTPicker1.Value
+        .TDBCombo_Status.Text = "P"
+        .txt_status_name.Text = "PRESENT"
+        .vGroupCode = TDBCombo_Group_Shift
+        .vShiftCode = TDBGrid_Shift.Columns("shift_code").Value
+        
+        .TDBCombo_shift.Text = TDBGrid_Shift.Columns("shift_code").Value
+        .txt_shift_name.Text = TDBGrid_Shift.Columns("shift_name").Value
+        .editTrans = False
+        .Show vbModal
+    End With
+End Sub
+
+'Private Sub Form_Resize()
+'    Frame1.Width = Me.Width - 500
+'    Frame1.Height = Me.Height - 2500
+'    TDBGrid_Shift.Height = Frame1.Height - 400
+'    TDBGrid_Shift.Width = Frame1.Width - (TDBGrid_Att.Width + 400)
+'    TDBGrid_Att.Height = Frame1.Height - 400
+'End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+    Set frm_list_manual_att = Nothing
+End Sub
+
+Private Sub SSTab1_Click(PreviousTab As Integer)
+    If SSTab1.Tab = 1 Then
+        createGrid
+    ElseIf SSTab1.Tab = 2 Then
+        createGridM
+    End If
+End Sub
+
+Private Sub tdbGrid_Att_DblClick()
+    showData
+End Sub
+
+Private Sub TDBGrid_Att_KeyPress(KeyAscii As Integer)
+    If KeyAscii = 13 Then
+        showData
+    End If
+End Sub
+
+Private Sub TDBGrid_Shift_RowColChange(LastRow As Variant, ByVal LastCol As Integer)
+    Call load_data_att
+End Sub
+
+Private Sub TDBCombo_company_ItemChange()
+    If TDBCombo_company.ApproxCount > 0 Then
+        TDBCombo_company.Text = TDBCombo_company.Columns("company_code").Value
+        txt_company_name.Text = TDBCombo_company.Columns("company_name").Value
+
+        Call load_data_group_shift
+    End If
+End Sub
+
+Private Sub TDBCombo_Group_Shift_ItemChange()
+    If TDBCombo_Group_Shift.ApproxCount > 0 Then
+        TDBCombo_Group_Shift.Text = TDBCombo_Group_Shift.Columns("group_code").Value
+        txt_group_shift.Text = TDBCombo_Group_Shift.Columns("group_name").Value
+
+        Call load_data_shift
+        Call load_data_att
+    End If
+End Sub
+
+Private Sub cmdNew_Click()
+    If TDBGrid_Shift.ApproxCount = 0 Then
+        MsgBox "Invalid Shift Code!" & Chr(13) & "Please Check Your Transaction Again...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    newData
+End Sub
+
+Private Sub cmdEdit_Click()
+    showData
+End Sub
+
+Private Sub cmdRefresh_Click()
+    vMode = 0
+    Call load_data_att
+End Sub
+
+Private Sub Timer1_Timer()
+    Timer1.Enabled = False
+    Call set_company_mode(rsCompany, TDBCombo_company, txt_company_name)
+End Sub
+
+Private Sub clear_filter()
+    For Each Col In TDBGrid_Att.Columns
+        Col.FilterText = ""
+    Next Col
+    rsAtt.Filter = adFilterNone
+End Sub
+
+Private Function getFilter() As String
+Dim tmp As String
+Dim n As Integer
+
+    For Each Col In Cols
+        If Trim(Col.FilterText) <> "" Then
+            n = n + 1
+            If n > 1 Then
+                tmp = tmp & " AND "
+            End If
+            
+            tmp = tmp & Col.DataField & " LIKE '" & Col.FilterText & "*'"
+        End If
+    Next Col
+    getFilter = tmp
+End Function
+
+Private Sub TDBGrid_Att_FilterChange()
+On Error GoTo Err
+
+    Dim i As Integer
+    
+    Set Cols = TDBGrid_Att.Columns
+    i = TDBGrid_Att.Col
+    TDBGrid_Att.HoldFields
+    
+    rsAtt.Filter = getFilter()
+    TDBGrid_Att.Col = i
+    TDBGrid_Att.EditActive = True
+    
+    TDBGrid_Att.SelStart = Len(TDBGrid_Att.Columns(i).FilterText)
+    If TDBGrid_Att.ApproxCount < 1 Then
+        Call clear_filter
+        TDBGrid_Att.Col = i
+    End If
+
+    Exit Sub
+
+Err:
+MsgBox "No Data found in this column " & vbCr _
+& "or invalid data filter", vbCritical, headerMSG
+Call clear_filter
+End Sub
+
+Private Sub cmdDelete_Click()
+Dim i As Integer
+Dim item
+    
+On Error GoTo Err
+    If Not TDBGrid_Att.ApproxCount > 0 Then
+        Exit Sub
+    End If
+        
+    Set SelBks = TDBGrid_Att.SelBookmarks
+    i = MsgBox("Are you sure want to delete " _
+        & SelBks.Count & " attendance's data ?", vbYesNo + vbQuestion, headerMSG)
+    If Not i = vbYes Then Exit Sub
+                
+    i = 0
+    CnG.BeginTrans
+    For Each item In SelBks
+        i = i + 1
+        
+        CnG.Execute "DELETE FROM h_attendance where employee_code = '" & TDBGrid_Att.Columns("employee_code").CellText(item) & "' " _
+            & "and date(att_date) = '" & Format(TDBGrid_Att.Columns("att_date").CellText(item), "yyyy-MM-dd") & "'"
+                
+    Next
+    CnG.CommitTrans
+    Call load_data_att
+    MsgBox i & " attendance's data are successfully deleted", vbInformation, headerMSG
+    
+    '+++++++++++++++++++++++++++++++++ Update Temp Salary Proses ++++++++++++++
+    SQL = "Update temp_sal_proses set salary_proses = 0 where company_code = '" & TDBCombo_company.Text & "'"
+    CnG.Execute SQL
+    '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        
+    Exit Sub
+
+Err:
+CnG.RollbackTrans: MsgBox Err.Description, vbExclamation, headerMSG
+End Sub
+
+Private Sub createGrid()
+   With LynxGrid1
+      .AddColumn "ATT. DATE", 1200, lgAlignCenterCenter, lgDate, "yyyy-MM-dd", , , , , , True
+      .AddColumn "EMP. CODE", 1300, lgAlignCenterCenter, , , , , , , True
+      .AddColumn "EMP. NAME", 2500, , , , , , , , True
+      .AddColumn "GROUP CODE", 800, lgAlignCenterCenter, , , , , , , , True
+      .AddColumn "SHIFT CODE", 800, , , , , , , , , True
+      .AddColumn "ATT. STATUS", 800, lgAlignCenterCenter, , , , , , , True
+      .AddColumn "TIME IN", 1000, lgAlignCenterCenter, lgDate, "hh:mm", , , , , True
+      .AddColumn "TIME OUT", 1000, lgAlignCenterCenter, lgDate, "hh:mm", , , , , True
+      .AddColumn "DESCRIPTION", 3000, lgAlignCenterCenter, , , , , , , True
+      .BackColorBkg = &HFCE1CB
+      .Redraw = True
+   End With
+    
+End Sub
+
+Private Sub createGridM()
+   With LynxGrid2
+      .AddColumn "EMP. CODE", 1200, lgAlignCenterCenter, , , , , , , True
+      .AddColumn "ATT. DATE", 2000, lgAlignCenterCenter, lgDate, "yyyy-MM-dd hh:mm:ss", , , , , , True
+      .BackColorBkg = &HFCE1CB
+      .Redraw = True
+   End With
+    
+End Sub
+
+Private Sub cmdBrowse_Click()
+    CommonDialog1.Filter = "XLS|*.xls"
+    CommonDialog1.initDir = App.Path
+    CommonDialog1.ShowOpen
+    
+    If CommonDialog1.FileName <> "" Then
+        Call fill_grid_excel(CommonDialog1.FileName)
+    End If
+End Sub
+
+Private Sub cmdBrowseM_Click()
+    CommonDialog1.Filter = "XLS|*.xls"
+    CommonDialog1.initDir = App.Path
+    CommonDialog1.ShowOpen
+    
+    If CommonDialog1.FileName <> "" Then
+        Call fill_grid_excelM(CommonDialog1.FileName)
+    End If
+End Sub
+
+Private Sub fill_grid_excel(str_file_name As String)
+On Error GoTo Err
+    Dim strWorksheet As String
+    strWorksheet = "data_attendance"
+    
+    Adodc1.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=" _
+    & str_file_name & ";Extended Properties=Excel 8.0"
+    
+    Adodc1.RecordSource = "select * from [" & strWorksheet & "$]"
+    Adodc1.Refresh
+    LynxGrid1.Redraw = False
+    LynxGrid1.Clear
+    With Adodc1.Recordset
+        If .RecordCount > 0 Then
+            Me.MousePointer = vbHourglass
+            .MoveFirst
+            While Not .EOF
+                LynxGrid1.AddItem .Fields(0) & vbTab & .Fields(1) _
+                        & vbTab & .Fields(2) & vbTab & .Fields(3) _
+                        & vbTab & .Fields(4) & vbTab & .Fields(5) _
+                        & vbTab & .Fields(6) & vbTab & .Fields(7) _
+                        & vbTab & .Fields(8)
+                .MoveNext
+            Wend
+            Me.MousePointer = vbNormal
+        End If
+    End With
+    LynxGrid1.Redraw = True
+    Exit Sub
+    
+Err:
+MsgBox Err.Description, vbExclamation, "Message Error!"
+End Sub
+
+Private Sub fill_grid_excelM(str_file_name As String)
+On Error GoTo Err
+    Dim strWorksheet As String
+    strWorksheet = "data_log"
+    
+    Adodc2.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=" _
+    & str_file_name & ";Extended Properties=Excel 8.0"
+    
+    Adodc2.RecordSource = "select * from [" & strWorksheet & "$]"
+    Adodc2.Refresh
+    LynxGrid2.Redraw = False
+    LynxGrid2.Clear
+    With Adodc2.Recordset
+        If .RecordCount > 0 Then
+            Me.MousePointer = vbHourglass
+            .MoveFirst
+            While Not .EOF
+                LynxGrid2.AddItem .Fields(0) & vbTab & .Fields(1)
+                .MoveNext
+            Wend
+            Me.MousePointer = vbNormal
+        End If
+    End With
+    LynxGrid2.Redraw = True
+    Exit Sub
+    
+Err:
+MsgBox Err.Description, vbExclamation, "Message Error!"
+End Sub
+
+Private Sub cmdImport_Click()
+Dim aa As Integer
+Dim rsnumber As New ADODB.Recordset
+Dim nourut As Long
+Dim v_employee_code As String
+Dim SQL As String
+Dim waktu_in As String, waktu_out As String
+Dim time_in As String, time_out As String
+Dim start_time As String, end_time As String
+
+'On Error Resume Next
+    With LynxGrid1
+        If .Rows > 0 Then
+            ProgressBar1.Visible = True
+            Label5.Visible = True
+            ProgressBar1.Max = .Rows - 1
+            ProgressBar1.Value = 0
+            
+            DoEvents
+            
+            For aa = 0 To .Rows - 1
+                
+                ProgressBar1.Value = aa
+                Label5.Caption = .CellText(aa, 0) & " - " & .CellText(aa, 1)
+                             
+                SQL = "SELECT employee_code FROM m_employee WHERE nik = '" & .CellText(aa, 1) & "' " _
+                            & "AND flag_active <> 0"
+                rsnumber.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+                
+                If rsnumber.RecordCount > 0 Then
+                    v_employee_code = rsnumber!employee_code
+                    
+                    SQL = "DELETE FROM h_attendance " & _
+                          "WHERE att_date = '" & .CellText(aa, 0) & "' " & _
+                            "AND employee_code = '" & .CellText(aa, 1) & "'"
+                    CnG.Execute SQL
+                    
+                    SQL = "SELECT start_time, end_time FROM m_shift " & _
+                      "WHERE group_code = '" & .CellText(aa, 3) & "' " & _
+                        "AND shift_code = '" & .CellText(aa, 4) & "'"
+                    rs.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+                    
+                    If rs.RecordCount > 0 Then
+                        waktu_in = Format(.CellText(aa, 0), "yyyy-MM-dd") & " " & Format(rs!start_time, "hh:mm") & ":00"
+                        waktu_out = Format(.CellText(aa, 0), "yyyy-MM-dd") & " " & Format(rs!end_time, "hh:mm") & ":00"
+                    Else
+                        waktu_in = Format(.CellText(aa, 0), "yyyy-MM-dd") & " 07:00:00"
+                        waktu_out = Format(.CellText(aa, 0), "yyyy-MM-dd") & " 15:00:00"
+                    End If
+                    rs.Close
+                    
+                    '+++++++++++++++++++++MENCARI TANGGAL BATAS JAM MASUK,ISTIRAHAT,KELUAR++++++++
+                    SQL = "Select CAST(concat('" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "',' ', time(start_time)) as datetime) start_time," _
+                            & "CAST(concat('" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "',' ', time(end_time)) as datetime) end_time," _
+                            & "now() tglserver " _
+                            & "from m_shift where shift_code = '" & .CellText(aa, 4) & "' " & _
+                                "AND group_code = '" & .CellText(aa, 3) & "'"
+                '        & "from m_shift where shift_code = '" & txtkdshift.Text & "'"
+                    rs.Open SQL, CnG, adOpenDynamic, adLockReadOnly
+                    
+                    start_time = Format(rs!start_time, "yyyy-MM-dd hh:mm:ss")
+                    If frm_list_manual_att.TDBGrid_Shift.Columns("flag_day_over").Value = 1 Then
+                        end_time = Format(DateAdd("d", 1, rs!end_time), "yyyy-MM-dd hh:mm:ss")
+                    Else
+                        end_time = Format(rs!end_time, "yyyy-MM-dd hh:mm:ss")
+                    End If
+                    
+                    time_in = Format(.CellText(aa, 0), "yyyy-MM-dd") & " " & Format(.CellText(aa, 6), "hh:mm:ss")
+                    If Format(.CellText(aa, 7), "hh:mm:ss") <= Format(.CellText(aa, 6), "hh:mm:ss") Then
+                        time_out = Format(DateAdd("d", 1, .CellText(aa, 0)), "yyyy-MM-dd") & " " & Format(.CellText(aa, 7), "hh:mm") & ":00"
+                    Else
+                        time_out = Format(.CellText(aa, 0), "yyyy-MM-dd") & " " & Format(.CellText(aa, 7), "hh:mm") & ":00"
+                    End If
+                    
+                    rs.Close
+    
+                    If .CellText(aa, 0) <> "" And .CellText(aa, 1) <> "" Then
+                        Select Case .CellText(aa, 5)
+                        Case "P"
+                            SQL = "DELETE FROM h_attendance WHERE date(att_date) = '" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "' " & _
+                                    "AND employee_code = '" & v_employee_code & "'"
+                            CnG.Execute SQL
+                            
+                            SQL = "INSERT INTO h_attendance (employee_code,att_date,group_code,shift_code,status," & _
+                                      "shift_number,start_time,end_time,time_in,time_out,description,entry_date,userinput," & _
+                                      "absent_status,flag_present,flag_duty) " & _
+                                    "VALUES (" & _
+                                      "'" & v_employee_code & "','" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "','" & .CellText(aa, 3) & "'," & _
+                                      "'" & .CellText(aa, 4) & "','" & .CellText(aa, 5) & "',1,'" & start_time & "','" & end_time & "'," & _
+                                      "'" & time_in & "','" & time_out & "'," & _
+                                      "'" & .CellText(aa, 8) & "',now(),'" & LOGIN_NAME & "',0,1,0)"
+                            CnG.Execute SQL
+                        Case "A", "OF", "PR", "S"
+                            If .CellText(aa, 5) = "A" Then
+                                abstatus = 2
+                            ElseIf .CellText(aa, 5) = "OF" Then
+                                abstatus = 6
+                            ElseIf .CellText(aa, 5) = "PR" Then
+                                abstatus = 0
+                            ElseIf .CellText(aa, 5) = "S" Then
+                                abstatus = 1
+                            End If
+                            
+                            SQL = "DELETE FROM h_attendance WHERE date(att_date) = '" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "' " & _
+                                    "AND employee_code = '" & v_employee_code & "'"
+                            CnG.Execute SQL
+                            
+                            SQL = "INSERT INTO h_attendance (att_date,employee_code,group_code,shift_code,status,flag_present,absent_status," & _
+                                    "description,entry_date,userinput,shift_number) " & _
+                                  "VALUES (" & _
+                                    "'" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "','" & v_employee_code & "','" & .CellText(aa, 3) & "'," & _
+                                    "'" & .CellText(aa, 4) & "','" & .CellText(aa, 5) & "',0,'" & abstatus & "'," & _
+                                    "'" & .CellText(aa, 8) & "',now(),'" & LOGIN_NAME & "',1)"
+                            CnG.Execute SQL
+                        Case "DT"
+                            SQL = "DELETE FROM h_attendance WHERE date(att_date) = '" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "' " & _
+                                    "AND employee_code = '" & v_employee_code & "'"
+                            CnG.Execute SQL
+                                
+                            SQL = "INSERT INTO h_attendance (att_date,employee_code,group_code,shift_code,status,time_in,time_out," & _
+                                    "flag_present,flag_duty,absent_status,description,entry_date,userinput,shift_number) " & _
+                                  "VALUES (" & _
+                                    "'" & Format(.CellText(aa, 0), "yyyy-MM-dd") & "','" & v_employee_code & "','" & .CellText(aa, 3) & "'," & _
+                                    "'" & .CellText(aa, 4) & "','" & .CellText(aa, 5) & "'," & _
+                                    "'" & waktu_in & "','" & waktu_out & "'," & _
+                                    "1,1,0,'" & .CellText(aa, 8) & "',now(),'" & LOGIN_NAME & "',1)"
+                            CnG.Execute SQL
+                        End Select
+                    End If
+                End If
+                rsnumber.Close
+                
+                
+                DoEvents
+            Next
+            MsgBox "Import Data Success...!!!", vbInformation, headerMSG
+            
+            '+++++++++++++++++++++++++++++++++ Update Temp Salary Proses ++++++++++++++
+            SQL = "Update temp_sal_proses set salary_proses = 0"
+            CnG.Execute SQL
+            '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            ProgressBar1.Visible = False
+            Label5.Visible = False
+        End If
+    End With
+End Sub
+
+Private Sub cmdImportM_Click()
+Dim aa As Integer
+Dim rsnumber As New ADODB.Recordset
+Dim nourut As Long
+Dim v_employee_code As String
+Dim SQL As String
+
+'On Error Resume Next
+    With LynxGrid2
+        If .Rows > 0 Then
+            ProgressBar2.Visible = True
+            Label6.Visible = True
+            ProgressBar2.Max = .Rows - 1
+            ProgressBar2.Value = 0
+            
+            DoEvents
+            
+            For aa = 0 To .Rows - 1
+                
+                ProgressBar2.Value = aa
+                Label6.Caption = .CellText(aa, 0) & " - " & .CellText(aa, 1)
+                             
+                SQL = "SELECT employee_code FROM m_employee WHERE nik = '" & .CellText(aa, 0) & "' " _
+                            & "AND flag_active <> 0"
+                rsnumber.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+                
+                If rsnumber.RecordCount > 0 Then
+                    v_employee_code = rsnumber!employee_code
+                    
+                    SQL = "DELETE FROM h_log_attendance WHERE employee_code = '" & v_employee_code & "' " & _
+                            "AND att_date = '" & Format(.CellText(aa, 1), "yyyy-MM-dd hh:mm:ss") & "'"
+                    CnG.Execute SQL
+                    
+                    SQL = "DELETE FROM h_attendance WHERE employee_code = '" & v_employee_code & "' " & _
+                            "AND att_date = '" & Format(.CellText(aa, 1), "yyyy-MM-dd hh:mm:ss") & "'"
+                    CnG.Execute SQL
+                    
+                    SQL = "SELECT * FROM h_log_attendance WHERE employee_code = '" & v_employee_code & "' " & _
+                            "AND att_date = '" & Format(.CellText(aa, 1), "yyyy-MM-dd hh:mm:ss") & "'"
+                    rsCari.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+                    
+                    If rsCari.RecordCount = 0 Then
+                        SQL = "INSERT INTO h_log_attendance(att_date,enrollnumber,employee_code,verifymode,flag_io) " & _
+                                "VALUES ( " & _
+                                "'" & Format(.CellText(aa, 1), "yyyy-MM-dd hh:mm:ss") & "','" & .CellText(aa, 0) & "','" & v_employee_code & "',0,0)"
+                        CnG.Execute SQL
+                    End If
+                    rsCari.Close
+                End If
+                rsnumber.Close
+                
+                
+                DoEvents
+            Next
+            MsgBox "Import Data Success...!!!", vbInformation, headerMSG
+            
+            '+++++++++++++++++++++++++++++++++ Update Temp Salary Proses ++++++++++++++
+            SQL = "Update temp_sal_proses set salary_proses = 0"
+            CnG.Execute SQL
+            '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            ProgressBar2.Visible = False
+            Label6.Visible = False
+        End If
+    End With
+End Sub
+
+Private Sub TDBGrid_Att_HeadClick(ByVal ColIndex As Integer)
+    
+    x = x + 1
+    
+    If x Mod 2 <> 1 And vSubject = TDBGrid_Att.Columns(ColIndex).DataField Then
+        oClause = " ORDER BY " + TDBGrid_Att.Columns(ColIndex).DataField + " DESC"
+    Else
+        oClause = " ORDER BY " + TDBGrid_Att.Columns(ColIndex).DataField + " ASC"
+    End If
+    
+    vSubject = TDBGrid_Att.Columns(ColIndex).DataField
+    Call load_data_att
+
+End Sub
+
+Private Sub createGridKar()
+   With LynxGrid3
+      .AddColumn "Employee Code", 1500, lgAlignCenterCenter, , , , , , , True
+      .AddColumn "Name", 3000, , , , , , , , , True
+      .AddColumn "employee_code", 2000, , , , , , , , False
+      .BackColorBkg = &HFCE1CB
+      .Redraw = True
+   End With
+    
+End Sub
+
+Private Sub isiGridKar(pilihan As Integer)
+    If pilihan = 1 Then
+        LynxGrid3.Clear
+        
+        vParam = IIf(DEPARTMENT_CODE <> "" And DIVISION_CODE = "", "a.department_code = '" & DEPARTMENT_CODE & "'", IIf(DEPARTMENT_CODE = "" And DIVISION_CODE = "", "a.company_code = '" & COMPANY_CODE & "'", "a.department_code = '" & DEPARTMENT_CODE & "' AND a.division_code = '" & DIVISION_CODE & "'"))
+        
+        If LOGIN_LEVEL = 100 Then
+            SQL = "select nik,employee_name,employee_code " & _
+                     "from m_employee a " & _
+                     "WHERE flag_active <> 0 AND company_code = '" & TDBCombo_company.Text & "' " & _
+                        "AND (nik LIKE '%" & txt_nik.Text & "%' " & _
+                            "OR employee_name LIKE '%" & txt_nik.Text & "%')"
+        Else
+            SQL = "select nik,employee_name,employee_code " & _
+                     "from m_employee a " & _
+                     "WHERE flag_active <> 0 AND company_code = '" & TDBCombo_company.Text & "' " & _
+                        "AND " & vParam & " " & _
+                        "AND (nik LIKE '%" & txt_nik.Text & "%' " & _
+                            "OR employee_name LIKE '%" & txt_nik.Text & "%') " & _
+                        "AND (level_code = ANY (SELECT access_level_code FROM t_user_access_level WHERE level_code = '" & LOGIN_CODE & "' AND allow_access <> 0))"
+        End If
+        
+        rs.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+        If rs.RecordCount > 0 Then
+            LynxGrid3.Redraw = False
+            rs.MoveFirst
+            While Not rs.EOF
+                LynxGrid3.AddItem rs!nik & vbTab & rs!EMPLOYEE_NAME & vbTab & rs!employee_code
+                rs.MoveNext
+            Wend
+            LynxGrid3.Redraw = True
+            If rs.RecordCount = 1 Then
+                rs.MoveFirst
+                txt_employee_code.Text = rs!employee_code
+                txt_employee_name.Text = rs!EMPLOYEE_NAME
+                txt_nik.Text = rs!nik
+'                TDBCombo1.SetFocus
+            Else
+                LynxGrid3.Visible = True
+                LynxGrid3.SetFocus
+            End If
+        Else
+            
+        End If
+        rs.Close
+    Else
+        If LynxGrid3.Rows > 0 Then
+            txt_nik.Text = LynxGrid3.CellText(LynxGrid3.Row, 0)
+            txt_employee_name.Text = LynxGrid3.CellText(LynxGrid3.Row, 1)
+            txt_employee_code.Text = LynxGrid3.CellText(LynxGrid3.Row, 2)
+        End If
+        LynxGrid3.Visible = False
+    End If
+End Sub
+
+Private Sub LynxGrid3_DblClick()
+    isiGridKar (2)
+End Sub
+
+Private Sub LynxGrid3_KeyPress(KeyAscii As Integer)
+    If KeyAscii = 27 Then
+        LynxGrid3.Visible = False
+    End If
+    If KeyAscii = 13 Then
+        isiGridKar (2)
+    End If
+End Sub
+
+Private Sub LynxGrid3_LostFocus()
+    LynxGrid3.Visible = False
+End Sub
+
+Private Sub txt_nik_Change()
+    If txt_nik.Text = "" Then
+        txt_employee_code.Text = ""
+        txt_employee_name.Text = ""
+    End If
+End Sub
+
+Private Sub txt_nik_KeyPress(KeyAscii As Integer)
+    If KeyAscii = 13 Then
+        isiGridKar (1)
+    End If
+End Sub
+
+Private Sub cmdBrowse_Emp_Click()
+    isiGridKar (1)
+End Sub

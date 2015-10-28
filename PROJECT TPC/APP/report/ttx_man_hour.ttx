@@ -1,0 +1,20 @@
+company_code	string	20
+company_name	string	50
+department_code	string	20
+department_name	string	50
+division_code	string	20
+division_name	string	50
+status_code	string	20
+status_name	string	50
+emp_jan		number
+emp_feb		number
+emp_mar		number
+emp_apr		number
+emp_mei		number
+emp_jun		number
+emp_jul		number
+emp_aug		number
+emp_sep		number
+emp_okt		number
+emp_nov		number
+emp_des		number

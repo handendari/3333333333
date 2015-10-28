@@ -1,0 +1,84 @@
+Line 50: Property TabPicture(0) in SSTab1 had an invalid file reference.
+Line 56: Property TabPicture(1) in SSTab1 had an invalid file reference.
+Line 62: Property TabPicture(2) in SSTab1 had an invalid file reference.
+Line 72: Property TabPicture(3) in SSTab1 had an invalid file reference.
+Line 79: Property TabPicture(4) in SSTab1 had an invalid file reference.
+Line 86: Property TabPicture(5) in SSTab1 had an invalid file reference.
+Line 102: Property TabPicture(0) in SSTab2 had an invalid file reference.
+Line 112: Property TabPicture(1) in SSTab2 had an invalid file reference.
+Line 119: Property TabPicture(2) in SSTab2 had an invalid file reference.
+Line 497: Property MICON in cmdNew_LateConvert had an invalid file reference.
+Line 498: Property PICN in cmdNew_LateConvert had an invalid file reference.
+Line 536: Property MICON in cmdSave_LateConvert had an invalid file reference.
+Line 537: Property PICN in cmdSave_LateConvert had an invalid file reference.
+Line 575: Property MICON in cmdEdit_LateConvert had an invalid file reference.
+Line 576: Property PICN in cmdEdit_LateConvert had an invalid file reference.
+Line 614: Property MICON in cmdDelete_LateConvert had an invalid file reference.
+Line 615: Property PICN in cmdDelete_LateConvert had an invalid file reference.
+Line 653: Property MICON in cmdCancel_LateConvert had an invalid file reference.
+Line 654: Property PICN in cmdCancel_LateConvert had an invalid file reference.
+Line 700: Property MICON in cmdNew_PreAll had an invalid file reference.
+Line 701: Property PICN in cmdNew_PreAll had an invalid file reference.
+Line 739: Property MICON in cmdSave_PreAll had an invalid file reference.
+Line 740: Property PICN in cmdSave_PreAll had an invalid file reference.
+Line 778: Property MICON in cmdEdit_PreAll had an invalid file reference.
+Line 779: Property PICN in cmdEdit_PreAll had an invalid file reference.
+Line 817: Property MICON in cmdDelete_PreAll had an invalid file reference.
+Line 818: Property PICN in cmdDelete_PreAll had an invalid file reference.
+Line 856: Property MICON in cmdCancel_PreAll had an invalid file reference.
+Line 857: Property PICN in cmdCancel_PreAll had an invalid file reference.
+Line 1324: Property MICON in cmdSave_Gen had an invalid file reference.
+Line 1325: Property PICN in cmdSave_Gen had an invalid file reference.
+Line 1449: Property MICON in cmdSave_OT had an invalid file reference.
+Line 1450: Property PICN in cmdSave_OT had an invalid file reference.
+Line 1587: Property OleObjectBlob in TDBCombo_ot1 had an invalid file reference.
+Line 1584: Cannot load control TDBCombo_ot1.
+Line 1595: Property OleObjectBlob in TDBCombo_ot2 had an invalid file reference.
+Line 1592: Cannot load control TDBCombo_ot2.
+Line 1603: Property OleObjectBlob in TDBCombo_ot3 had an invalid file reference.
+Line 1600: Cannot load control TDBCombo_ot3.
+Line 1807: Property MICON in cmdSave_Att had an invalid file reference.
+Line 1808: Property PICN in cmdSave_Att had an invalid file reference.
+Line 1904: Property OleObjectBlob in TDBCombo_company_presence had an invalid file reference.
+Line 1901: Cannot load control TDBCombo_company_presence.
+Line 1912: Property OleObjectBlob in TDBCombo_department_presence had an invalid file reference.
+Line 1909: Cannot load control TDBCombo_department_presence.
+Line 2016: Property MICON in cmdNew_Presence had an invalid file reference.
+Line 2017: Property PICN in cmdNew_Presence had an invalid file reference.
+Line 2055: Property MICON in cmdSave_Presence had an invalid file reference.
+Line 2056: Property PICN in cmdSave_Presence had an invalid file reference.
+Line 2094: Property MICON in cmdEdit_Presence had an invalid file reference.
+Line 2095: Property PICN in cmdEdit_Presence had an invalid file reference.
+Line 2133: Property MICON in cmdDelete_Presence had an invalid file reference.
+Line 2134: Property PICN in cmdDelete_Presence had an invalid file reference.
+Line 2172: Property MICON in cmdCancel_Presence had an invalid file reference.
+Line 2173: Property PICN in cmdCancel_Presence had an invalid file reference.
+Line 2219: Property MICON in cmdNew_Leave had an invalid file reference.
+Line 2220: Property PICN in cmdNew_Leave had an invalid file reference.
+Line 2258: Property MICON in cmdSave_Leave had an invalid file reference.
+Line 2259: Property PICN in cmdSave_Leave had an invalid file reference.
+Line 2297: Property MICON in cmdEdit_Leave had an invalid file reference.
+Line 2298: Property PICN in cmdEdit_Leave had an invalid file reference.
+Line 2336: Property MICON in cmdDelete_Leave had an invalid file reference.
+Line 2337: Property PICN in cmdDelete_Leave had an invalid file reference.
+Line 2375: Property MICON in cmdCancel_Leave had an invalid file reference.
+Line 2376: Property PICN in cmdCancel_Leave had an invalid file reference.
+Line 2445: Property ItemData in cboLeave had an invalid file reference.
+Line 2447: Property List in cboLeave had an invalid file reference.
+Line 2473: Property OleObjectBlob in TDBCombo_company_leave had an invalid file reference.
+Line 2470: Cannot load control TDBCombo_company_leave.
+Line 2481: Property OleObjectBlob in TDBCombo_department_leave had an invalid file reference.
+Line 2478: Cannot load control TDBCombo_department_leave.
+Line 2672: Property MICON in cmdNew_UMK had an invalid file reference.
+Line 2673: Property PICN in cmdNew_UMK had an invalid file reference.
+Line 2711: Property MICON in cmdSave_UMK had an invalid file reference.
+Line 2712: Property PICN in cmdSave_UMK had an invalid file reference.
+Line 2750: Property MICON in cmdEdit_UMK had an invalid file reference.
+Line 2751: Property PICN in cmdEdit_UMK had an invalid file reference.
+Line 2789: Property MICON in cmdDelete_UMK had an invalid file reference.
+Line 2790: Property PICN in cmdDelete_UMK had an invalid file reference.
+Line 2828: Property MICON in cmdCancel_UMK had an invalid file reference.
+Line 2829: Property PICN in cmdCancel_UMK had an invalid file reference.
+Line 3514: Property MICON in cmdExit had an invalid file reference.
+Line 3515: Property PICN in cmdExit had an invalid file reference.
+Line 3546: Property Picture in Image2 had an invalid file reference.

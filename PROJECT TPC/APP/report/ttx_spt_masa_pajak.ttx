@@ -1,0 +1,67 @@
+year			string	4
+month			string	2
+company_npwp		string	20
+company_city		string	20
+company_name		string	50
+company_address		string 	225
+company_telpon		String	20
+company_email		string	50
+leadership		string	50
+leadership_npwp		string	20
+start_date		string	5
+end_date		string	5
+
+basic_salary1_tdk	number
+basic_salary1_ttp	number
+tunj_pph2_tdk		number
+tunj_pph2_ttp		number
+lembur3_tdk		number
+lembur3_ttp		number
+honor4			number
+uangmakan6		number
+jht12_tdk		number
+jht12_ttp		number
+jml_ptkp17_tdk		number
+jml_ptkp17_ttp		number
+pph21_tdk		number
+pph21_ttp		number
+neto15			number
+jml_bln_kerja		number
+nol			number
+jml_employee_tdk	number
+jml_employee_ttp	number
+
+jkk_value_tdk		number
+jkk_value_ttp		number
+jkm_value_tdk		number
+jkm_value_ttp		number
+pl_value_tdk		number
+pl_value_ttp		number
+pl_not_value_tdk	number
+pl_not_value_ttp	number
+alpha_value_tdk		number
+alpha_value_ttp		number
+late_value_tdk		number
+late_value_ttp		number
+other_expense_tdk	number
+other_expense_ttp	number
+
+bonus_tdk		number
+bonus_ttp		number
+thr_tdk			number
+thr_ttp			number
+
+presence_allow_tdk	number
+presence_allow_ttp	number
+meal_allow_tdk		number
+meal_allow_ttp		number
+transport_allow_tdk	number
+transport_allow_ttp	number
+position_allow_tdk	number
+position_allow_ttp	number
+shift2_allow_tdk	number
+shift2_allow_ttp	number
+shift3_allow_tdk	number
+shift3_allow_ttp	number
+other_allow_tdk		number
+other_allow_ttp		number
