@@ -1,0 +1,36 @@
+company_code		string	20
+company_name		string	50
+division_code		string	20
+division_name		string	50
+employee_code		string	20
+nik			string	20
+employee_name		string	100
+title_code		string	20
+title_name		string	50
+start_working		date
+lama_bekerja		number
+working_status		string	50
+place_birth		string	50
+date_birth		date
+usia			number
+sex			number
+religion		number
+marital_status		number
+no_of_child		number
+emp_address		string	100
+no_telp			string	50
+email			string	50
+no_ktp			string	50
+kewarganegaraan		number
+ket			string	100
+no_npwp			string	50
+date_reg_npwp		date
+npwp_address		string	100
+no_jamsostek		string	50
+date_reg_jamsostek	date
+bank_name		string	50
+no_rek			string	50
+nama_rek		string	50
+status_aktif		number
+reason			string	100
+login_name		string	100

@@ -1,0 +1,5 @@
+month			string	50		month
+employee_code		string	50		employee_code
+bank_account		string	50		bank_account
+total_thp		number			total_thp
+

@@ -1,0 +1,65 @@
+MONTH			string	50		MONTH
+company_name		string	50		company_name
+division_code		string	50		division_code
+employee_code		string	50		employee_code
+employee_name		string	50		employee_name
+division_name		string	50		division_name
+title_name		string	50		title_name
+start_working		date			start_working
+
+days_count		number			days_count
+days_present		number			days_present
+
+working_age		number			working_age
+STATUS			string	50		STATUS
+bank_name		string	50		bank_name
+bank_account		string	50		bank_account
+basic_salary		number			basic_salary
+tot_basic_salary	number
+
+count_ot1		number
+count_ot2		number
+count_ot3		number
+count_ot4		number
+
+value_ot1		number
+value_ot2		number
+value_ot3		number
+value_ot4		number
+
+premi			number
+insentif		number
+
+title_allow		number
+performance_allow	number
+family_allow		number
+meal_trans_allow	number
+shift2_count		number
+shift3_count		number
+shift2_allow		number
+shift3_allow		number
+
+other_income		number
+other_expense		number
+loan			number
+
+gaji_tunj		number
+late_value		number
+jstk_value		number
+incentive_allow		number
+pot_alpha		number
+presence_allow		number
+tot_pot			number
+pph21			number
+sisa_gaji		number
+pot_ijin		number
+bonus			number
+
+days_present		number
+days_duty		number
+days_permission		number
+days_sick		number
+days_alpha		number
+days_leave		number
+days_holiday		number
+days_general_leave	number

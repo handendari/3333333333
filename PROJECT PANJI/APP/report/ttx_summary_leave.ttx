@@ -1,0 +1,17 @@
+start_periode			date		start_periode
+end_periode			date		end_periode
+leave_periode			date		leave_periode
+max_leave			number		max_leave
+actual_leave			number		actual_leave
+over_leave			number		over_leave
+leave_available			number		leave_available	
+flag_close			number		flag_close
+nik				string	20	nik
+employee_code			string	20	employee_code
+employee_name			string	50	employee_name
+employee_nick_name		string	50	employee_nick_name
+division_code			string	20	division_code
+division_name			string	50	division_name
+company_code			string	20	company_code
+company_name			string	50	company_name
+flag_active			number		flag_active

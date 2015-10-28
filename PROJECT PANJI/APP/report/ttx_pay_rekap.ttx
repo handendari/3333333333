@@ -1,0 +1,49 @@
+month		date
+company_code	string	20
+company_name	string	50
+area_code	string	20
+area_name	string	50
+basic_salary	number
+trans_allow	number
+funct_allow	number
+staff_allow	number
+telp_allow	number
+others_allow	number
+ot		number
+jkk_persen	number
+jkk_value	number
+jkm_persen	number
+jkm_value	number
+prs_persen	number
+prs_value	number
+tk_persen	number
+tk_value	number
+biaya_jabatan	number
+pph21		number
+deduction	number
+ump		number
+nett_salary	number
+tot_emp		number
+driver_allow	number
+thr		number
+bonus		number
+rapel		number
+tunj_acting	number
+tunj_skill	number
+misc_adjust_in	number
+tax_shortage	number
+loan		number
+misc_ded	number
+returnable	number
+nol		number
+addressed	string	100
+hr_exc		string	100
+hr_exc_title	string	100
+hr_man		string	100
+hr_man_title	string	100
+svp_finance	string	100
+svp_finance_title	string	100
+presdir		string	100
+presdir_title	string	100
+ket		string	100
+meal_allow	number

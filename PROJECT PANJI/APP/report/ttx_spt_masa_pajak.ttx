@@ -1,0 +1,26 @@
+year	string	4
+month	string	2
+company_npwp	string	20
+company_city	string	20
+company_name	string	50
+company_address	string 	225
+company_telpon	String	20
+company_email	string	50
+leadership	string	50
+leadership_npwp	string	20
+start_date	string	5
+end_date	string	5
+basic_salary1	number
+tunj_pph2	number
+lembur3	number
+honor4	number
+uangmakan6	number
+thr7	number
+jht12	number
+jml_ptkp17	number
+pph21	number
+neto15	number
+jml_bln_kerja	number
+jkk_jkm_204	number
+nol	number
+jml_employee	number

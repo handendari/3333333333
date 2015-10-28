@@ -1,0 +1,14 @@
+company_code	string	20
+company_name	string	50
+status		string	50
+employee_code	string	50
+nik		string	50
+employee_name	string	50
+login		string	30
+logout		string	30
+ot		number
+flag_holiday	string	30
+att_date	string	30
+ket		string	100
+shift		string	30
+break		number

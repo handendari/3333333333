@@ -1,0 +1,22 @@
+MONTH			date			MONTH
+company_name		string	50		company_name
+employee_code		string	50		employee_code
+employee_name		string	50		employee_name
+title_name		string	50		title_name
+start_working		date			start_working
+STATUS			string	50		STATUS
+number_wd		number			number_wd
+					
+basic_salary		number			basic_salary
+transport		number			transport
+guaranteed		number			guaranteed
+variable		number			variable
+bonus_thr		number			bonus_thr
+gross_salary		number			gross_salary
+					
+astek			number			astek
+tax			number			tax
+deduction_union		number			deduction_union
+deduction_others	number			deduction_others
+deduction_koperasi	number			deduction_koperasi
+nett_salary		number			nett_salary

@@ -1,0 +1,19 @@
+company_code		string	20
+company_name		string	50
+division_code		string	20
+division_name		string	50
+employee_code		string	20
+nik			string	20
+employee_name		string	100
+spl_date		date
+start_time		string	20
+end_time		string	20
+jam_lembur		number
+ot_15			number
+ot_20			number
+ot_30			number
+ot_40			number
+tot_konversi_ot		number
+user_approval		string	100
+description		string	100
+login_name		string	100

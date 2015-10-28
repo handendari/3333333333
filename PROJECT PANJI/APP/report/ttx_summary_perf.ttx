@@ -1,0 +1,10 @@
+company_code	string	20
+company_name	string	50
+division_code	string	20
+division_name	string	50
+employee_code	string	20
+nik		string	20
+employee_name	string	50
+avg		number
+grade		string	10
+login_name	string	50
