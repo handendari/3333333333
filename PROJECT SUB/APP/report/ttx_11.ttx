@@ -1,0 +1,44 @@
+company_code		String	20	company_code
+company_name		String	50	company_name
+department_code		String	20	department_code
+department_name		String	50	department_name
+division_code		String	50	division_code
+division_name		String	50	division_name
+employee_code		String	50	employee_code
+employee_name		String	50	employee_name
+title_code		String	50	title_code
+title_name		String	50	title_name
+att_date		date		att_date
+enrollnumber		number		enrollnumber
+shift_number		number		shift_number
+shift_code		String	20	shift_code
+start_time		date		start_time
+end_time		date		end_time
+time_in			date		time_in
+time_out		date		time_out
+
+days_count		number		days_count
+days_present		number   	days_present
+days_duty		number   	days_duty
+days_permission		number		days_permission
+days_sick		number		days_sick
+days_other		number		days_other
+days_leave		number		days_leave
+days_holiday		number		days_holiday
+days_general_leave	number		days_general_leave
+days_late		number		days_late
+days_early		number		days_early
+days_ot			number		days_ot
+total_time_in_late	date		total_time_in_late
+total_time_out_early	date		total_time_out_early
+total_time_out_ot	date		total_time_out_ot
+surplus			String	10	surplus
+
+flag_io			number		flag_io
+flag_present		number		flag_present
+flag_duty		number		flag_duty
+flag_late		number		flag_late
+flag_early		number		flag_early
+absent_status		number		absent_status
+description		String	100	description
+entry_date		date		entry_date

@@ -1,0 +1,12 @@
+company_code		String	20	company_code
+company_name		String	50	company_name
+department_code		String	20	department_code
+department_name		String	50	department_name
+division_code		String	50	division_code
+division_name		String	50	division_name
+employee_code		String	50	employee_code
+employee_name		String	50	employee_name
+title_code		String	50	title_code
+title_name		String	50	title_name
+enrollnumber		number		enrollnumber
+flat_active		number		flat_active

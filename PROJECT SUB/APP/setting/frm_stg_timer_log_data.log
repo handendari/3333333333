@@ -1,0 +1,14 @@
+Line 31: Class prj_tpc.vbButton of control cmd_exit was not a loaded control class.
+Line 500: Class prj_tpc.vbButton of control cmdNew_Device was not a loaded control class.
+Line 539: Class prj_tpc.vbButton of control cmdSave_Device was not a loaded control class.
+Line 578: Class prj_tpc.vbButton of control cmdEdit_Device was not a loaded control class.
+Line 617: Class prj_tpc.vbButton of control cmdDelete_Device was not a loaded control class.
+Line 656: Class prj_tpc.vbButton of control cmdCancel_Device was not a loaded control class.
+Line 695: Class prj_tpc.vbButton of control cmd_test was not a loaded control class.
+Line 748: Class prj_tpc.vbButton of control cmdNew was not a loaded control class.
+Line 787: Class prj_tpc.vbButton of control cmdSave was not a loaded control class.
+Line 826: Class prj_tpc.vbButton of control cmdEdit was not a loaded control class.
+Line 865: Class prj_tpc.vbButton of control cmdDelete was not a loaded control class.
+Line 904: Class prj_tpc.vbButton of control cmdCancel was not a loaded control class.
+Line 943: Class prj_tpc.vbButton of control vbButton6 was not a loaded control class.
+Line 1005: Class prj_tpc.vbButton of control cmd_update_device_type was not a loaded control class.
