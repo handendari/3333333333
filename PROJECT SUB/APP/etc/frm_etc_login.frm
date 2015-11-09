@@ -236,7 +236,7 @@ Private Declare Function SetWindowLong Lib "user32" Alias _
         "SetWindowLongA" (ByVal hWnd As Long, ByVal nIndex As Long, _
         ByVal dwNewLong As Long) As Long
 Private Declare Function SetLayeredWindowAttributes Lib "user32" _
-        (ByVal hWnd As Long, ByVal Color As Long, ByVal X As Byte, _
+        (ByVal hWnd As Long, ByVal Color As Long, ByVal x As Byte, _
         ByVal Alpha As Long) As Boolean
         
 Dim int_idx As Integer
@@ -244,7 +244,7 @@ Dim intOKTime As Integer
 
 
 
-Private Sub cmdCancel_Click()
+Private Sub CmdCancel_Click()
 Timer1.Enabled = False
 Timer2.Enabled = True
 End Sub

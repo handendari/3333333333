@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{FE9DED34-E159-408E-8490-B720A5E632C7}#1.0#0"; "zkemkeeper.dll"
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Object = "{0D62356B-DBA2-11D1-B5DF-0060976089D0}#6.0#0"; "TODL6.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Begin VB.Form frm_attendance 
@@ -33,8 +33,8 @@ Begin VB.Form frm_attendance
       TabCaption(0)   =   "Data Fingerprint"
       TabPicture(0)   =   "frm_attendance.frx":058A
       Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "Frame1(0)"
-      Tab(0).Control(1)=   "fra_button_control(1)"
+      Tab(0).Control(0)=   "fra_button_control(1)"
+      Tab(0).Control(1)=   "Frame1(0)"
       Tab(0).ControlCount=   2
       TabCaption(1)   =   "Download Log"
       TabPicture(1)   =   "frm_attendance.frx":05A6
@@ -51,8 +51,8 @@ Begin VB.Form frm_attendance
       TabCaption(2)   =   "Transfer Enroll Data"
       TabPicture(2)   =   "frm_attendance.frx":05C2
       Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "Frame1(2)"
-      Tab(2).Control(1)=   "fra_button_control(2)"
+      Tab(2).Control(0)=   "fra_button_control(2)"
+      Tab(2).Control(1)=   "Frame1(2)"
       Tab(2).ControlCount=   2
       Begin VB.Frame Frame1 
          Caption         =   "Transfer Enroll Data"
@@ -1619,6 +1619,7 @@ Dim lng_second As Long
 Dim dw_work As Long
 Dim strsql As String
 Dim j As Long
+Dim k As Long
 
 Dim rsabsen As New ADODB.Recordset
 Dim rs1 As New ADODB.Recordset
@@ -1634,6 +1635,7 @@ Dim vTglAkhir As String
     dw_work = 0
     i = 0
     j = 0
+    k = 0
     
     vTglAwal = Format(Now, "yyyy-MM-dd")
     vTglAkhir = Format(Now, "yyyy-MM-dd")
@@ -1672,6 +1674,8 @@ Dim vTglAkhir As String
                         "'" & Format(str_date, "yyyy-MM-dd HH:mm:ss") & "', '" & FG_IP_ADDRESS & "', '" & Val(dwEnrollNumber) & "'," & _
                         "'" & dwVerifyMode & "','" & dwInOutMode & "',0,Now())"
                 CnG.Execute SQL
+                
+                k = k + 1
             End If
             rs7.Close
             
@@ -1726,7 +1730,7 @@ Dim vTglAkhir As String
 
     MousePointer = vbDefault
     If public_int_caller = 0 Then
-        MsgBox i & " are successfully downloaded...", vbInformation, headerMSG
+        MsgBox k & " are successfully downloaded...", vbInformation, headerMSG
         lbl_progress.Caption = "Finish Downloading..."
         
         If vAutoDeleteLog <> 0 Then
@@ -1767,6 +1771,7 @@ Dim lng_minute As Long
 Dim lng_second As Long
 Dim dw_work As Long
 Dim j As Long
+Dim k As Long
 
 Dim rs1 As New ADODB.Recordset
 Dim rs7 As New ADODB.Recordset
@@ -1783,6 +1788,7 @@ Dim rsabsen As New ADODB.Recordset
     dw_work = 0
     i = 0
     j = 0
+    k = 0
     vTglAwal = Format(Now, "yyyy-MM-dd")
     vTglAkhir = Format(Now, "yyyy-MM-dd")
     
@@ -1826,6 +1832,8 @@ Dim rsabsen As New ADODB.Recordset
                         "'" & Format(str_date, "yyyy-MM-dd HH:mm:ss") & "', '" & FG_IP_ADDRESS & "', '" & Val(dwEnrollNumber) & "'," & _
                         "'" & dwVerifyMode & "','" & dwInOutMode & "',0,Now())"
                 CnG.Execute SQL
+                
+                k = k + 1
             End If
             rs7.Close
             
