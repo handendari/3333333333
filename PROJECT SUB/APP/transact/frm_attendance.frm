@@ -1887,7 +1887,7 @@ Dim rsabsen As New ADODB.Recordset
     
     MousePointer = vbDefault
     If public_int_caller = 0 Then
-        MsgBox i & " are successfully downloaded...", vbInformation, headerMSG
+        MsgBox k & " are successfully downloaded...", vbInformation, headerMSG
         lbl_progress.Caption = "Finish Downloading..."
         
         If vAutoDeleteLog <> 0 Then

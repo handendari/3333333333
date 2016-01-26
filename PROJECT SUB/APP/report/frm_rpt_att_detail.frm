@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Object = "{0D62356B-DBA2-11D1-B5DF-0060976089D0}#6.0#0"; "TODL6.OCX"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
@@ -18,6 +18,47 @@ Begin VB.Form frm_rpt_att_detail
    ScaleHeight     =   6570
    ScaleWidth      =   10560
    ShowInTaskbar   =   0   'False
+   Begin prj_absensi.LynxGrid LynxGrid1 
+      Height          =   2805
+      Left            =   4680
+      TabIndex        =   42
+      Top             =   3210
+      Visible         =   0   'False
+      Width           =   4335
+      _ExtentX        =   7646
+      _ExtentY        =   4948
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty FontHeader {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BackColorSel    =   12937777
+      ForeColorSel    =   16777215
+      CustomColorFrom =   16572875
+      CustomColorTo   =   14722429
+      GridColor       =   16367254
+      FocusRectColor  =   9895934
+      Appearance      =   0
+      ColumnHeaderSmall=   0   'False
+      TotalsLineShow  =   0   'False
+      FocusRowHighlightKeepTextForecolor=   0   'False
+      ShowRowNumbers  =   0   'False
+      ShowRowNumbersVary=   0   'False
+      AllowColumnResizing=   -1  'True
+   End
    Begin VB.TextBox txt_company_name 
       Appearance      =   0  'Flat
       Height          =   315
@@ -50,7 +91,6 @@ Begin VB.Form frm_rpt_att_detail
       TabPicture(1)   =   "frm_rpt_att_detail.frx":05A6
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame2"
-      Tab(1).Control(0).Enabled=   0   'False
       Tab(1).ControlCount=   1
       TabCaption(2)   =   "PERIODE"
       TabPicture(2)   =   "frm_rpt_att_detail.frx":05C2
@@ -79,16 +119,15 @@ Begin VB.Form frm_rpt_att_detail
             Caption         =   "Frame5"
             Height          =   615
             Left            =   3600
-            TabIndex        =   28
+            TabIndex        =   27
             Top             =   960
             Width           =   4575
             Begin VB.TextBox txt_monthly_employee_code 
                Appearance      =   0  'Flat
                Height          =   315
                Left            =   0
-               Locked          =   -1  'True
                MaxLength       =   50
-               TabIndex        =   31
+               TabIndex        =   29
                Top             =   240
                Width           =   1335
             End
@@ -98,24 +137,54 @@ Begin VB.Form frm_rpt_att_detail
                Left            =   1920
                Locked          =   -1  'True
                MaxLength       =   50
-               TabIndex        =   30
+               TabIndex        =   28
                Top             =   240
                Width           =   2415
             End
-            Begin VB.CommandButton cmd_monthly_browse_employee 
-               Caption         =   "..."
-               Height          =   300
+            Begin prj_absensi.vbButton cmd_monthly_browse_employee 
+               Height          =   315
                Left            =   1440
-               TabIndex        =   29
+               TabIndex        =   40
                Top             =   240
                Width           =   375
+               _ExtentX        =   661
+               _ExtentY        =   556
+               BTYPE           =   14
+               TX              =   "..."
+               ENAB            =   -1  'True
+               BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "MS Sans Serif"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               COLTYPE         =   1
+               FOCUSR          =   -1  'True
+               BCOL            =   15790320
+               BCOLO           =   15790320
+               FCOL            =   0
+               FCOLO           =   0
+               MCOL            =   12632256
+               MPTR            =   1
+               MICON           =   "frm_rpt_att_detail.frx":05F9
+               UMCOL           =   -1  'True
+               SOFT            =   0   'False
+               PICPOS          =   0
+               NGREY           =   0   'False
+               FX              =   0
+               HAND            =   0   'False
+               CHECK           =   0   'False
+               VALUE           =   0   'False
             End
          End
          Begin VB.ComboBox cbo_monthly_company 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":05F9
+            ItemData        =   "frm_rpt_att_detail.frx":0615
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":0603
+            List            =   "frm_rpt_att_detail.frx":061F
             TabIndex        =   3
             Text            =   "..."
             Top             =   840
@@ -131,7 +200,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM"
-            Format          =   171114499
+            Format          =   83361795
             UpDown          =   -1  'True
             CurrentDate     =   39278
          End
@@ -140,7 +209,7 @@ Begin VB.Form frm_rpt_att_detail
             Caption         =   "EMPLOYEE"
             Height          =   195
             Left            =   720
-            TabIndex        =   32
+            TabIndex        =   30
             Top             =   1200
             Width           =   870
          End
@@ -177,14 +246,6 @@ Begin VB.Form frm_rpt_att_detail
             TabIndex        =   24
             Top             =   960
             Width           =   4575
-            Begin VB.CommandButton cmd_periode_browse_employee 
-               Caption         =   "..."
-               Height          =   300
-               Left            =   1440
-               TabIndex        =   27
-               Top             =   240
-               Width           =   375
-            End
             Begin VB.TextBox txt_periode_employee_name 
                Appearance      =   0  'Flat
                Height          =   315
@@ -199,18 +260,55 @@ Begin VB.Form frm_rpt_att_detail
                Appearance      =   0  'Flat
                Height          =   315
                Left            =   0
-               Locked          =   -1  'True
                MaxLength       =   50
                TabIndex        =   25
                Top             =   240
                Width           =   1335
             End
+            Begin prj_absensi.vbButton cmd_periode_browse_employee 
+               Height          =   315
+               Left            =   1440
+               TabIndex        =   41
+               Top             =   240
+               Width           =   375
+               _ExtentX        =   661
+               _ExtentY        =   556
+               BTYPE           =   14
+               TX              =   "..."
+               ENAB            =   -1  'True
+               BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "MS Sans Serif"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               COLTYPE         =   1
+               FOCUSR          =   -1  'True
+               BCOL            =   15790320
+               BCOLO           =   15790320
+               FCOL            =   0
+               FCOLO           =   0
+               MCOL            =   12632256
+               MPTR            =   1
+               MICON           =   "frm_rpt_att_detail.frx":0632
+               UMCOL           =   -1  'True
+               SOFT            =   0   'False
+               PICPOS          =   0
+               NGREY           =   0   'False
+               FX              =   0
+               HAND            =   0   'False
+               CHECK           =   0   'False
+               VALUE           =   0   'False
+            End
          End
          Begin VB.ComboBox cbo_periode_employee 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":0616
+            ItemData        =   "frm_rpt_att_detail.frx":064E
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":0620
+            List            =   "frm_rpt_att_detail.frx":0658
             TabIndex        =   7
             Text            =   "..."
             Top             =   1200
@@ -227,9 +325,9 @@ Begin VB.Form frm_rpt_att_detail
          End
          Begin VB.ComboBox cbo_periode_company 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":0631
+            ItemData        =   "frm_rpt_att_detail.frx":0669
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":063B
+            List            =   "frm_rpt_att_detail.frx":0673
             TabIndex        =   6
             Text            =   "..."
             Top             =   840
@@ -237,9 +335,9 @@ Begin VB.Form frm_rpt_att_detail
          End
          Begin VB.ComboBox cbo_periode_to 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":064E
+            ItemData        =   "frm_rpt_att_detail.frx":0686
             Left            =   3600
-            List            =   "frm_rpt_att_detail.frx":0658
+            List            =   "frm_rpt_att_detail.frx":0690
             TabIndex        =   9
             Text            =   "..."
             Top             =   1560
@@ -255,7 +353,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   171114499
+            Format          =   83361795
             CurrentDate     =   39278
          End
          Begin MSComCtl2.DTPicker DTPicker_periode_to 
@@ -268,7 +366,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   171114499
+            Format          =   83361795
             CurrentDate     =   39278
          End
          Begin VB.Label Label8 
@@ -302,14 +400,14 @@ Begin VB.Form frm_rpt_att_detail
       Begin VB.Frame Frame5 
          Height          =   2655
          Left            =   -74160
-         TabIndex        =   33
+         TabIndex        =   31
          Top             =   960
          Width           =   8415
          Begin VB.ComboBox cbo_daily_company 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":0666
+            ItemData        =   "frm_rpt_att_detail.frx":069E
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":0670
+            List            =   "frm_rpt_att_detail.frx":06A8
             TabIndex        =   0
             Text            =   "..."
             Top             =   840
@@ -320,24 +418,16 @@ Begin VB.Form frm_rpt_att_detail
             Caption         =   "Frame5"
             Height          =   615
             Left            =   3600
-            TabIndex        =   34
+            TabIndex        =   32
             Top             =   960
             Width           =   4575
-            Begin VB.CommandButton cmd_daily_browse_employee 
-               Caption         =   "..."
-               Height          =   300
-               Left            =   1440
-               TabIndex        =   37
-               Top             =   240
-               Width           =   375
-            End
             Begin VB.TextBox txt_daily_employee_name 
                Appearance      =   0  'Flat
                Height          =   315
                Left            =   1920
                Locked          =   -1  'True
                MaxLength       =   50
-               TabIndex        =   36
+               TabIndex        =   34
                Top             =   240
                Width           =   2415
             End
@@ -345,18 +435,55 @@ Begin VB.Form frm_rpt_att_detail
                Appearance      =   0  'Flat
                Height          =   315
                Left            =   0
-               Locked          =   -1  'True
                MaxLength       =   50
-               TabIndex        =   35
+               TabIndex        =   33
                Top             =   240
                Width           =   1335
+            End
+            Begin prj_absensi.vbButton cmd_daily_browse_employee 
+               Height          =   315
+               Left            =   1440
+               TabIndex        =   43
+               Top             =   240
+               Width           =   375
+               _ExtentX        =   661
+               _ExtentY        =   556
+               BTYPE           =   14
+               TX              =   "..."
+               ENAB            =   -1  'True
+               BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "MS Sans Serif"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               COLTYPE         =   1
+               FOCUSR          =   -1  'True
+               BCOL            =   15790320
+               BCOLO           =   15790320
+               FCOL            =   0
+               FCOLO           =   0
+               MCOL            =   12632256
+               MPTR            =   1
+               MICON           =   "frm_rpt_att_detail.frx":06BB
+               UMCOL           =   -1  'True
+               SOFT            =   0   'False
+               PICPOS          =   0
+               NGREY           =   0   'False
+               FX              =   0
+               HAND            =   0   'False
+               CHECK           =   0   'False
+               VALUE           =   0   'False
             End
          End
          Begin VB.ComboBox cbo_daily_employee 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":0683
+            ItemData        =   "frm_rpt_att_detail.frx":06D7
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":068D
+            List            =   "frm_rpt_att_detail.frx":06E1
             TabIndex        =   1
             Text            =   "..."
             Top             =   1200
@@ -372,7 +499,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   171114499
+            Format          =   83361795
             CurrentDate     =   39278
          End
          Begin VB.Label Label10 
@@ -380,7 +507,7 @@ Begin VB.Form frm_rpt_att_detail
             Caption         =   "COMPANY"
             Height          =   195
             Left            =   720
-            TabIndex        =   40
+            TabIndex        =   37
             Top             =   840
             Width           =   795
          End
@@ -389,7 +516,7 @@ Begin VB.Form frm_rpt_att_detail
             Caption         =   "DAY"
             Height          =   195
             Left            =   720
-            TabIndex        =   39
+            TabIndex        =   36
             Top             =   1560
             Width           =   330
          End
@@ -398,7 +525,7 @@ Begin VB.Form frm_rpt_att_detail
             Caption         =   "EMPLOYEE"
             Height          =   195
             Left            =   720
-            TabIndex        =   38
+            TabIndex        =   35
             Top             =   1200
             Width           =   870
          End
@@ -420,7 +547,7 @@ Begin VB.Form frm_rpt_att_detail
       Begin prj_absensi.vbButton cmdExit 
          Height          =   705
          Left            =   8220
-         TabIndex        =   41
+         TabIndex        =   38
          Top             =   330
          Width           =   945
          _ExtentX        =   1667
@@ -445,8 +572,8 @@ Begin VB.Form frm_rpt_att_detail
          FCOLO           =   0
          MCOL            =   12632256
          MPTR            =   1
-         MICON           =   "frm_rpt_att_detail.frx":069E
-         PICN            =   "frm_rpt_att_detail.frx":06BA
+         MICON           =   "frm_rpt_att_detail.frx":06F2
+         PICN            =   "frm_rpt_att_detail.frx":070E
          UMCOL           =   -1  'True
          SOFT            =   0   'False
          PICPOS          =   2
@@ -459,7 +586,7 @@ Begin VB.Form frm_rpt_att_detail
       Begin prj_absensi.vbButton cmdPrint 
          Height          =   705
          Left            =   7200
-         TabIndex        =   42
+         TabIndex        =   39
          Top             =   330
          Width           =   945
          _ExtentX        =   1667
@@ -484,8 +611,8 @@ Begin VB.Form frm_rpt_att_detail
          FCOLO           =   0
          MCOL            =   12632256
          MPTR            =   1
-         MICON           =   "frm_rpt_att_detail.frx":174C
-         PICN            =   "frm_rpt_att_detail.frx":1768
+         MICON           =   "frm_rpt_att_detail.frx":17A0
+         PICN            =   "frm_rpt_att_detail.frx":17BC
          UMCOL           =   -1  'True
          SOFT            =   0   'False
          PICPOS          =   2
@@ -499,7 +626,7 @@ Begin VB.Form frm_rpt_att_detail
    Begin TrueOleDBList60.TDBCombo TDBCombo_company 
       Height          =   375
       Left            =   1200
-      OleObjectBlob   =   "frm_rpt_att_detail.frx":27FA
+      OleObjectBlob   =   "frm_rpt_att_detail.frx":284E
       TabIndex        =   21
       Top             =   240
       Width           =   1695
@@ -691,21 +818,6 @@ Else
     fra_periode_employee.Visible = True
     txt_periode_employee_code = "": txt_periode_employee_name = ""
 End If
-End Sub
-
-Private Sub cmd_daily_browse_employee_Click()
-frm_lookup_mst_employee.public_int_mode = 6
-frm_lookup_mst_employee.Show 1
-End Sub
-
-Private Sub cmd_monthly_browse_employee_Click()
-frm_lookup_mst_employee.public_int_mode = 5
-frm_lookup_mst_employee.Show 1
-End Sub
-
-Private Sub cmd_periode_browse_employee_Click()
-frm_lookup_mst_employee.public_int_mode = 4
-frm_lookup_mst_employee.Show 1
 End Sub
 
 Private Sub Command1_Click()
@@ -972,7 +1084,7 @@ str_param_periode = "MONTHLY : (" & Format(DTPicker_monthly.Value, "yyyy-MM") & 
 Call a.rpt_view(str_sql, str_file, str_param_periode)
 End Sub
 
-Private Sub cmdPrint_Click()
+Private Sub CmdPrint_Click()
 If SSTab1.Tab = 2 Then
     If check_valid_periode Then
         Call rpt_periode
@@ -1000,6 +1112,7 @@ Private Sub Form_Load()
 Adodc_company.ConnectionString = strConn
 
 Call load_data_company
+Call createGridKar
 
 DTPicker_periode_from.Value = Now
 DTPicker_periode_to.Value = Now
@@ -1016,7 +1129,7 @@ cbo_monthly_employee.ListIndex = 0
 cbo_daily_company.ListIndex = 1
 cbo_daily_employee.ListIndex = 0
 
-timer1.Enabled = True
+Timer1.Enabled = True
 SSTab1.Tab = 0
 End Sub
 
@@ -1068,7 +1181,7 @@ MsgBox KeyAscii
 End Sub
 
 Private Sub Timer1_Timer()
-timer1.Enabled = False
+Timer1.Enabled = False
 Call set_company_mode(Adodc_company, TDBCombo_company, txt_company_name)
 If LOGIN_LEVEL = 100 Then
     cbo_daily_company.Enabled = True
@@ -1079,4 +1192,173 @@ Else
     cbo_monthly_company.Enabled = False
     cbo_periode_company.Enabled = False
 End If
+End Sub
+
+Private Sub createGridKar()
+   With LynxGrid1
+      .AddColumn "CODE", 1500, lgAlignCenterCenter, , , , , , , True
+      .AddColumn "NAME", 2000, , , , , , , , , True
+      .BackColorBkg = &HFCE1CB
+      .Redraw = True
+   End With
+    
+End Sub
+
+Private Sub isiGridKar(pilihan As Integer)
+Dim vEmployeeCode As String
+    If pilihan = 1 Then
+        LynxGrid1.Clear
+        
+        vEmployeeCode = IIf(SSTab1.Tab = 0, txt_daily_employee_code.Text, IIf(SSTab1.Tab = 1, txt_monthly_employee_code.Text, txt_periode_employee_code.Text))
+        If rs.State Then rs.Close
+        SQL = "SELECT employee_code, employee_name " & _
+              "FROM m_employee " & _
+                 "WHERE flag_active <> 0 " & _
+                    "AND company_code = '" & TDBCombo_company.Columns("company_code").Value & "' " & _
+                    "AND (employee_code LIKE '%" & vEmployeeCode & "%' " & _
+                        "OR employee_name LIKE '%" & vEmployeeCode & "%')"
+        
+        rs.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
+        If rs.RecordCount > 0 Then
+            LynxGrid1.Redraw = False
+            rs.MoveFirst
+            While Not rs.EOF
+                LynxGrid1.AddItem rs!employee_code & vbTab & rs!EMPLOYEE_NAME
+                rs.MoveNext
+            Wend
+            LynxGrid1.Redraw = True
+            If rs.RecordCount = 1 Then
+                rs.MoveFirst
+                
+                If SSTab1.Tab = 0 Then
+                    txt_daily_employee_code.Text = rs!employee_code
+                    txt_daily_employee_name.Text = rs!EMPLOYEE_NAME
+                ElseIf SSTab1.Tab = 1 Then
+                    txt_monthly_employee_code.Text = rs!employee_code
+                    txt_monthly_employee_name.Text = rs!EMPLOYEE_NAME
+                ElseIf SSTab1.Tab = 2 Then
+                    txt_periode_employee_code.Text = rs!employee_code
+                    txt_periode_employee_name.Text = rs!EMPLOYEE_NAME
+                End If
+            Else
+                LynxGrid1.Visible = True
+                LynxGrid1.SetFocus
+            End If
+        Else
+            
+        End If
+        rs.Close
+    Else
+        If LynxGrid1.Rows > 0 Then
+            If SSTab1.Tab = 0 Then
+                txt_daily_employee_code.Text = LynxGrid1.CellText(LynxGrid1.Row, 0)
+                txt_daily_employee_name.Text = LynxGrid1.CellText(LynxGrid1.Row, 1)
+            ElseIf SSTab1.Tab = 1 Then
+                txt_monthly_employee_code.Text = LynxGrid1.CellText(LynxGrid1.Row, 0)
+                txt_monthly_employee_name.Text = LynxGrid1.CellText(LynxGrid1.Row, 1)
+            ElseIf SSTab1.Tab = 2 Then
+                txt_periode_employee_code.Text = LynxGrid1.CellText(LynxGrid1.Row, 0)
+                txt_periode_employee_name.Text = LynxGrid1.CellText(LynxGrid1.Row, 1)
+            End If
+        End If
+        LynxGrid1.Visible = False
+    End If
+End Sub
+
+Private Sub LynxGrid1_DblClick()
+    isiGridKar (2)
+End Sub
+
+Private Sub LynxGrid1_KeyPress(KeyAscii As Integer)
+    If KeyAscii = 27 Then
+        LynxGrid1.Visible = False
+    End If
+    If KeyAscii = 13 Then
+        isiGridKar (2)
+    End If
+End Sub
+
+Private Sub LynxGrid1_LostFocus()
+    LynxGrid1.Visible = False
+End Sub
+
+Private Sub txt_daily_employee_code_Change()
+    If txt_daily_employee_code.Text = "" Then
+        txt_daily_employee_code.Text = ""
+        txt_daily_employee_name.Text = ""
+    End If
+End Sub
+
+Private Sub txt_monthly_employee_code_Change()
+    If txt_monthly_employee_code.Text = "" Then
+        txt_monthly_employee_code.Text = ""
+        txt_monthly_employee_name.Text = ""
+    End If
+End Sub
+
+Private Sub txt_periode_employee_code_Change()
+    If txt_periode_employee_code.Text = "" Then
+        txt_periode_employee_code.Text = ""
+        txt_periode_employee_name.Text = ""
+    End If
+End Sub
+
+Private Sub txt_daily_employee_code_KeyPress(KeyAscii As Integer)
+    If TDBCombo_company.Text = "" Then
+        MsgBox "Company not selected...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    If KeyAscii = 13 Then
+        isiGridKar (1)
+    End If
+End Sub
+
+Private Sub txt_monthly_employee_code_KeyPress(KeyAscii As Integer)
+    If TDBCombo_company.Text = "" Then
+        MsgBox "Company not selected...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    If KeyAscii = 13 Then
+        isiGridKar (1)
+    End If
+End Sub
+
+Private Sub txt_periode_employee_code_KeyPress(KeyAscii As Integer)
+    If TDBCombo_company.Text = "" Then
+        MsgBox "Company not selected...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    If KeyAscii = 13 Then
+        isiGridKar (1)
+    End If
+End Sub
+
+Private Sub cmd_daily_browse_employee_Click()
+    If TDBCombo_company.Text = "" Then
+        MsgBox "Company not selected...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    isiGridKar (1)
+End Sub
+
+Private Sub cmd_monthly_browse_employee_Click()
+    If TDBCombo_company.Text = "" Then
+        MsgBox "Company not selected...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    isiGridKar (1)
+End Sub
+
+Private Sub cmd_periode_browse_employee_Click()
+    If TDBCombo_company.Text = "" Then
+        MsgBox "Company not selected...", vbExclamation, headerMSG
+        Exit Sub
+    End If
+    
+    isiGridKar (1)
 End Sub

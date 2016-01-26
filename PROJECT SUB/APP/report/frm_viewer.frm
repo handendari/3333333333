@@ -51,36 +51,38 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
-
-Public Sub rpt_view _
-(ByVal sql_proc As String, ByVal rpt_file As String, ByVal str_param As String)
 Dim CrApp As New CRAXDRT.Application
 Dim CrRep As New CRAXDRT.Report
 Dim AdoRs As New ADODB.Recordset
+
+Public Sub rpt_view _
+(ByVal sql_proc As String, ByVal rpt_file As String, ByVal str_param As String)
+'Dim CrApp As New CRAXDRT.Application
+'Dim CrRep As New CRAXDRT.Report
+'Dim AdoRs As New ADODB.Recordset
 
 AdoRs.Open sql_proc, CnG, adOpenDynamic, adLockBatchOptimistic
 Set CrRep = CrApp.OpenReport(App.Path & rpt_file)
 CrRep.DiscardSavedData
 CrRep.Database.Tables(1).SetDataSource AdoRs, 3
-CRV.ReportSource = CrRep
-CRV.ViewReport
+crv.ReportSource = CrRep
+crv.ViewReport
 
 CrRep.ParameterFields.GetItemByName("p_periode").AddCurrentValue str_param
 End Sub
 
 Public Sub rpt_view_master _
 (ByVal sql_proc As String, ByVal rpt_file As String)
-Dim CrApp As New CRAXDRT.Application
-Dim CrRep As New CRAXDRT.Report
-Dim AdoRs As New ADODB.Recordset
+'Dim CrApp As New CRAXDRT.Application
+'Dim CrRep As New CRAXDRT.Report
+'Dim AdoRs As New ADODB.Recordset
 
 AdoRs.Open sql_proc, CnG, adOpenDynamic, adLockBatchOptimistic
 Set CrRep = CrApp.OpenReport(App.Path & rpt_file)
 CrRep.DiscardSavedData
 CrRep.Database.Tables(1).SetDataSource AdoRs, 3
-CRV.ReportSource = CrRep
-CRV.ViewReport
+crv.ReportSource = CrRep
+crv.ViewReport
 End Sub
 
 Private Sub Form_Activate()
@@ -88,12 +90,20 @@ Me.WindowState = vbMaximized
 End Sub
 
 Private Sub Form_Resize()
-CRV.Top = 0
-CRV.Left = 0
-CRV.Width = Me.Width - 200
-CRV.Height = Me.Height - 400
+crv.Top = 0
+crv.Left = 0
+crv.Width = Me.Width - 200
+crv.Height = Me.Height - 400
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
 Me.WindowState = vbNormal
+End Sub
+
+Public Sub crv_PrintButtonClicked(UseDefault As Boolean)
+    UseDefault = False
+    CrRep.PrinterSetup Me.hWnd
+    CrRep.PrintOut True
+    'Set CrRep = Nothing
+    'crv.Visible = False
 End Sub
