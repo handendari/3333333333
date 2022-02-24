@@ -869,7 +869,7 @@ Begin VB.Form frm_list_manual_att
          _ExtentY        =   556
          _Version        =   393216
          CustomFormat    =   "dd-MM-yyyy"
-         Format          =   112197635
+         Format          =   85590019
          CurrentDate     =   40794
       End
       Begin MSComCtl2.DTPicker DTPicker_to 
@@ -882,7 +882,7 @@ Begin VB.Form frm_list_manual_att
          _ExtentY        =   556
          _Version        =   393216
          CustomFormat    =   "dd-MM-yyyy"
-         Format          =   112197635
+         Format          =   85590019
          CurrentDate     =   40794
       End
       Begin prj_absensi.vbButton cmdSearch 
@@ -1195,7 +1195,7 @@ Begin VB.Form frm_list_manual_att
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "dd-MM-yyyy"
-      Format          =   112197635
+      Format          =   85590019
       CurrentDate     =   40794
    End
    Begin prj_absensi.vbButton cmdRefresh 

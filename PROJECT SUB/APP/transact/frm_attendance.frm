@@ -33,8 +33,8 @@ Begin VB.Form frm_attendance
       TabCaption(0)   =   "Data Fingerprint"
       TabPicture(0)   =   "frm_attendance.frx":058A
       Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "fra_button_control(1)"
-      Tab(0).Control(1)=   "Frame1(0)"
+      Tab(0).Control(0)=   "Frame1(0)"
+      Tab(0).Control(1)=   "fra_button_control(1)"
       Tab(0).ControlCount=   2
       TabCaption(1)   =   "Download Log"
       TabPicture(1)   =   "frm_attendance.frx":05A6
@@ -51,8 +51,8 @@ Begin VB.Form frm_attendance
       TabCaption(2)   =   "Transfer Enroll Data"
       TabPicture(2)   =   "frm_attendance.frx":05C2
       Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "fra_button_control(2)"
-      Tab(2).Control(1)=   "Frame1(2)"
+      Tab(2).Control(0)=   "Frame1(2)"
+      Tab(2).Control(1)=   "fra_button_control(2)"
       Tab(2).ControlCount=   2
       Begin VB.Frame Frame1 
          Caption         =   "Transfer Enroll Data"
@@ -110,37 +110,29 @@ Begin VB.Form frm_attendance
             TabIndex        =   36
             Top             =   660
             Width           =   375
-            _ExtentX        =   661
-            _ExtentY        =   556
-            BTYPE           =   14
-            TX              =   "..."
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Tahoma"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   15790320
-            BCOLO           =   15790320
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frm_attendance.frx":29D2
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            _extentx        =   661
+            _extenty        =   556
+            btype           =   14
+            tx              =   "..."
+            enab            =   -1  'True
+            font            =   "frm_attendance.frx":29D2
+            coltype         =   1
+            focusr          =   -1  'True
+            bcol            =   15790320
+            bcolo           =   15790320
+            fcol            =   0
+            fcolo           =   0
+            mcol            =   12632256
+            mptr            =   1
+            micon           =   "frm_attendance.frx":29FA
+            umcol           =   -1  'True
+            soft            =   0   'False
+            picpos          =   0
+            ngrey           =   0   'False
+            fx              =   0
+            hand            =   0   'False
+            check           =   0   'False
+            value           =   0   'False
          End
          Begin VB.TextBox txt_employee_code 
             Appearance      =   0  'Flat
@@ -218,38 +210,30 @@ Begin VB.Form frm_attendance
             TabIndex        =   28
             Top             =   210
             Width           =   945
-            _ExtentX        =   1667
-            _ExtentY        =   1323
-            BTYPE           =   14
-            TX              =   "&OK"
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   15790320
-            BCOLO           =   15790320
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frm_attendance.frx":29EE
-            PICN            =   "frm_attendance.frx":2A0A
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   2
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            _extentx        =   1667
+            _extenty        =   1323
+            btype           =   14
+            tx              =   "&OK"
+            enab            =   -1  'True
+            font            =   "frm_attendance.frx":2A18
+            coltype         =   1
+            focusr          =   -1  'True
+            bcol            =   15790320
+            bcolo           =   15790320
+            fcol            =   0
+            fcolo           =   0
+            mcol            =   12632256
+            mptr            =   1
+            micon           =   "frm_attendance.frx":2A44
+            picn            =   "frm_attendance.frx":2A62
+            umcol           =   -1  'True
+            soft            =   0   'False
+            picpos          =   2
+            ngrey           =   0   'False
+            fx              =   0
+            hand            =   0   'False
+            check           =   0   'False
+            value           =   0   'False
          End
       End
       Begin MSComctlLib.ProgressBar ProgressBar2 
@@ -272,37 +256,29 @@ Begin VB.Form frm_attendance
          Top             =   4050
          Visible         =   0   'False
          Width           =   915
-         _ExtentX        =   1614
-         _ExtentY        =   556
-         BTYPE           =   14
-         TX              =   "Proses"
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   15790320
-         BCOLO           =   15790320
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frm_attendance.frx":3A9C
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
+         _extentx        =   1614
+         _extenty        =   556
+         btype           =   14
+         tx              =   "Proses"
+         enab            =   -1  'True
+         font            =   "frm_attendance.frx":3AF6
+         coltype         =   1
+         focusr          =   -1  'True
+         bcol            =   15790320
+         bcolo           =   15790320
+         fcol            =   0
+         fcolo           =   0
+         mcol            =   12632256
+         mptr            =   1
+         micon           =   "frm_attendance.frx":3B22
+         umcol           =   -1  'True
+         soft            =   0   'False
+         picpos          =   0
+         ngrey           =   0   'False
+         fx              =   0
+         hand            =   0   'False
+         check           =   0   'False
+         value           =   0   'False
       End
       Begin VB.Frame Frame1 
          Caption         =   "Download Log"
@@ -377,7 +353,7 @@ Begin VB.Form frm_attendance
             Height          =   375
             Index           =   1
             Left            =   780
-            OleObjectBlob   =   "frm_attendance.frx":3AB8
+            OleObjectBlob   =   "frm_attendance.frx":3B40
             TabIndex        =   19
             Top             =   870
             Width           =   1335
@@ -407,38 +383,30 @@ Begin VB.Form frm_attendance
             TabIndex        =   15
             Top             =   210
             Width           =   945
-            _ExtentX        =   1667
-            _ExtentY        =   1323
-            BTYPE           =   14
-            TX              =   "&Backup"
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   15790320
-            BCOLO           =   15790320
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frm_attendance.frx":5EAC
-            PICN            =   "frm_attendance.frx":5EC8
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   2
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            _extentx        =   1667
+            _extenty        =   1323
+            btype           =   14
+            tx              =   "&Backup"
+            enab            =   -1  'True
+            font            =   "frm_attendance.frx":5F34
+            coltype         =   1
+            focusr          =   -1  'True
+            bcol            =   15790320
+            bcolo           =   15790320
+            fcol            =   0
+            fcolo           =   0
+            mcol            =   12632256
+            mptr            =   1
+            micon           =   "frm_attendance.frx":5F60
+            picn            =   "frm_attendance.frx":5F7E
+            umcol           =   -1  'True
+            soft            =   0   'False
+            picpos          =   2
+            ngrey           =   0   'False
+            fx              =   0
+            hand            =   0   'False
+            check           =   0   'False
+            value           =   0   'False
          End
       End
       Begin VB.Frame fra_button_control 
@@ -450,81 +418,65 @@ Begin VB.Form frm_attendance
          Width           =   4695
          Begin prj_absensi.vbButton cmd_download 
             Height          =   705
-            Left            =   1620
+            Left            =   2610
             TabIndex        =   11
             Top             =   210
             Width           =   945
-            _ExtentX        =   1667
-            _ExtentY        =   1244
-            BTYPE           =   14
-            TX              =   "&Download"
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   15790320
-            BCOLO           =   15790320
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frm_attendance.frx":6F5A
-            PICN            =   "frm_attendance.frx":6F76
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   2
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            _extentx        =   1667
+            _extenty        =   1244
+            btype           =   14
+            tx              =   "&Download"
+            enab            =   -1  'True
+            font            =   "frm_attendance.frx":7012
+            coltype         =   1
+            focusr          =   -1  'True
+            bcol            =   15790320
+            bcolo           =   15790320
+            fcol            =   0
+            fcolo           =   0
+            mcol            =   12632256
+            mptr            =   1
+            micon           =   "frm_attendance.frx":703E
+            picn            =   "frm_attendance.frx":705C
+            umcol           =   -1  'True
+            soft            =   0   'False
+            picpos          =   2
+            ngrey           =   0   'False
+            fx              =   0
+            hand            =   0   'False
+            check           =   0   'False
+            value           =   0   'False
          End
          Begin prj_absensi.vbButton cmd_delete_log 
             Height          =   705
-            Left            =   2610
+            Left            =   1620
             TabIndex        =   12
             Top             =   210
             Width           =   945
-            _ExtentX        =   1667
-            _ExtentY        =   1244
-            BTYPE           =   14
-            TX              =   "&Delete"
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   15790320
-            BCOLO           =   15790320
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frm_attendance.frx":8008
-            PICN            =   "frm_attendance.frx":8024
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   2
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            _extentx        =   1667
+            _extenty        =   1244
+            btype           =   14
+            tx              =   "&Delete"
+            enab            =   -1  'True
+            font            =   "frm_attendance.frx":80F0
+            coltype         =   1
+            focusr          =   -1  'True
+            bcol            =   15790320
+            bcolo           =   15790320
+            fcol            =   0
+            fcolo           =   0
+            mcol            =   12632256
+            mptr            =   1
+            micon           =   "frm_attendance.frx":811C
+            picn            =   "frm_attendance.frx":813A
+            umcol           =   -1  'True
+            soft            =   0   'False
+            picpos          =   2
+            ngrey           =   0   'False
+            fx              =   0
+            hand            =   0   'False
+            check           =   0   'False
+            value           =   0   'False
          End
          Begin prj_absensi.vbButton cmd_reproses 
             Height          =   705
@@ -532,38 +484,30 @@ Begin VB.Form frm_attendance
             TabIndex        =   13
             Top             =   210
             Width           =   945
-            _ExtentX        =   1667
-            _ExtentY        =   1244
-            BTYPE           =   14
-            TX              =   "&Reprocess"
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   15790320
-            BCOLO           =   15790320
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frm_attendance.frx":90B6
-            PICN            =   "frm_attendance.frx":90D2
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   2
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            _extentx        =   1667
+            _extenty        =   1244
+            btype           =   14
+            tx              =   "&Reprocess"
+            enab            =   -1  'True
+            font            =   "frm_attendance.frx":91CE
+            coltype         =   1
+            focusr          =   -1  'True
+            bcol            =   15790320
+            bcolo           =   15790320
+            fcol            =   0
+            fcolo           =   0
+            mcol            =   12632256
+            mptr            =   1
+            micon           =   "frm_attendance.frx":91FA
+            picn            =   "frm_attendance.frx":9218
+            umcol           =   -1  'True
+            soft            =   0   'False
+            picpos          =   2
+            ngrey           =   0   'False
+            fx              =   0
+            hand            =   0   'False
+            check           =   0   'False
+            value           =   0   'False
          End
       End
       Begin VB.Frame Frame1 
@@ -619,7 +563,7 @@ Begin VB.Form frm_attendance
             Height          =   375
             Index           =   0
             Left            =   780
-            OleObjectBlob   =   "frm_attendance.frx":A164
+            OleObjectBlob   =   "frm_attendance.frx":A2AC
             TabIndex        =   7
             Top             =   870
             Width           =   1335
@@ -661,39 +605,24 @@ Begin VB.Form frm_attendance
       Top             =   2430
       Visible         =   0   'False
       Width           =   5505
-      _ExtentX        =   9710
-      _ExtentY        =   5741
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BeginProperty FontHeader {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BackColorSel    =   12937777
-      ForeColorSel    =   16777215
-      CustomColorFrom =   16572875
-      CustomColorTo   =   14722429
-      GridColor       =   16367254
-      FocusRectColor  =   9895934
-      Appearance      =   0
-      ColumnHeaderSmall=   0   'False
-      TotalsLineShow  =   0   'False
-      FocusRowHighlightKeepTextForecolor=   0   'False
-      ShowRowNumbers  =   0   'False
-      ShowRowNumbersVary=   0   'False
-      AllowColumnResizing=   -1  'True
+      _extentx        =   9710
+      _extenty        =   5741
+      backcolorsel    =   12937777
+      forecolorsel    =   16777215
+      gridcolor       =   16367254
+      focusrectcolor  =   9895934
+      columnheadersmall=   0   'False
+      customcolorfrom =   16572875
+      customcolorto   =   14722429
+      appearance      =   0
+      totalslineshow  =   0   'False
+      focusrowhighlightkeeptextforecolor=   0   'False
+      showrownumbers  =   0   'False
+      showrownumbersvary=   0   'False
+      allowcolumnresizing=   -1  'True
+      font            =   "frm_attendance.frx":C6A0
+      font            =   "frm_attendance.frx":C6CC
+      fontheader      =   "frm_attendance.frx":C6F8
    End
    Begin VB.Timer timer_get_log_data 
       Interval        =   60000
@@ -703,7 +632,7 @@ Begin VB.Form frm_attendance
    Begin zkemkeeperCtl.CZKEM CZKEM1 
       Height          =   345
       Left            =   150
-      OleObjectBlob   =   "frm_attendance.frx":C558
+      OleObjectBlob   =   "frm_attendance.frx":C724
       TabIndex        =   0
       Top             =   5400
       Visible         =   0   'False
@@ -715,38 +644,30 @@ Begin VB.Form frm_attendance
       TabIndex        =   23
       Top             =   5970
       Width           =   945
-      _ExtentX        =   1667
-      _ExtentY        =   1244
-      BTYPE           =   14
-      TX              =   "&Exit"
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   15790320
-      BCOLO           =   15790320
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frm_attendance.frx":C57C
-      PICN            =   "frm_attendance.frx":C598
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   2
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
+      _extentx        =   1667
+      _extenty        =   1244
+      btype           =   14
+      tx              =   "&Exit"
+      enab            =   -1  'True
+      font            =   "frm_attendance.frx":C748
+      coltype         =   1
+      focusr          =   -1  'True
+      bcol            =   15790320
+      bcolo           =   15790320
+      fcol            =   0
+      fcolo           =   0
+      mcol            =   12632256
+      mptr            =   1
+      micon           =   "frm_attendance.frx":C774
+      picn            =   "frm_attendance.frx":C792
+      umcol           =   -1  'True
+      soft            =   0   'False
+      picpos          =   2
+      ngrey           =   0   'False
+      fx              =   0
+      hand            =   0   'False
+      check           =   0   'False
+      value           =   0   'False
    End
 End
 Attribute VB_Name = "frm_attendance"
@@ -1398,7 +1319,13 @@ End Sub
 Private Sub SSTab1_Click(PreviousTab As Integer)
     Call load_data_device
     
-    If SSTab1.Tab = 2 Then
+    If SSTab1.Tab = 1 Then
+        If LOGIN_LEVEL = 100 Then
+            cmd_delete_log.Visible = True
+        Else
+            cmd_delete_log.Visible = False
+        End If
+    ElseIf SSTab1.Tab = 2 Then
         createGridKar
     End If
 End Sub
@@ -1437,6 +1364,12 @@ Private Sub Form_Load()
     SSTab1.TabVisible(0) = False
     
     SSTab1.Tab = 1
+    
+    If LOGIN_LEVEL = 100 Then
+        cmd_delete_log.Visible = True
+    Else
+        cmd_delete_log.Visible = False
+    End If
     
     vMachineNumber = 1
     Call load_data_device

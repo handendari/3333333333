@@ -76,7 +76,7 @@ Begin VB.Form frm_trans_IncomeLain
    End
    Begin prj_genting.vbButton vbButton5 
       Height          =   585
-      Left            =   2850
+      Left            =   2820
       TabIndex        =   27
       Top             =   5160
       Width           =   1485
@@ -324,7 +324,7 @@ Begin VB.Form frm_trans_IncomeLain
       _ExtentX        =   3149
       _ExtentY        =   556
       _Version        =   393216
-      Format          =   3342337
+      Format          =   79233025
       CurrentDate     =   40794
    End
    Begin TrueOleDBList60.TDBCombo TDBCombo_company 

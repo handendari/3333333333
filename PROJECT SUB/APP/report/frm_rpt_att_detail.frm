@@ -85,7 +85,6 @@ Begin VB.Form frm_rpt_att_detail
       TabPicture(0)   =   "frm_rpt_att_detail.frx":058A
       Tab(0).ControlEnabled=   0   'False
       Tab(0).Control(0)=   "Frame5"
-      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "MONTHLY"
       TabPicture(1)   =   "frm_rpt_att_detail.frx":05A6
@@ -200,7 +199,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM"
-            Format          =   83361795
+            Format          =   96141315
             UpDown          =   -1  'True
             CurrentDate     =   39278
          End
@@ -353,7 +352,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   83361795
+            Format          =   96141315
             CurrentDate     =   39278
          End
          Begin MSComCtl2.DTPicker DTPicker_periode_to 
@@ -366,7 +365,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   83361795
+            Format          =   96141315
             CurrentDate     =   39278
          End
          Begin VB.Label Label8 
@@ -499,7 +498,7 @@ Begin VB.Form frm_rpt_att_detail
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   83361795
+            Format          =   96141315
             CurrentDate     =   39278
          End
          Begin VB.Label Label10 
@@ -1129,7 +1128,7 @@ cbo_monthly_employee.ListIndex = 0
 cbo_daily_company.ListIndex = 1
 cbo_daily_employee.ListIndex = 0
 
-Timer1.Enabled = True
+timer1.Enabled = True
 SSTab1.Tab = 0
 End Sub
 
@@ -1181,7 +1180,7 @@ MsgBox KeyAscii
 End Sub
 
 Private Sub Timer1_Timer()
-Timer1.Enabled = False
+timer1.Enabled = False
 Call set_company_mode(Adodc_company, TDBCombo_company, txt_company_name)
 If LOGIN_LEVEL = 100 Then
     cbo_daily_company.Enabled = True

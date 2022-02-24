@@ -772,7 +772,7 @@ CnG.CommitTrans
 Call load_data_summary_leave
 End Sub
 
-Private Sub cmdCancel_Click()
+Private Sub CmdCancel_Click()
 int_mode = 0
 Call load_mode
 End Sub
@@ -828,7 +828,7 @@ int_mode = 1
 Call load_mode
 End Sub
 
-Private Sub cmdPrint_Click()
+Private Sub CmdPrint_Click()
 TDBGrid1.PrintInfo.PageSetup
 If Not TDBGrid1.PrintInfo.PageSetupCancelled = True Then
     TDBGrid1.PrintInfo.PrintPreview dbgAllRows

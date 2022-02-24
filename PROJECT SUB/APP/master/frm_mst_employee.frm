@@ -389,7 +389,7 @@ Begin VB.Form frm_mst_employee
             _Version        =   393216
             MousePointer    =   99
             CustomFormat    =   "yyyy-MM"
-            Format          =   82182147
+            Format          =   88145923
             CurrentDate     =   39270
          End
          Begin VB.Label lbl_last_education_level 
@@ -466,7 +466,7 @@ Begin VB.Form frm_mst_employee
             _Version        =   393216
             MousePointer    =   99
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   82182147
+            Format          =   88145923
             CurrentDate     =   39270
          End
          Begin VB.Label lbl_last_employment_title 
@@ -548,7 +548,7 @@ Begin VB.Form frm_mst_employee
             _Version        =   393216
             MousePointer    =   99
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   82182147
+            Format          =   88145923
             CurrentDate     =   39270
          End
          Begin VB.Label lbl_reason_description 
@@ -761,7 +761,7 @@ Begin VB.Form frm_mst_employee
          _Version        =   393216
          MousePointer    =   99
          CustomFormat    =   "yyyy-MM-dd"
-         Format          =   82182147
+         Format          =   88145923
          CurrentDate     =   39270
       End
       Begin MSComCtl2.DTPicker DTPicker_start_working 
@@ -775,7 +775,7 @@ Begin VB.Form frm_mst_employee
          _Version        =   393216
          MousePointer    =   99
          CustomFormat    =   "yyyy-MM-dd"
-         Format          =   82182147
+         Format          =   88145923
          CurrentDate     =   39270
       End
       Begin TrueOleDBList60.TDBCombo TDBCombo_title 
@@ -797,7 +797,7 @@ Begin VB.Form frm_mst_employee
          _Version        =   393216
          MousePointer    =   99
          CustomFormat    =   "yyyy-MM-dd"
-         Format          =   82182147
+         Format          =   88145923
          CurrentDate     =   39270
       End
       Begin TrueOleDBList60.TDBCombo TDBCombo_department 
@@ -2063,7 +2063,6 @@ Dim int_mode As Integer
 Dim Col As TrueOleDBGrid70.Column
 Dim Cols As TrueOleDBGrid70.Columns
 Dim i_lang As Integer
-
 
 
 Private Function check_validate_exist_new() As Boolean

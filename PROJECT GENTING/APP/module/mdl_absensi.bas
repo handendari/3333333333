@@ -605,7 +605,7 @@ blnUser_Printing = False
 
 str_sql = "select F.sub_menu_code, F.form_name, F.form_title, " _
 & "F.allow_read, F.allow_add, F.allow_edit, F.allow_delete, F.allow_post, F.allow_print " _
-& "from m_user U join m_employee b on U.employee_code = b.employee_code " _
+& "from m_user U left join m_employee b on U.employee_code = b.employee_code " _
 & "join t_user F on U.user_code = F.level_code " _
 & "Where U.user_code = '" & LOGIN_CODE & "' and user_name = '" & LOGIN_NAME _
 & "' and user_pass = '" & LOGIN_PASS & "' and upper(F.form_name)='" & UCase(frm.name) & "'"

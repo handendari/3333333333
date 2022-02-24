@@ -26,3 +26,5 @@ flag_early		number		flag_early
 absent_status		number		absent_status
 description		String	100	description
 entry_date		date		entry_date
+late_value		number
+early_value		number
