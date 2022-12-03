@@ -83,7 +83,7 @@ Begin VB.Form frm_rpt_summary_leave
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy"
-            Format          =   149422083
+            Format          =   31260675
             CurrentDate     =   39278
          End
          Begin TrueOleDBList60.TDBCombo TDBCombo_department 
@@ -265,6 +265,8 @@ Private Sub rpt_summary_leave()
     Dim str_param_periode, str_file As String
     Dim a As New frm_rpt
     
+    Call hitung_cuti(Format(DTPicker_summary_leave.Value, "yyyy-12-31"), "", TDBCombo_company.Text)
+    
     str_file = "\report\rpt_summary_leave.rpt"
     v_access = IIf(LOGIN_LEVEL = 100, "", "AND (level_code = ANY (SELECT access_level_code FROM t_user_access_level WHERE level_code = '" & LOGIN_CODE & "' AND allow_access <> 0)) AND flag_active <> 0 order by employee_name")
     
@@ -347,7 +349,7 @@ Private Sub TDBCombo_company_ItemChange()
     Call load_data_department
 End Sub
 
-Private Sub Timer1_Timer()
+Private Sub timer1_Timer()
     Timer1.Enabled = False
     Call set_company_mode(rsCompany, TDBCombo_company, txt_company_name)
 End Sub
@@ -364,9 +366,28 @@ Private Sub TDBCombo_department_Change()
     If TDBCombo_department.Text = "" Then txt_department_name.Text = ""
 End Sub
 
-Private Sub tdbCombo_department_itemChange()
+Private Sub TDBCombo_department_ItemChange()
     If TDBCombo_department.ApproxCount > 0 Then
         TDBCombo_department.Text = TDBCombo_department.Columns("department_code").Value
         txt_department_name = TDBCombo_department.Columns("department_name").Value
     End If
 End Sub
+
+Private Sub hitung_cuti(periode As String, str_employee_code As String, str_company_code As String)
+Dim vStartPeriode As String
+Dim vEndPeriode As String
+
+    vStartPeriode = Format(periode, "yyyy") & "-01-01"
+    vEndPeriode = Format(periode, "yyyy") & "-12-31"
+    vParamPeriode = Format(periode, "yyyyMM")
+
+    SQL = "DELETE b FROM m_employee a JOIN t_leave_periode b ON a.employee_code = b.employee_code " & _
+            "WHERE b.employee_code = '" & str_employee_code & "' AND periode_year = '" & Format(periode, "yyyy") & "'"
+    CnG.Execute SQL
+    
+    SQL = "CALL spr_last_leave('" & periode & "','" & vStartPeriode & "'," & _
+                                "'" & vEndPeriode & "','" & vParamPeriode & "'," & _
+                                "'" & str_employee_code & "','" & str_company_code & "')"
+    CnG.Execute SQL
+End Sub
+

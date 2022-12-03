@@ -1067,7 +1067,8 @@ Dim rsBak As New ADODB.Recordset
             vLocation = Chr(34) & vLocation & "dbTPC_Daily_" & Format(Now, "yyyyMMddhhmm") & ".sql" & Chr(34)
             
             If Format(Now, "hh:mm") = vDailyTime Then
-                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
+'                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
+                cmd = Chr(34) & "C:\xampp\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
                 Call CreateBatchFile(App.Path & "\backup.bat", cmd)
                 
                 Call execCommand(cmd)
@@ -1076,7 +1077,8 @@ Dim rsBak As New ADODB.Recordset
             vLocation = Chr(34) & vLocation & "dbTPC_Weekly_" & Format(Now, "yyyyMMddhhmm") & ".sql" & Chr(34)
             
             If Format(Now, "dddd") = vWeekDay And Format(Now, "hh:mm") = vWeeklyTime Then
-                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
+'                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
+                cmd = Chr(34) & "C:\xampp\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
                 Call CreateBatchFile(App.Path & "\backup.bat", cmd)
                 
                 Call execCommand(cmd)
@@ -1084,7 +1086,8 @@ Dim rsBak As New ADODB.Recordset
         ElseIf vFlagAuto = 2 Then
             vLocation = Chr(34) & vLocation & "dbTPC_Monthly_" & Format(Now, "yyyyMMddhhmm") & ".sql" & Chr(34)
             If Format(Now, "MM-dd hh:mm") = vMonthlyTime Then
-                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
+'                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
+                cmd = Chr(34) & "C:\xampp\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & vLocation
                 Call CreateBatchFile(App.Path & "\backup.bat", cmd)
                 
                 Call execCommand(cmd)

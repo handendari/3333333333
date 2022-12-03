@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Object = "{0D62356B-DBA2-11D1-B5DF-0060976089D0}#6.0#0"; "TODL6.OCX"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
@@ -467,7 +467,7 @@ Begin VB.Form frm_list_manual_att
             _ExtentY        =   556
             _Version        =   393216
             CustomFormat    =   "dd-MM-yyyy"
-            Format          =   94699523
+            Format          =   100204547
             CurrentDate     =   40794
          End
          Begin MSComCtl2.DTPicker DTPicker_to 
@@ -480,7 +480,7 @@ Begin VB.Form frm_list_manual_att
             _ExtentY        =   556
             _Version        =   393216
             CustomFormat    =   "dd-MM-yyyy"
-            Format          =   94699523
+            Format          =   100204547
             CurrentDate     =   40794
          End
          Begin prj_tpc.vbButton cmdSearch 
@@ -541,7 +541,7 @@ Begin VB.Form frm_list_manual_att
             _ExtentY        =   556
             _Version        =   393216
             CustomFormat    =   "MM-yyyy"
-            Format          =   94699523
+            Format          =   100204547
             CurrentDate     =   40794
          End
          Begin prj_tpc.vbButton cmdPL 
@@ -3003,7 +3003,7 @@ Begin VB.Form frm_list_manual_att
          _ExtentY        =   556
          _Version        =   393216
          CustomFormat    =   "dd-MM-yyyy"
-         Format          =   94699523
+         Format          =   100204547
          CurrentDate     =   40794
       End
       Begin TrueOleDBList60.TDBCombo TDBCombo_Group_Shift 
@@ -4829,7 +4829,7 @@ Dim vPLDate As String
             "ELSE 'AL' END type, seq " & _
           "FROM t_private_leave " & _
           "WHERE employee_code = '" & TDBGrid_Att.Columns("employee_code").Value & "' " & _
-            "AND DATE(pl_date) = DATE('" & vPLDate & "')"
+            "AND pl_date = '" & vPLDate & "'"
     rsPL.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
     
     TDBGrid2.DataSource = rsPL

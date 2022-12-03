@@ -18,6 +18,67 @@ Begin VB.Form frm_trans_leave
    ScaleHeight     =   9510
    ScaleWidth      =   12795
    ShowInTaskbar   =   0   'False
+   Begin VB.Frame fraPeriode 
+      BorderStyle     =   0  'None
+      Height          =   525
+      Left            =   7170
+      TabIndex        =   44
+      Top             =   690
+      Width           =   3945
+      Begin MSComCtl2.DTPicker DTPicker1 
+         Height          =   315
+         Left            =   870
+         TabIndex        =   45
+         Top             =   120
+         Width           =   1245
+         _ExtentX        =   2196
+         _ExtentY        =   556
+         _Version        =   393216
+         CustomFormat    =   "dd-MM-yyyy"
+         Format          =   99745795
+         CurrentDate     =   40809
+      End
+      Begin MSComCtl2.DTPicker DTPicker2 
+         Height          =   315
+         Left            =   2490
+         TabIndex        =   46
+         Top             =   120
+         Width           =   1275
+         _ExtentX        =   2249
+         _ExtentY        =   556
+         _Version        =   393216
+         CustomFormat    =   "dd-MM-yyyy"
+         Format          =   99745795
+         CurrentDate     =   40809
+      End
+      Begin VB.Label Label9 
+         AutoSize        =   -1  'True
+         Caption         =   "DATE :"
+         Height          =   195
+         Left            =   210
+         TabIndex        =   48
+         Top             =   180
+         Width           =   585
+      End
+      Begin VB.Label Label8 
+         AutoSize        =   -1  'True
+         Caption         =   "TO"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   2190
+         TabIndex        =   47
+         Top             =   180
+         Width           =   270
+      End
+   End
    Begin prj_tpc.LynxGrid LynxGrid2 
       Height          =   3105
       Left            =   2310
@@ -270,7 +331,7 @@ Begin VB.Form frm_trans_leave
             _Version        =   393216
             MousePointer    =   99
             CustomFormat    =   "dd-MM-yyyy"
-            Format          =   94765059
+            Format          =   99745795
             CurrentDate     =   39270
          End
          Begin MSComCtl2.DTPicker DTPicker_date_to 
@@ -284,7 +345,7 @@ Begin VB.Form frm_trans_leave
             _Version        =   393216
             MousePointer    =   99
             CustomFormat    =   "dd-MM-yyyy"
-            Format          =   94765059
+            Format          =   99745795
             CurrentDate     =   39270
          End
          Begin VB.TextBox txt_employee_code 
@@ -584,7 +645,7 @@ Begin VB.Form frm_trans_leave
             _Version        =   393216
             MousePointer    =   99
             CustomFormat    =   "yyyy-MM-dd"
-            Format          =   94765059
+            Format          =   99745795
             CurrentDate     =   39270
          End
          Begin VB.Label Label6 
@@ -1848,6 +1909,45 @@ Begin VB.Form frm_trans_leave
          _StyleDefs(102) =   ":id=42,.parent=33"
       End
    End
+   Begin prj_tpc.vbButton cmdRefresh 
+      Height          =   495
+      Left            =   11190
+      TabIndex        =   49
+      Top             =   720
+      Width           =   1275
+      _ExtentX        =   2249
+      _ExtentY        =   873
+      BTYPE           =   14
+      TX              =   "Refresh"
+      ENAB            =   -1  'True
+      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      COLTYPE         =   1
+      FOCUSR          =   -1  'True
+      BCOL            =   15790320
+      BCOLO           =   15790320
+      FCOL            =   0
+      FCOLO           =   0
+      MCOL            =   12632256
+      MPTR            =   1
+      MICON           =   "frmTransLeave.frx":EDA0
+      PICN            =   "frmTransLeave.frx":EDBC
+      UMCOL           =   -1  'True
+      SOFT            =   0   'False
+      PICPOS          =   0
+      NGREY           =   0   'False
+      FX              =   0
+      HAND            =   0   'False
+      CHECK           =   0   'False
+      VALUE           =   0   'False
+   End
    Begin VB.Label Label3 
       BackStyle       =   0  'Transparent
       Caption         =   "LEAVE"
@@ -1869,7 +1969,7 @@ Begin VB.Form frm_trans_leave
    Begin VB.Image Image1 
       Height          =   585
       Left            =   0
-      Picture         =   "frmTransLeave.frx":EDA0
+      Picture         =   "frmTransLeave.frx":FE4E
       Stretch         =   -1  'True
       Top             =   0
       Width           =   12690
@@ -1990,7 +2090,7 @@ Dim item
             vTglLeave = Format(TDBGrid_Emp.Columns("leave_date_from").CellText(item), "yyyy-MM-dd")
             CnG.Execute "delete from t_leave where leave_number = " _
                         & TDBGrid_Emp.Columns("leave_number").CellText(item)
-            Call hitung_cuti(Format(Now, "yyyy-MM-dd"), TDBGrid_Emp.Columns("employee_code").CellText(item), TDBCombo_company.Text)
+'            Call hitung_cuti(Format(Now, "yyyy-MM-dd"), TDBGrid_Emp.Columns("employee_code").CellText(item), TDBCombo_company.Text)
                     
         Next
         CnG.CommitTrans
@@ -2149,11 +2249,11 @@ Private Sub insert_new_data()
                 "'" & Trim(txt_description.Text) & "',now(),'" & LOGIN_NAME & "')"
         CnG.Execute SQL
         
-        If cbo_date_to.ListIndex = 0 Then
-            Call hitung_cuti(Format(DTPicker_date_from.Value, "yyyy-MM-dd"), txt_employee_code.Text, TDBCombo_company.Text)
-        Else
-            Call hitung_cuti(Format(DTPicker_date_to.Value, "yyyy-MM-dd"), txt_employee_code.Text, TDBCombo_company.Text)
-        End If
+'        If cbo_date_to.ListIndex = 0 Then
+'            Call hitung_cuti(Format(DTPicker_date_from.Value, "yyyy-MM-dd"), txt_employee_code.Text, TDBCombo_company.Text)
+'        Else
+'            Call hitung_cuti(Format(DTPicker_date_to.Value, "yyyy-MM-dd"), txt_employee_code.Text, TDBCombo_company.Text)
+'        End If
     ElseIf SSTab1.Tab = 1 Then
         SQL = "select ifnull(max(general_leave_number),0)+1 as general_leave_number from t_general_leave"
         rs.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
@@ -2374,12 +2474,26 @@ Private Sub cmdLoad_Sum_Click()
     frm_lookup_leave_periode.Show 1
 End Sub
 
+Private Sub cmdRefresh_Click()
+    oClause = ""
+    If SSTab1.Tab = 0 Then
+        Call load_data_leave
+    ElseIf SSTab1.Tab = 1 Then
+        Call load_data_general_leave
+    End If
+    
+    int_mode = 0
+    Call load_mode
+End Sub
+
 Private Sub Form_Load()
     Call load_data_company
     Call createGridKar
     oClause = ""
     
     SSTab1.Tab = 0
+    DTPicker1.Value = Now
+    DTPicker2.Value = Now
     
     Call load_data_user_access(Me)
     timer1.Enabled = True
@@ -2491,10 +2605,19 @@ Private Sub SSTab1_Click(PreviousTab As Integer)
     oClause = ""
     If SSTab1.Tab = 0 Then
         Call load_data_leave
+        
+        fraPeriode.Visible = True
+        cmdRefresh.Visible = True
     ElseIf SSTab1.Tab = 1 Then
         Call load_data_general_leave
+        
+        fraPeriode.Visible = True
+        cmdRefresh.Visible = True
     ElseIf SSTab1.Tab = 2 Then
         Call load_data_summary_leave
+        
+        fraPeriode.Visible = False
+        cmdRefresh.Visible = False
     End If
     
     int_mode = 0
@@ -2538,7 +2661,8 @@ Private Sub load_data_leave()
                 "AND b.department_code = e.department_code " & _
                 "AND b.company_code = e.company_code " & _
             "JOIN m_title f ON b.title_code = f.title_code " & _
-          "WHERE a.company_code = '" & TDBCombo_company.Text & "' " & oClause
+          "WHERE a.company_code = '" & TDBCombo_company.Text & "' " & _
+            "AND (DATE(leave_date_from) BETWEEN '" & Format(DTPicker1.Value, "yyyy-MM-dd") & "' AND '" & Format(DTPicker2.Value, "yyyy-MM-dd") & "') " & oClause
     rsEmpLeave.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
     
     TDBGrid_Emp.DataSource = rsEmpLeave
@@ -2547,7 +2671,8 @@ End Sub
 Private Sub load_data_general_leave()
     If rsGenLeave.State Then rsGenLeave.Close
     SQL = "select * from t_general_leave " & _
-          "where company_code = '" & TDBCombo_company.Text & "' " & oClause
+          "where company_code = '" & TDBCombo_company.Text & "' " & _
+            "AND (DATE(general_leave_date) BETWEEN '" & Format(DTPicker1.Value, "yyyy-MM-dd") & "' AND '" & Format(DTPicker2.Value, "yyyy-MM-dd") & "') " & oClause
     rsGenLeave.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
     
     TDBGrid_Gen.DataSource = rsGenLeave

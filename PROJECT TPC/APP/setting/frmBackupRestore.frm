@@ -30,24 +30,24 @@ Begin VB.Form frm_etc_backup_restore
       _Version        =   393216
       Style           =   1
       Tabs            =   2
-      Tab             =   1
       TabsPerRow      =   2
       TabHeight       =   520
       TabCaption(0)   =   "Backup /  Restore"
       TabPicture(0)   =   "frmBackupRestore.frx":058A
-      Tab(0).ControlEnabled=   0   'False
+      Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame1"
+      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Transfer Data"
       TabPicture(1)   =   "frmBackupRestore.frx":05A6
-      Tab(1).ControlEnabled=   -1  'True
+      Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "fra_bak"
       Tab(1).Control(0).Enabled=   0   'False
       Tab(1).ControlCount=   1
       Begin VB.Frame fra_bak 
          Caption         =   "Transfer Data"
          Height          =   3045
-         Left            =   210
+         Left            =   -74790
          TabIndex        =   27
          Top             =   480
          Width           =   4845
@@ -85,7 +85,7 @@ Begin VB.Form frm_etc_backup_restore
       Begin VB.Frame Frame1 
          Caption         =   "Backup / Restore"
          Height          =   3285
-         Left            =   -74700
+         Left            =   300
          TabIndex        =   3
          Top             =   390
          Width           =   4695
@@ -329,7 +329,7 @@ Begin VB.Form frm_etc_backup_restore
                   _ExtentY        =   556
                   _Version        =   393216
                   CustomFormat    =   "dd-MMM"
-                  Format          =   82640899
+                  Format          =   94765059
                   CurrentDate     =   41351
                End
                Begin TDBTime6Ctl.TDBTime monthly_time 
@@ -643,10 +643,12 @@ Dim result As Double
             Screen.MousePointer = vbHourglass
             DoEvents
             If optManual(0) Then
-                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & location
+'                cmd = Chr(34) & App.Path & "\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & location
+                cmd = Chr(34) & "C:\xampp\mysql\bin\mysqldump" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --routines --comments " & nmDB & " > " & location
                 Call CreateBatchFile(App.Path & "\backup.bat", cmd)
             Else
-                cmd = Chr(34) & App.Path & "\mysql\bin\mysql" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --comments " & nmDB & " < " & location
+'                cmd = Chr(34) & App.Path & "\mysql\bin\mysql" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --comments " & nmDB & " < " & location
+                cmd = Chr(34) & "C:\xampp\mysql\bin\mysql" & Chr(34) & " -h" & ServerDB & " -u" & UserDB & " -p" & passDB & " --comments " & nmDB & " < " & location
                 Call CreateBatchFile(App.Path & "\restore.bat", cmd)
             End If
             

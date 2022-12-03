@@ -217,7 +217,7 @@ Begin VB.Form frm_trans_private_leave
          _Version        =   393216
          MousePointer    =   99
          CustomFormat    =   "dd-MM-yyyy"
-         Format          =   94109699
+         Format          =   99745795
          CurrentDate     =   39270
       End
       Begin VB.TextBox txt_employee_code 
@@ -1422,7 +1422,7 @@ Begin VB.Form frm_trans_private_leave
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "dd-MM-yyyy"
-      Format          =   94109699
+      Format          =   99745795
       CurrentDate     =   41332
    End
    Begin MSComCtl2.DTPicker DTPicker_to 
@@ -1435,7 +1435,7 @@ Begin VB.Form frm_trans_private_leave
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "dd-MM-yyyy"
-      Format          =   94109699
+      Format          =   99745795
       CurrentDate     =   41332
    End
    Begin prj_tpc.vbButton cmdSearch 
@@ -1487,7 +1487,7 @@ Begin VB.Form frm_trans_private_leave
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "MM-yyyy"
-      Format          =   94109699
+      Format          =   99745795
       CurrentDate     =   40794
    End
    Begin VB.Label Label9 

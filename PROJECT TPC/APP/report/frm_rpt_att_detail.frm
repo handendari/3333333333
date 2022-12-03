@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Object = "{0D62356B-DBA2-11D1-B5DF-0060976089D0}#6.0#0"; "TODL6.OCX"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
@@ -59,98 +59,6 @@ Begin VB.Form frm_rpt_detail_attendance
       ShowRowNumbersVary=   0   'False
       AllowColumnResizing=   -1  'True
    End
-   Begin VB.Frame Frame3 
-      Caption         =   "Report Control Button"
-      Height          =   1215
-      Left            =   240
-      TabIndex        =   0
-      Top             =   5940
-      Width           =   10095
-      Begin VB.Timer Timer1 
-         Enabled         =   0   'False
-         Interval        =   300
-         Left            =   180
-         Top             =   360
-      End
-      Begin prj_tpc.vbButton cmdExit 
-         Height          =   705
-         Left            =   8190
-         TabIndex        =   43
-         Top             =   300
-         Width           =   945
-         _ExtentX        =   1667
-         _ExtentY        =   1244
-         BTYPE           =   14
-         TX              =   "&Exit"
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   15790320
-         BCOLO           =   15790320
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frm_rpt_att_detail.frx":058A
-         PICN            =   "frm_rpt_att_detail.frx":05A6
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   2
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-      Begin prj_tpc.vbButton cmdPrint 
-         Height          =   705
-         Left            =   7170
-         TabIndex        =   44
-         Top             =   300
-         Width           =   945
-         _ExtentX        =   1667
-         _ExtentY        =   1244
-         BTYPE           =   14
-         TX              =   "&Print"
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   15790320
-         BCOLO           =   15790320
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frm_rpt_att_detail.frx":1638
-         PICN            =   "frm_rpt_att_detail.frx":1654
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   2
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-   End
    Begin VB.TextBox txt_department_name 
       Appearance      =   0  'Flat
       BackColor       =   &H8000000B&
@@ -185,7 +93,7 @@ Begin VB.Form frm_rpt_detail_attendance
    Begin TrueOleDBList60.TDBCombo TDBCombo_company 
       Height          =   375
       Left            =   1350
-      OleObjectBlob   =   "frm_rpt_att_detail.frx":26E6
+      OleObjectBlob   =   "frm_rpt_att_detail.frx":058A
       TabIndex        =   1
       Top             =   840
       Width           =   1695
@@ -193,7 +101,7 @@ Begin VB.Form frm_rpt_detail_attendance
    Begin TrueOleDBList60.TDBCombo TDBCombo_department 
       Height          =   375
       Left            =   1350
-      OleObjectBlob   =   "frm_rpt_att_detail.frx":46A4
+      OleObjectBlob   =   "frm_rpt_att_detail.frx":24F0
       TabIndex        =   47
       Top             =   1200
       Width           =   1695
@@ -212,23 +120,23 @@ Begin VB.Form frm_rpt_detail_attendance
       TabsPerRow      =   4
       TabHeight       =   520
       TabCaption(0)   =   "DETAIL"
-      TabPicture(0)   =   "frm_rpt_att_detail.frx":6665
+      TabPicture(0)   =   "frm_rpt_att_detail.frx":4459
       Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame5"
       Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "SUMMARY"
-      TabPicture(1)   =   "frm_rpt_att_detail.frx":6681
+      TabPicture(1)   =   "frm_rpt_att_detail.frx":4475
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame1"
       Tab(1).ControlCount=   1
       TabCaption(2)   =   "CALCULATION"
-      TabPicture(2)   =   "frm_rpt_att_detail.frx":669D
+      TabPicture(2)   =   "frm_rpt_att_detail.frx":4491
       Tab(2).ControlEnabled=   0   'False
       Tab(2).Control(0)=   "Frame2"
       Tab(2).ControlCount=   1
       TabCaption(3)   =   "MAN WORKING"
-      TabPicture(3)   =   "frm_rpt_att_detail.frx":66B9
+      TabPicture(3)   =   "frm_rpt_att_detail.frx":44AD
       Tab(3).ControlEnabled=   0   'False
       Tab(3).Control(0)=   "Frame7"
       Tab(3).ControlCount=   1
@@ -297,9 +205,9 @@ Begin VB.Form frm_rpt_detail_attendance
          End
          Begin VB.ComboBox cbo_employee 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":66D5
+            ItemData        =   "frm_rpt_att_detail.frx":44C9
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":66DF
+            List            =   "frm_rpt_att_detail.frx":44D3
             TabIndex        =   57
             Text            =   "..."
             Top             =   780
@@ -329,7 +237,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                UpDown          =   -1  'True
                CurrentDate     =   39278
             End
@@ -350,7 +258,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
             Begin MSComCtl2.DTPicker DTPicker_periode_to 
@@ -363,7 +271,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
             Begin VB.Label Label11 
@@ -441,7 +349,7 @@ Begin VB.Form frm_rpt_detail_attendance
                FCOLO           =   0
                MCOL            =   12632256
                MPTR            =   1
-               MICON           =   "frm_rpt_att_detail.frx":66F0
+               MICON           =   "frm_rpt_att_detail.frx":44E4
                UMCOL           =   -1  'True
                SOFT            =   0   'False
                PICPOS          =   0
@@ -455,7 +363,7 @@ Begin VB.Form frm_rpt_detail_attendance
          Begin TrueOleDBList60.TDBCombo TDBCombo_division 
             Height          =   375
             Left            =   1800
-            OleObjectBlob   =   "frm_rpt_att_detail.frx":670C
+            OleObjectBlob   =   "frm_rpt_att_detail.frx":4500
             TabIndex        =   74
             Top             =   390
             Width           =   1695
@@ -504,7 +412,7 @@ Begin VB.Form frm_rpt_detail_attendance
             _ExtentY        =   529
             _Version        =   393216
             CustomFormat    =   "yyyy"
-            Format          =   124125187
+            Format          =   91488259
             UpDown          =   -1  'True
             CurrentDate     =   39278
          End
@@ -524,6 +432,19 @@ Begin VB.Form frm_rpt_detail_attendance
          TabIndex        =   6
          Top             =   660
          Width           =   8415
+         Begin MSComctlLib.ProgressBar ProgressBar2 
+            Height          =   105
+            Left            =   120
+            TabIndex        =   77
+            Top             =   2610
+            Visible         =   0   'False
+            Width           =   8115
+            _ExtentX        =   14314
+            _ExtentY        =   185
+            _Version        =   393216
+            Appearance      =   0
+            Scrolling       =   1
+         End
          Begin VB.Frame Frame6 
             Caption         =   "TYPE"
             Height          =   525
@@ -601,7 +522,7 @@ Begin VB.Form frm_rpt_detail_attendance
                FCOLO           =   0
                MCOL            =   12632256
                MPTR            =   1
-               MICON           =   "frm_rpt_att_detail.frx":86D3
+               MICON           =   "frm_rpt_att_detail.frx":646F
                UMCOL           =   -1  'True
                SOFT            =   0   'False
                PICPOS          =   0
@@ -635,9 +556,9 @@ Begin VB.Form frm_rpt_detail_attendance
          End
          Begin VB.ComboBox cbo_dtl_employee 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":86EF
+            ItemData        =   "frm_rpt_att_detail.frx":648B
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":86F9
+            List            =   "frm_rpt_att_detail.frx":6495
             TabIndex        =   2
             Text            =   "..."
             Top             =   810
@@ -659,7 +580,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                UpDown          =   -1  'True
                CurrentDate     =   39278
             End
@@ -680,7 +601,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
          End
@@ -700,7 +621,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
             Begin MSComCtl2.DTPicker DTPicker_dtl_periode_to 
@@ -713,7 +634,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
             Begin VB.Label Label6 
@@ -734,6 +655,15 @@ Begin VB.Form frm_rpt_detail_attendance
                Width           =   285
             End
          End
+         Begin VB.Label lblLate 
+            Caption         =   "Late Calculation"
+            Height          =   195
+            Left            =   150
+            TabIndex        =   78
+            Top             =   2370
+            Visible         =   0   'False
+            Width           =   3495
+         End
          Begin VB.Label Label5 
             AutoSize        =   -1  'True
             Caption         =   "EMPLOYEE"
@@ -752,9 +682,9 @@ Begin VB.Form frm_rpt_detail_attendance
          Width           =   8415
          Begin VB.ComboBox cbo_sum_employee 
             Height          =   315
-            ItemData        =   "frm_rpt_att_detail.frx":870A
+            ItemData        =   "frm_rpt_att_detail.frx":64A6
             Left            =   1800
-            List            =   "frm_rpt_att_detail.frx":8714
+            List            =   "frm_rpt_att_detail.frx":64B0
             TabIndex        =   35
             Text            =   "..."
             Top             =   780
@@ -857,7 +787,7 @@ Begin VB.Form frm_rpt_detail_attendance
                FCOLO           =   0
                MCOL            =   12632256
                MPTR            =   1
-               MICON           =   "frm_rpt_att_detail.frx":8725
+               MICON           =   "frm_rpt_att_detail.frx":64C1
                UMCOL           =   -1  'True
                SOFT            =   0   'False
                PICPOS          =   0
@@ -884,7 +814,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                UpDown          =   -1  'True
                CurrentDate     =   39278
             End
@@ -905,7 +835,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
          End
@@ -925,7 +855,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
             Begin MSComCtl2.DTPicker DTPicker_sum_periode_to 
@@ -938,7 +868,7 @@ Begin VB.Form frm_rpt_detail_attendance
                _ExtentY        =   529
                _Version        =   393216
                CustomFormat    =   "dd-MM-yyyy"
-               Format          =   124125187
+               Format          =   91488259
                CurrentDate     =   39278
             End
             Begin VB.Label Label1 
@@ -968,6 +898,98 @@ Begin VB.Form frm_rpt_detail_attendance
             Top             =   840
             Width           =   870
          End
+      End
+   End
+   Begin VB.Frame Frame3 
+      Caption         =   "Report Control Button"
+      Height          =   1215
+      Left            =   240
+      TabIndex        =   0
+      Top             =   5940
+      Width           =   10095
+      Begin VB.Timer Timer1 
+         Enabled         =   0   'False
+         Interval        =   300
+         Left            =   180
+         Top             =   360
+      End
+      Begin prj_tpc.vbButton cmdExit 
+         Height          =   705
+         Left            =   8190
+         TabIndex        =   43
+         Top             =   300
+         Width           =   945
+         _ExtentX        =   1667
+         _ExtentY        =   1244
+         BTYPE           =   14
+         TX              =   "&Exit"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frm_rpt_att_detail.frx":64DD
+         PICN            =   "frm_rpt_att_detail.frx":64F9
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   2
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin prj_tpc.vbButton cmdPrint 
+         Height          =   705
+         Left            =   7170
+         TabIndex        =   44
+         Top             =   300
+         Width           =   945
+         _ExtentX        =   1667
+         _ExtentY        =   1244
+         BTYPE           =   14
+         TX              =   "&Print"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   1
+         FOCUSR          =   -1  'True
+         BCOL            =   15790320
+         BCOLO           =   15790320
+         FCOL            =   0
+         FCOLO           =   0
+         MCOL            =   12632256
+         MPTR            =   1
+         MICON           =   "frm_rpt_att_detail.frx":758B
+         PICN            =   "frm_rpt_att_detail.frx":75A7
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   2
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
       End
    End
    Begin VB.Label Label2 
@@ -1009,7 +1031,7 @@ Begin VB.Form frm_rpt_detail_attendance
    Begin VB.Image Image1 
       Height          =   585
       Left            =   0
-      Picture         =   "frm_rpt_att_detail.frx":8741
+      Picture         =   "frm_rpt_att_detail.frx":8639
       Stretch         =   -1  'True
       Top             =   0
       Width           =   14850
@@ -1062,15 +1084,34 @@ Dim a As New frm_rpt
         If cbo_dtl_employee.ListIndex <> 0 Then
             Call check_late(txt_dtl_employee_code.Text, tgl1, tgl2)
         Else
-            SQL = "SELECT employee_code FROM m_employee WHERE flag_active <> 0"
+            SQL = "SELECT employee_code FROM m_employee " & _
+                  "WHERE flag_active <> 0 " & _
+                    "AND CASE WHEN '" & TDBCombo_department.Text & "' <> '' THEN " & _
+                            "department_code = '" & TDBCombo_department.Text & "' " & _
+                        "ELSE company_code = '" & TDBCombo_company.Text & "' END"
             rs.Open SQL, CnG, adOpenForwardOnly, adLockReadOnly
     
             If rs.RecordCount > 0 Then
+                lblLate.Visible = True
+                ProgressBar2.Visible = True
+                ProgressBar2.Max = rs.RecordCount
+                ProgressBar2.Value = 0
+                                
+                lblLate.Caption = "Late Calculation ( " & ProgressBar2.Value & " / " & ProgressBar2.Max & " )"
+                
                 rs.MoveFirst
                 While Not rs.EOF
+                    DoEvents
+                    
                     Call check_late(rs!employee_code, tgl1, tgl2)
+                    
+                    ProgressBar2.Value = ProgressBar2.Value + 1
+                    lblLate.Caption = "Late Calculation ( " & ProgressBar2.Value & " / " & ProgressBar2.Max & " )"
                 rs.MoveNext
                 Wend
+                
+                ProgressBar2.Visible = False
+                lblLate.Visible = False
             End If
             rs.Close
         End If

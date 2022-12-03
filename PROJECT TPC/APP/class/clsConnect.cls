@@ -78,42 +78,46 @@ On Error GoTo ErrHandler
         rs.Close
         
         vDatabaseType = IIf(TypeDB = 0, "SERVER DATABASE", "LOCAL DATABASE")
-        If clsReg.masihTrial = True Then
-            If vLoadMode = 1 Then
-                strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
-            ElseIf vLoadMode = 2 Then
-                strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
-            Else
-                strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
-                
-'                frm_etc_login.timer1.Enabled = True
-                frm_etc_login.Show 1
-            End If
-        Else
-            If clsReg.masihBerlaku = False Then
-                If vLoadMode = 1 Then
-                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
-                ElseIf vLoadMode = 2 Then
-                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
-                Else
-                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
-                                       
-'                    frm_etc_login.timer1.Enabled = True
-                    frm_etc_login.Show 1
-                End If
-            Else
-                If vLoadMode = 1 Then
-                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
-                ElseIf vLoadMode = 2 Then
-                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
-                Else
-                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
-                    
-'                    frm_etc_login.timer1.Enabled = True
-                    frm_etc_login.Show 1
-                End If
-            End If
-        End If
+        
+        strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
+        frm_etc_login.Show 1
+
+'        If clsReg.masihTrial = True Then
+'            If vLoadMode = 1 Then
+'                strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
+'            ElseIf vLoadMode = 2 Then
+'                strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
+'            Else
+'                strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
+'
+''                frm_etc_login.timer1.Enabled = True
+'                frm_etc_login.Show 1
+'            End If
+'        Else
+'            If clsReg.masihBerlaku = False Then
+'                If vLoadMode = 1 Then
+'                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
+'                ElseIf vLoadMode = 2 Then
+'                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
+'                Else
+'                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 (TRIAL VERSION) - " & vDatabaseType
+'
+''                    frm_etc_login.timer1.Enabled = True
+'                    frm_etc_login.Show 1
+'                End If
+'            Else
+'                If vLoadMode = 1 Then
+'                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
+'                ElseIf vLoadMode = 2 Then
+'                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
+'                Else
+'                    strJudulProgram = "ATTENDANCE & PAYROLL SYSTEM 3.0 - " & vDatabaseType
+'
+''                    frm_etc_login.timer1.Enabled = True
+'                    frm_etc_login.Show 1
+'                End If
+'            End If
+'        End If
     Else
         Koneksi = False
     End If

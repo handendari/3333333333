@@ -103,7 +103,7 @@ Begin VB.Form frm_trans_spl
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "dd-MM-yyyy"
-      Format          =   94502915
+      Format          =   172687363
       CurrentDate     =   41332
    End
    Begin VB.TextBox txt_company_name 
@@ -469,7 +469,7 @@ Begin VB.Form frm_trans_spl
          _ExtentY        =   556
          _Version        =   393216
          CustomFormat    =   "dd-MM-yyyy"
-         Format          =   94502915
+         Format          =   172687363
          CurrentDate     =   40823
       End
       Begin MSComCtl2.DTPicker DTPicker2 
@@ -483,7 +483,7 @@ Begin VB.Form frm_trans_spl
          _ExtentY        =   556
          _Version        =   393216
          CustomFormat    =   "dd-MM-yyyy"
-         Format          =   94502915
+         Format          =   172687363
          CurrentDate     =   40823
       End
       Begin VB.Label Label20 
@@ -1369,7 +1369,7 @@ Begin VB.Form frm_trans_spl
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "dd-MM-yyyy"
-      Format          =   94502915
+      Format          =   172687363
       CurrentDate     =   41332
    End
    Begin prj_tpc.vbButton cmdSearch 
@@ -1421,7 +1421,7 @@ Begin VB.Form frm_trans_spl
       _ExtentY        =   556
       _Version        =   393216
       CustomFormat    =   "MM-yyyy"
-      Format          =   94502915
+      Format          =   172687363
       CurrentDate     =   40794
    End
    Begin VB.Label Label21 
@@ -2660,8 +2660,6 @@ Private Sub txt_nik_Change()
         txt_employee_code.Text = ""
         txt_employee_name.Text = ""
     End If
-    
-    Call cari_jam
 End Sub
 
 Private Sub txt_nik_KeyPress(KeyAscii As Integer)
